@@ -1,0 +1,25 @@
+{
+  "name": "pointnsave",
+  "version": "1.0.0",
+  "description": "Repository for Point N Save client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clockwerkz/pointnsave.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clockwerkz/pointnsave/issues"
+  },
+  "homepage": "https://github.com/clockwerkz/pointnsave#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.1",
+    "sass": "^1.17.2"
+  }
+}
