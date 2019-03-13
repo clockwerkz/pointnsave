@@ -1,9 +1,13 @@
+@import './components/hero';
+@import './components/navbar';
+
 * {
     margin: 0;
     padding: 0;
 }
 
-#hero {
-    height: 100vh;
-    background: url('../')
+.container {
+    width: 90%;
+    margin: 0 auto;
 }
+
