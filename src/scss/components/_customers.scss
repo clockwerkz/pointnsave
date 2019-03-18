@@ -1,0 +1,58 @@
+#customers {
+    background-color: #666;
+    padding: 2rem 0;
+}
+.industry-selector {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+.selector__button {
+    font-weight: bold;
+    font-size: 1.25rem;
+    &::before {
+        display: block;
+        content: '';
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: .5rem auto;
+        background-color: #fff;
+    }
+}
+.industry-info {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    &__card-wrapper {
+        margin: 1rem 0 0 0;
+        padding: 1rem;
+        width: 50%;
+    }
+    &__card {
+        padding: 1rem;
+        background-color: #ddd;
+        width: 60%;
+        margin: 0 0.4rem 0 auto;
+    }
+    &__title {
+        font-size: 1.4rem;
+        margin: 0.5rem 0;
+    }
+    &__image {
+        max-width: 300px;
+    }
+    &__image-wrapper {
+        margin-left: 0.4rem;
+        width: 50%
+    }
+
+    &__bullet-points {
+        list-style: none;
+        margin: 1rem 0;
+    }
+    &__copy {
+        margin: 1rem 0;
+        text-align: justify;
+    }
+}

@@ -13,6 +13,9 @@
 
     <nav>
         <div class="container">
+            <div class="navbar__logo">
+                Point N Save
+            </div>
             <ul class="navbar">
                 <li class="navbar__item"><a class="navbar__link" href="#">Nav Item</a></li>
                 <li class="navbar__item"><a class="navbar__link" href="#">Nav Item</a></li>
@@ -25,9 +28,11 @@
 
     <section id="hero">
         <div class="container">
-            <h1 class="hero__title">Connect with your Customers</h1>
-            <h3 class="hero__subtitle">Second line of text with more info</h3> 
-            <button class="btn">Learn More</button>
+            <div class="hero__wrapper">
+                <h1 class="hero__title">Connect with your Customers</h1>
+                <h3 class="hero__subtitle">Second line of text with more info</h3> 
+            </div> <!-- .hero__wrapper -->
+            <button class="btn btn--lg btn--right">Learn More</button>
         </div> <!-- .container -->
     </section>
 
@@ -38,7 +43,67 @@
         <div class="container">
             <h1 class="section__title">Made For Your Customers</h1>
             <h3 class="section__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-        </div>
+            <div class="industry-selector">
+                <div class="selector__button">
+                    Property Management
+                </div> <!-- .selector__button -->
+                <div class="selector__button">
+                    Chamber of Commerce
+                </div> <!-- .selector__button -->
+            </div> <!-- .industry-selector -->
+            <div class="industry-info">
+                <div class="industry-info__card-wrapper">
+                    <div class="industry-info__card">
+                        <h3 class="industry-info__title">
+                            Apartment Tenants
+                        </h3>
+                        <ul class="industry-info__bullet-points">
+                            <li class="bullet-point">Bullet Point 1</li>
+                            <li class="bullet-point">Bullet Point 2</li>
+                            <li class="bullet-point">Bullet Point 3</li>
+                            <p class="industry-info__copy">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis officiis vitae accusamus in reprehenderit, ducimus veritatis. 
+                                Adipisci quasi ducimus pariatur veniam nemo quos voluptatem quaerat, voluptatum sequi ut, necessitatibus alias.
+                            </p>
+                            <button class="btn">Learn More</button>
+                        </ul>
+                    </div> <!-- .industry-info__card -->
+                </div> <!-- .industyr-info__card-wrapper -->
+                <div class="industry-info__image-wrapper">
+                    <img class="industry-info__image" src="./images/mobile_phone_apartment_tenants.png" alt="Mobile Phone Displaying Apartment Tenants Main Screen" />
+                </div> <!-- .industry-info__card -->
+            </div> <!-- .industry-info -->
+        </div> <!-- .container -->
+    </section>
+
+    <!-- How It Works Section -->
+    <section id='how-it-works'>
+        <div class="container">
+            <h1 class="section__title">Your App. Your Way.</h1>
+            <div class="process-card__wrapper">
+                <div class="process-card">
+                    <h3 class="process-card__title">Design.</h3>
+                    <p class="process-card__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div> <!-- .process-card -->
+                <div class="process-card">
+                    <h3 class="process-card__title">Design.</h3>
+                    <p class="process-card__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div> <!-- .process-card -->
+                <div class="process-card">
+                    <h3 class="process-card__title">Design.</h3>
+                    <p class="process-card__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div> <!-- .process-card -->
+            </div> <!-- .process-card__wrapper -->
+        </div> <!-- .container -->
     </section>
 
   <script src='js/app.js'></script>

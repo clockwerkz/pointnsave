@@ -1,13 +1,48 @@
 @import './components/hero';
 @import './components/navbar';
+@import './components/customers';
+@import './components/how-it-works';
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
 }
 
 .container {
     width: 90%;
     margin: 0 auto;
+}
+
+.section__title {
+    margin-top: 3rem;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 4rem;
+}
+
+.section__subtitle {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 2rem;
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+.btn {
+    position: relative;
+    z-index: 1;
+    &--lg {
+        font-size: 1.75rem;
+        padding: 1rem 1.5rem;
+    }
 }
 

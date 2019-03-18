@@ -1,7 +1,19 @@
-.navbar {
+nav {
     position: absolute;
+    z-index: 1;
+    width: 100%;
+    .container {
+        background-color: #fff;
+        display: flex;
+    }
+}
+
+.navbar {
     list-style: none;
     display: flex;
     justify-content: flex-end;
     width: 100%;
+    &__logo {
+        width: 100px;
+    }
 }
