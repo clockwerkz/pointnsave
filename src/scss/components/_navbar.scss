@@ -3,7 +3,6 @@ nav {
     z-index: 1;
     width: 100%;
     .container {
-        background-color: #fff;
         display: flex;
     }
 }
@@ -15,5 +14,8 @@ nav {
     width: 100%;
     &__logo {
         width: 100px;
+    }
+    &__logo-image {
+        width: 150px;
     }
 }

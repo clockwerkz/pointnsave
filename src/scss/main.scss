@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu:500');
+@import './components/variables';
 @import './components/hero';
 @import './components/navbar';
 @import './components/customers';
@@ -41,12 +42,6 @@ img {
     line-height: 2rem;
 }
 
-@media screen and (min-width: 1200px) {
-    .container {
-        width: 1200px;
-    }
-}
-
 .btn {
     position: relative;
     z-index: 1;
@@ -55,8 +50,22 @@ img {
         padding: 1rem 1.5rem;
     }
     &--right {
-        margin-left: 50%;
+        margin-top: 10%;
+        margin-left: 65%;
     }
 }
 
 
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .btn {
+        &--right {
+            margin-top: 30%;
+        }
+    }
+}
