@@ -1,0 +1,25 @@
+.contact__body {
+    display: flex;
+}
+
+.form {
+    &-control {
+        width: 50%;
+    }
+    &-field {
+        margin: 1rem 0;
+    }
+    &__input-field {
+        width: 100%;
+    }
+    &__input-selector {
+        width: 100%;
+    }
+    &__textarea {
+        width: 100%;
+    }
+}
+
+.contact-form__quote {
+    width: 50%;
+}

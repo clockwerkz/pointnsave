@@ -4,12 +4,13 @@
 }
 .industry-selector {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin: 2rem 0;
 }
 .selector__button {
     font-weight: bold;
     font-size: 1.25rem;
+    margin: 0 1rem;
     &::before {
         display: block;
         content: '';
