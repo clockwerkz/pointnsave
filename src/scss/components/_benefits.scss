@@ -1,6 +1,24 @@
 
 
-.benefits__floating-quote {
+.benefits{
+    &__quote {
+        font-size: 2rem;
+        font-style: italic;
+    }
+    &__floating-quote {
     width: 30%;
     float: right;
+    }
+}
+
+.quote-section {
+    background-color: $darker-blue;
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.quote__footer {
+    margin-top: 1rem;
+    font-style: normal;
 }

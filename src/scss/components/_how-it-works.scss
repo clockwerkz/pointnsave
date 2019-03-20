@@ -10,6 +10,7 @@
         margin-top: 4rem;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__title {
         font-size: 2rem;
@@ -19,5 +20,14 @@
     &__description {
         margin-top: 3rem;
         line-height: 1.75rem;
+    }
+}
+
+
+@media screen and (max-width: 810px) {
+    .process-card {
+        width: 100%;  
+        margin: 1rem 0;  
+
     }
 }
