@@ -23,7 +23,7 @@ img {
 }
 
 .container {
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
     clear: both;
 }
@@ -45,18 +45,25 @@ img {
 .btn {
     position: relative;
     z-index: 1;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
     &--lg {
         font-size: 1.75rem;
-        padding: 1rem 1.5rem;
+        padding: 1rem 1.75rem;
     }
     &--right {
         margin-top: 10%;
         margin-left: 65%;
     }
+    &--yellow {
+        background-color: $yellow;
+        color: white;
+    }
 }
 
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1405px) {
     .container {
         width: 1200px;
     }

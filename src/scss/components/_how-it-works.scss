@@ -1,3 +1,23 @@
 #how-it-works {
-    padding: 2rem 0;
+    padding: 2rem 0 6rem 0;
+}
+
+.process-card {
+    width: 28%;
+    background-color: $light-yellow;
+    padding: 2rem 1rem 4rem 1rem;
+    &__wrapper {
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        font-size: 2rem;
+        text-align: center;
+        margin: 1rem 0;
+    }
+    &__description {
+        margin-top: 3rem;
+        line-height: 1.75rem;
+    }
 }
