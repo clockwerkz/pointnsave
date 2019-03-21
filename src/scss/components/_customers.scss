@@ -81,3 +81,38 @@
 .bullet-point {
     margin: 0.75rem 0;
 }
+
+@media screen and (max-width: 1200px) {
+    .industry-info {
+        &__card {
+            width: 80%;
+            padding: .25rem;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .industry-info {
+        &__card {
+            width: 100%;
+            padding: .25rem;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .industry-info {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        &__card-wrapper {
+            width:80%;
+            margin: 1rem auto;
+        }
+        &__card {
+            padding: 1rem;
+        }
+        &__image-wrapper {
+            margin: 1rem auto;
+        }
+    }
+}
