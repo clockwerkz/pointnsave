@@ -24,5 +24,9 @@
     "gh-pages": "^2.0.1",
     "parcel-bundler": "^1.12.1",
     "sass": "^1.17.2"
+  },
+  "dependencies": {
+    "save": "^2.3.3",
+    "vanillajs-scrollspy": "^2.0.3"
   }
 }

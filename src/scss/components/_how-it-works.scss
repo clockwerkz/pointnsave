@@ -5,11 +5,13 @@
 .process-card {
     width: 28%;
     background-color: $light-yellow;
+    margin: 0 1rem;
     padding: 2rem 1rem 4rem 1rem;
+    min-height: 550px;
     &__wrapper {
-        margin-top: 4rem;
+        margin: 4rem 0;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
     }
     &__title {
@@ -23,11 +25,17 @@
     }
 }
 
+@media screen and (min-width: 1100px) {
+    .process-card {
+        width: 22%;    
+
+    }
+}
 
 @media screen and (max-width: 810px) {
     .process-card {
-        width: 100%;  
-        margin: 1rem 0;  
-
+        width: 90%;  
+        margin: 1rem auto;  
+        min-height: 0;
     }
 }

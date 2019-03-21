@@ -6,6 +6,7 @@
 @import './components/how-it-works';
 @import './components/benefits';
 @import './components/contact-form';
+@import './components/footer';
 
 
 * {
@@ -34,6 +35,9 @@ img {
     font-size: 3rem;
     text-align: center;
     line-height: 4rem;
+    &--min-bot-margin {
+        margin-bottom: 1rem;
+    }
 }
 
 .section__subtitle {
@@ -48,6 +52,8 @@ img {
     font-weight: bold;
     border: none;
     border-radius: 15px;
+    font-size: 1.25rem;
+    padding: 10px;
     &--lg {
         font-size: 1.75rem;
         padding: 1rem 1.75rem;
@@ -59,6 +65,16 @@ img {
     &--yellow {
         background-color: $yellow;
         color: white;
+    }
+    &--wide {
+        width: 100%;
+    }
+    &--red {
+        background-color: $red;
+        color: white;
+    } 
+    &--non-rounded {
+        border-radius: 0;
     }
 }
 
@@ -74,5 +90,11 @@ img {
         &--right {
             margin-top: 30%;
         }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .section__title {
+        font-size: 2.5rem;
     }
 }

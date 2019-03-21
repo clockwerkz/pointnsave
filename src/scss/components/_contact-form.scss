@@ -1,25 +1,66 @@
+#contact-form {
+    background-color: $dark-blue;
+    padding: 0.5rem 0 0;
+    color: white;
+}
+
 .contact__body {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .form {
     &-control {
         width: 50%;
+        padding:0 2rem 2rem 0;
     }
     &-field {
         margin: 1rem 0;
+        &:first-child {
+            margin-top: 0;
+        }
     }
     &__input-field {
         width: 100%;
+        padding: 1rem;
+        font-size: 1.25rem;
     }
     &__input-selector {
         width: 100%;
+        padding: .5rem 1rem;
+        font-size: 1.25rem;
     }
     &__textarea {
         width: 100%;
+        padding: .5rem 1rem;
+        font-size: 1.5rem;
     }
+}
+
+option {
+    font-size: 1.25rem;
+    padding: .5rem;
 }
 
 .contact-form__quote {
     width: 50%;
+    padding: 3rem;
+    background-color: $light-yellow;
+    font-style: italic;
+    font-size: 1.25rem;
+}
+.contact-form__quote footer {
+    padding: 1rem 0;
+    font-style: normal;
+    text-align: right;
+}
+
+@media screen and (max-width: 850px) {
+    .form {
+        &-control {
+            width: 100%;
+        }
+    }.contact-form__quote {
+        width: 100%;
+    }
 }

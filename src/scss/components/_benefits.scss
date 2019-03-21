@@ -1,4 +1,6 @@
-
+#benefits {
+    padding: 4rem 0;
+}
 
 .benefits{
     &__quote {
@@ -8,6 +10,25 @@
     &__floating-quote {
     width: 30%;
     float: right;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-weight: bold;
+    &__footer {
+        font-weight:inherit;
+        font-style: italic;
+        text-align: right;
+    }
+    }
+    &__subtitle {
+        margin: 1rem 0 0.75rem;
+    }
+    &__description {
+        margin-bottom: 1.5rem;
+    }
+    &__source {
+        text-align: right;
+        color: #aaa;
+        font-style: italic;
     }
 }
 
@@ -21,4 +42,20 @@
 .quote__footer {
     margin-top: 1rem;
     font-style: normal;
+}
+
+@media screen and (max-width: 1200px) {
+    .benefits {
+        &__floating-quote {
+            width: 35%;
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .benefits {
+        &__floating-quote {
+            display: none;
+        }
+    }
 }

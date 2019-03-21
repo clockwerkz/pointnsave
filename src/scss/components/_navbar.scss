@@ -1,7 +1,7 @@
 nav {
     position: absolute;
     top: 20px;
-    z-index: 1;
+    z-index: 3;
     width: 100%;
     .container {
         display: flex;
@@ -19,6 +19,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     width: 100%;
+    transition: all 0.75s ease-in;
     &__logo {
         width: 130px;
     }
@@ -28,7 +29,7 @@ nav {
     &__icon {
         color: white;
         display: none;
-
+        font-size: 3rem;
     }
     &__item {
         font-size: 0.9rem;
@@ -46,6 +47,10 @@ nav {
         font-weight: bold;
         color: white;
     }
+}
+
+.navbar.show {
+    right: 0%;
 }
 
 @media screen and (max-width: 590px) {

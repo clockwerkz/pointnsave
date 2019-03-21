@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PointNSave Custom App Building</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+
 </head>
 <body>
 
@@ -17,20 +19,20 @@
                 <img src='./images/Point N Save.png' class="navbar__logo-image" />
             </div>
             <div class="navbar__icon">
-                <img class="menu-hamburger" src='./images/icon_menu.svg' />
+                <i class="fas fa-bars"></i>
             </div>
-            <ul class="navbar">
-                <li class="navbar__item"><a class="navbar__link navbar__link--active" href="#">Nav Item</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="#">Nav Item</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="#">Nav Item</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="#">Nav Item</a></li>
+            <ul class="navbar" id="navbar">
+                <li class="navbar__item"><a class="navbar__link" href="#hero">Home</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#customers">Customers</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#how-it-works">How It Works</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#benefits">Benefits</a></li>
             </ul>
         </div> <!-- .container -->
     </nav>
     <!-- Hero Section -->
 
     <section id="hero">
-        <div class="container">
+        <div class="container container--hero">
             <div class="hero__wrapper">
                 <h1 class="hero__title">Connect with<br> your Customers</h1>
                 <h3 class="hero__subtitle">Second line of text with more info</h3> 
@@ -65,7 +67,7 @@
 
     <section id="customers">
         <div class="container">
-            <h1 class="section__title">Made For Your Customers</h1>
+            <h1 class="section__title section__title--min-bot-margin">Made For Your Customers</h1>
             <h3 class="section__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
             <div class="industry-selector">
                 <div class="selector__button">
@@ -89,7 +91,7 @@
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis officiis vitae accusamus in reprehenderit, ducimus veritatis. 
                                 Adipisci quasi ducimus pariatur veniam nemo quos voluptatem quaerat, voluptatum sequi ut, necessitatibus alias.
                             </p>
-                            <button class="btn">Learn More</button>
+                            <button class="btn btn--wide btn--yellow">Learn More</button>
                         </ul>
                     </div> <!-- .industry-info__card -->
                 </div> <!-- .industyr-info__card-wrapper -->
@@ -135,7 +137,7 @@
 
     <!-- Benefits Section -->
 
-    <section class="benefits">
+    <section id="benefits">
         <div class="quote-section">
             <div class="container">
                 <blockquote class="benefits__quote">
@@ -150,7 +152,7 @@
             <div class="benefits__floating-quote">
                 <blockquote>
                     <q>Americans across all age groups, on average, check their phones 46 times per day.</q>
-                    <footer>-Forbes</footer>
+                    <footer class="benefits__floating-quote__footer">-Forbes</footer>
                 </blockquote>
             </div> <!-- benefits__floating-quote -->
             <h3 class="benefits__subtitle">Gives More Value to the Customers</h3>
@@ -173,7 +175,7 @@
 
     <!-- Contact Form Section -->
 
-    <section class="contact-form">
+    <section id="contact-form">
         <div class="container">
             <h1 class="section__title">Let's Build Your App!</h1>
             <div class="contact__body">
@@ -193,6 +195,9 @@
                     <div class="form-field">
                         <textarea name="message" class="form__textarea" cols="30" rows="10" placeholder="Message"></textarea>
                     </div>
+                    <div class="form-field">
+                        <button class="btn btn--wide btn--red btn--non-rounded">Send</button>
+                    </div>
                 </div> <!-- .form-control -->
                 <div class="contact-form__quote">
                     <blockquote>
@@ -207,19 +212,19 @@
 
     <!-- Footer -->
 
-    <footer>
+    <footer class="page-footer">
         <div class="container">
             <ul class="social-media__icons">
-                <li class="social-media__icon"><a link="#" class="social-media__link">FB</a></li>
-                <li class="social-media__icon"><a link="#" class="social-media__link">Twitter</a></li>
-                <li class="social-media__icon"><a link="#" class="social-media__link">LinkedIn</a></li>
+                <li class="social-media__icon"><a link="#" class="social-media__link"><i class="fab fa-facebook-square"></i></a></li>
+                <li class="social-media__icon"><a link="#" class="social-media__link"><i class="fab fa-twitter-square"></i></a></li>
+                <li class="social-media__icon"><a link="#" class="social-media__link"><i class="fab fa-linkedin"></i></a></li>
             </ul>
             <div class="footer__info">
                 <p class="footer__entry"><a link="#" class="footer__link">Privacy Policy</a></p>
                 <p class="footer__entry"><a link="#" class="footer__link">Terms of Service</a></p>
                 <p class="footer__entry"><a link="#" class="footer__link">Contact Us</a></p>
-            </div>
-        </div>
+            </div> <!-- .footer__info -->
+        </div> <!-- .container -->
     </footer>
 
   <script src='js/app.js'></script>
