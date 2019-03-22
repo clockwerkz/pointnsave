@@ -21,7 +21,7 @@
 .hero {
     &__wrapper {
         position: relative;
-        padding-top: 20%;
+        padding-top: 15%;
         text-align: right;
         width: 50%;
         z-index: 1;
@@ -33,10 +33,14 @@
         padding: 5rem 0 4.4rem 52%;
     }
     &__title {
-        font-size: 4rem;
+        font-size: 3.5rem;
+        font-family: 'Ubuntu', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
     }
     &__subtitle {
         font-size: 2rem;
+        font-weight: 500;
     }
 }
 
