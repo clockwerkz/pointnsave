@@ -329,11 +329,36 @@ var _vanillajsScrollspy = _interopRequireDefault(require("vanillajs-scrollspy"))
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var menu = document.getElementById('navbar');
+var menuMobile = document.getElementById('navbar__mobile');
 var scrollspy = new _vanillajsScrollspy.default(menu, 3000);
 scrollspy.init();
+var scrollspyMobile = new _vanillajsScrollspy.default(menuMobile, 3000);
+scrollspyMobile.init();
 var menuIcon = document.querySelector('.navbar__icon');
+var menuIconClose = document.querySelector('.navbar-mobile__close');
+var selectorBtns = document.querySelectorAll('.selector__button');
+var industryInfo = document.querySelectorAll('.industry-info');
 menuIcon.addEventListener('click', function (e) {
-  menu.classList.toggle('show');
+  document.querySelector('.navbar-mobile__wrapper').classList.toggle('show');
+});
+menuIconClose.addEventListener('click', function (e) {
+  document.querySelector('.navbar-mobile__wrapper').classList.toggle('show');
+});
+selectorBtns.forEach(function (btn) {
+  return btn.addEventListener('click', function (e) {
+    selectorBtns.forEach(function (selector) {
+      return selector.classList.remove('selected');
+    });
+    e.target.classList.add('selected');
+    var itemShown = document.querySelector('.industry-info--show');
+
+    if (itemShown) {
+      itemShown.classList.remove('industry-info--show');
+    }
+
+    console.log(e.target.dataset.value);
+    document.getElementById(e.target.dataset.value).classList.add('industry-info--show');
+  });
 });
 },{"../scss/main.scss":"scss/main.scss","vanillajs-scrollspy":"../node_modules/vanillajs-scrollspy/lib/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -363,7 +388,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53511" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50600" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
