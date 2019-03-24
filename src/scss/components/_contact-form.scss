@@ -44,10 +44,12 @@ option {
 
 .contact-form__quote {
     width: 50%;
-    padding: 3rem;
     background-color: $light-yellow;
+    background: url('../images/John_Sitting.jpg') no-repeat center;
+    background-position: cover;
     font-style: italic;
     font-size: 1.25rem;
+    margin-top: -5.1rem;
 }
 .contact-form__quote footer {
     padding: 1rem 0;
@@ -59,8 +61,20 @@ option {
     .form {
         &-control {
             width: 100%;
+            padding: 0;
+            margin-bottom: 2rem;
         }
-    }.contact-form__quote {
+    }
+    .contact-form__quote {
         width: 100%;
+        height: 400px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contact-form__quote {
+        height: 350px;
+        width: 95%;
     }
 }

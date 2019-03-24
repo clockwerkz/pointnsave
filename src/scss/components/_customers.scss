@@ -21,22 +21,27 @@
 }
 .industry-selector {
     display: flex;
+    width: 50%;
     justify-content: center;
-    margin: 2rem 0;
+    margin: 2rem auto;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: $dark-green;
+    cursor: pointer;
 }
 .selector__button {
     font-weight: bold;
-    font-size: 1.25rem;
-    margin: 0 3rem;
-    &::before {
-        display: block;
-        content: '';
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin: .5rem auto;
-        background-color: #fff;
+    color: $lighter-green;
+    font-size: 1rem;
+    padding: 0.7rem 0;
+    width: 100%;
+    text-align: center;
+    &:hover {
+        background-color: $light-green;
     }
+}
+.selected {
+    color: white;
 }
 .industry-info {
     display: flex;
@@ -44,37 +49,31 @@
     padding: 2rem 0;
     &__card-wrapper {
         margin: 1rem 0 0 0;
-        padding: 1rem;
+        padding: 2.75rem 1rem 1rem 1rem;
         width: 50%;
     }
     &__card {
         padding: 1.5rem;
-        background-color: white;
-        color: black;
         width: 60%;
-        margin: 0 auto;
     }
     &__title {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+        font-weight: bold;
         margin: 0.5rem 0;
     }
     &__image {
-        display: block;
         max-width: 300px;
-        margin: 0 auto;
     }
     &__image-wrapper {
+        text-align:right;
         margin-left: 0.4rem;
         width: 50%
     }
 
     &__bullet-points {
         list-style: none;
-        margin: 1rem 0;
-    }
-    &__copy {
-        margin: 1rem 0;
-        text-align: justify;
+        margin: 1rem 0 4rem;
+        color: $lighter-green;
     }
 }
 
@@ -98,14 +97,21 @@
             padding: .25rem;
         }
     }
+    .industry-selector {
+        width: 60%;
+    }
+    .selector__button {
+        font-size: 0.8rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
     .industry-info {
         flex-wrap: wrap;
-        flex-direction: column-reverse;
         &__card-wrapper {
-            width:80%;
+            text-align: center;
+            width:100%;
+            padding: 0;
             margin: 1rem auto;
         }
         &__card {
@@ -114,5 +120,17 @@
         &__image-wrapper {
             margin: 1rem auto;
         }
+    }
+    .industry-selector {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .industry-selector {
+        width: 80%;
+    }
+    .selector__button {
+        font-size: 0.65rem;
     }
 }
