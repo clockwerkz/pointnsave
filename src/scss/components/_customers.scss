@@ -1,5 +1,5 @@
 #current-customers {
-    padding: 3rem 0;
+    padding: 3rem 0 0 0;
 }
 
 .current-customers {
@@ -7,6 +7,7 @@
         display: flex;
         justify-content: space-between;
         flex-basis: 1;
+        margin-bottom: 2rem;
     }
     &__logo {
         display: block;
@@ -16,8 +17,60 @@
 
 #customers {
     background-color: $green;
-    padding: 2rem 0;
+    padding: 2rem 0 0 0;
     color: white;
+}
+
+.quote-section {
+    background-color: $darker-blue;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.quote{
+    &__title {
+        padding: 0 0 1rem 0;
+        font-weight: bold;
+    }
+    &__footer {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    font-style: normal;
+    text-align: right;
+    }
+    &__info {
+        color: $lighter-green;
+    }
+}
+.benefits{
+    &__quote {
+        font-size: 1.5rem;
+        font-style: italic;
+    }
+    &__floating-quote {
+    width: 30%;
+    float: right;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-weight: bold;
+    &__footer {
+        font-weight:inherit;
+        font-style: italic;
+        text-align: right;
+    }
+    }
+    &__subtitle {
+        margin: 1rem 0 0.75rem;
+    }
+    &__description {
+        margin-bottom: 1.5rem;
+    }
+    &__source {
+        text-align: right;
+        color: #aaa;
+        font-style: italic;
+    }
 }
 .industry-selector {
     display: flex;
@@ -44,9 +97,12 @@
     color: white;
 }
 .industry-info {
-    display: flex;
+    display:none;
     justify-content: center;
-    padding: 2rem 0;
+    padding: 2rem 0 5rem 0;
+    &--show {
+        display: flex;
+    }
     &__card-wrapper {
         margin: 1rem 0 0 0;
         padding: 2.75rem 1rem 1rem 1rem;

@@ -49,8 +49,10 @@
     .hero {
         &__wrapper {
             text-align: center;
-            width: 100%;
-  
+            width: 100%;            
+        }
+        &__title {
+            margin-top: 4rem;
         }
         &__wrapper--btn {
             justify-content: center;
