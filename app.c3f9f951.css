@@ -181,7 +181,7 @@ nav .container {
   right: 0%;
 }
 
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 670px) {
   .navbar {
     display: none;
   }
@@ -189,7 +189,7 @@ nav .container {
     display: inherit;
   }
 }
-@media screen and (min-width: 591px) {
+@media screen and (min-width: 671px) {
   .navbar-mobile__wrapper.show {
     display: none;
   }
