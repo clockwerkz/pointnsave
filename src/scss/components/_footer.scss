@@ -9,6 +9,14 @@
         justify-content: center;
         list-style: none;
         margin: 1rem 0;
+        cursor: pointer;
+    }
+    &__link {
+        text-decoration: none;
+        color: $dark-green;
+        &:hover {
+            color: $lighter-green;
+        }
     }
     &__icon {
         margin: 0 1rem;
@@ -23,5 +31,22 @@
     }
     &__entry {
         margin: 0 4rem;
+    }
+    &__link {
+        text-decoration: none;
+        color: $green;
+        &:hover {
+            color: $lighter-green;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 575px) {
+    .footer {
+        &__entry {
+            font-size: 0.8rem;
+            margin: 0 1rem;
+        }
     }
 }

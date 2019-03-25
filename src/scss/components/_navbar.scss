@@ -59,30 +59,34 @@ nav {
     list-style: none;
     &__wrapper {
         background-color: black;
-        padding-top: 2rem;
+        height: 100vh;
+        padding-top: 5rem;
         position: fixed;
         right: -60%;
         top:0;
-        width: 50%;  
+        width: 60%;  
         z-index: 3;
+        transition: all 0.25s;
     }
     &__item {
         margin: 0;
         font-size: 1rem;
         border-bottom: 1px solid $lighter-green;
-        font-size: 0.9rem;
-        line-height: 3rem;
-    
     }
     &__item:last-child {
         border-bottom: none;
     }
     &__link {
+        display: block;
         padding-left: 1rem;
         text-decoration: none;
         color: $lighter-green;
+        font-size: 2rem;
+        width: 100%;
+        padding: 1.5rem;
         &:hover {
-            color: white;
+            background-color: $lighter-green;
+            color: inherit;
         }
     }
     &__link--active {
@@ -90,11 +94,11 @@ nav {
         color: white;
     }
     &__close {
-        font-size: 2rem;
+        font-size: 3rem;
         position: absolute;
         color: $lighter-green;
-        top: 5px;
-        right: 5px;
+        top: 30px;
+        right: 30px;
     }
 }
 

@@ -2,6 +2,16 @@
     padding: 4rem 0;
 }
 
+.benefits {
+    &__subtitle {
+        color: $yellow;
+    }
+    &__description {
+        width: 80%;
+        color: $light-green;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .benefits {
         &__floating-quote {
@@ -14,6 +24,9 @@
     .benefits {
         &__floating-quote {
             display: none;
+        }
+        &__description {
+            width: 100%;
         }
     }
 }
