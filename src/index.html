@@ -220,15 +220,15 @@
         <div class="container">
             <h1 class="section__title">Let's Build Your App!</h1>
             <div class="contact__body">
-                <div class="form-control">
+                <form class="form-control" action="https://formspree.io/finsc@hotmail.com" method="POST">
                     <div class="form-field">
-                        <input type="text" placeholder="Name" class="form__input-field" />
+                        <input type="text" placeholder="Name" name="name" class="form__input-field" />
                     </div>
                     <div class="form-field">
-                        <input type="email" placeholder="Email" class="form__input-field" />
+                        <input type="email" name="email" placeholder="Email" class="form__input-field" />
                     </div>
                     <div class="form-field">
-                        <select class="form__input-selector">
+                        <select class="form__input-selector" name="industry">
                             <option value="Chamber of Commerce">Chamber of Commerce</option>
                             <option value="Property Management">Property Management</option>
                         </select>
@@ -239,10 +239,10 @@
                     <div class="form-field">
                         <button class="btn btn--wide btn--red btn--non-rounded">Send</button>
                     </div>
-                </div> <!-- .form-control -->
-                <div class="contact-form__quote">
-                    
-                </div> <!-- .contact-form__quote -->
+                </form> <!-- .form-control -->
+                <div class="contact-form__image">
+                    <img src="./images/John_Sitting.jpg" class="contact-form__img"/>
+                </div> <!-- .contact-form__image -->
         </div> <!-- .contact__body -->
         </div> <!-- .container -->
     </section>
