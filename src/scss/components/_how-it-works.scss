@@ -5,6 +5,7 @@
 .process-card {
     width: 28%;
     background-color: $darker-yellow;
+    border-radius: 25px;
     margin: 0 1rem;
     padding: 2rem 1rem 4rem 1rem;
     min-height: 550px;
@@ -21,8 +22,14 @@
         margin: 1rem 0;
     }
     &__description {
-        margin-top: 3rem;
+        margin-top: 1.75rem;
         line-height: 1.75rem;
+    }
+    &__icon {
+        text-align: center;
+        display: block;
+        margin: 1rem auto;
+        width: 25%;
     }
 }
 
