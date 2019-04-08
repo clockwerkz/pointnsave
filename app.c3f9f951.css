@@ -389,6 +389,7 @@ nav .container {
 .process-card {
   width: 28%;
   background-color: #b17300;
+  border-radius: 25px;
   margin: 0 1rem;
   padding: 2rem 1rem 4rem 1rem;
   min-height: 550px;
@@ -406,8 +407,14 @@ nav .container {
   margin: 1rem 0;
 }
 .process-card__description {
-  margin-top: 3rem;
+  margin-top: 1.75rem;
   line-height: 1.75rem;
+}
+.process-card__icon {
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
+  width: 25%;
 }
 
 @media screen and (min-width: 1100px) {
