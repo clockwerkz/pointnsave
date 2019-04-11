@@ -21,6 +21,9 @@ menuIconClose.addEventListener('click', (e)=> {
     document.querySelector('.navbar-mobile__wrapper').classList.toggle('show');
 });
 
+
+
+
 selectorBtns.forEach(btn => btn.addEventListener('click', (e)=> {
     selectorBtns.forEach(selector => selector.classList.remove('selected'));
     e.target.classList.add('selected');
@@ -32,3 +35,39 @@ selectorBtns.forEach(btn => btn.addEventListener('click', (e)=> {
     console.log(e.target.dataset.value);
     document.getElementById(e.target.dataset.value).classList.add('industry-info--show');
 }));
+
+//Modal 
+
+const modalWrapper = document.querySelector('.modal__wrapper');
+
+const privacyPolicy = document.getElementById('privacy-policy');
+
+const termsOfService = document.getElementById('terms-of-service');
+
+
+modalWrapper.addEventListener('click', closeModal);
+
+termsOfService.addEventListener('click', (e)=>{
+    e.preventDefault();
+    openModal();
+});
+
+privacyPolicy.addEventListener('click', (e)=>{
+    e.preventDefault();
+    openModal();
+    document.getElementById('privacy-modal').classList.add('modal__body--show');
+});
+
+const modalCloseBtns = document.querySelectorAll('.btn--modal-close');
+modalCloseBtns.forEach(btn => btn.addEventListener('click',closeModal));
+
+
+
+function closeModal() {
+    modalWrapper.classList.add('modal__wrapper--hide');
+    document.getElementById('privacy-modal').classList.remove('modal__body--show');
+}
+
+function openModal() {
+    modalWrapper.classList.remove('modal__wrapper--hide');
+}

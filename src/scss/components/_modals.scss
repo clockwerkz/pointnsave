@@ -1,0 +1,35 @@
+.modal {
+    &__wrapper {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.644);
+        top: 0;
+        left: 0;
+        z-index: 10;
+        height: 100%;
+        width: 100%;
+        opacity: 100%;
+        transition: all 0.5s linear;
+        &--hide {
+            display: none;
+            opacity: 0%;
+        }
+    }
+    &__body {
+        top: -100%;
+        position: relative;
+        background-color: $light-yellow;
+        width: 70%;
+        margin: 3rem auto;
+        padding: 2rem;
+        transition: all 0.5s linear;
+        &--show {
+            top: 0;
+        }
+    }
+    &__title {
+        margin-bottom: 1.5rem;
+    }
+    &__copy {
+        margin-bottom: 1.5rem;
+    }
+}

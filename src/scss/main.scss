@@ -7,6 +7,7 @@
 @import './components/benefits';
 @import './components/contact-form';
 @import './components/footer';
+@import './components//modals';
 
 
 * {
@@ -67,6 +68,10 @@ img {
     }
     &--yellow {
         background-color: $yellow;
+        color: white;
+    }
+    &--dark {
+        background-color: $green;
         color: white;
     }
     &--wide {
