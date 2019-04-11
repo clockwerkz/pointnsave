@@ -58,6 +58,13 @@ privacyPolicy.addEventListener('click', (e)=>{
     document.getElementById('privacy-modal').classList.add('modal__body--show');
 });
 
+termsOfService.addEventListener('click', (e)=>{
+    e.preventDefault();
+    openModal();
+    console.log(termsOfService);
+    document.getElementById('terms-of-service-modal').classList.add('modal__body--show');
+});
+
 const modalCloseBtns = document.querySelectorAll('.btn--modal-close');
 modalCloseBtns.forEach(btn => btn.addEventListener('click',closeModal));
 
@@ -66,6 +73,7 @@ modalCloseBtns.forEach(btn => btn.addEventListener('click',closeModal));
 function closeModal() {
     modalWrapper.classList.add('modal__wrapper--hide');
     document.getElementById('privacy-modal').classList.remove('modal__body--show');
+    document.getElementById('terms-of-service-modal').classList.remove('modal__body--show');
 }
 
 function openModal() {
