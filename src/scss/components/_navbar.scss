@@ -1,12 +1,17 @@
 nav {
-    position: absolute;
-    top: 20px;
+    position: fixed;
+    padding: 20px 0;
     z-index: 3;
     width: 100%;
+    transition: all 0.15s ease;
     .container {
         display: flex;
         justify-content: space-between;
     }
+}
+
+.dark {
+    background-color: $darker-blue;
 }
 
 .navbar {

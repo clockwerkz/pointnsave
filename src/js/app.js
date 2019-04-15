@@ -13,6 +13,20 @@ const menuIconClose = document.querySelector('.navbar-mobile__close');
 const selectorBtns = document.querySelectorAll('.selector__button');
 const industryInfo = document.querySelectorAll('.industry-info');
 
+const navBar = document.querySelector('nav');
+
+const handleScroll = debounce((e)=> {
+    console.log(window.scrollY);
+}, 250)
+
+window.addEventListener('scroll', function(e){
+    if (window.scrollY > 200) {
+        navBar.classList.add('dark');
+    } else {
+        navBar.classList.remove('dark');
+    }
+});
+
 menuIcon.addEventListener('click', (e)=> {
     document.querySelector('.navbar-mobile__wrapper').classList.toggle('show');
 });
@@ -74,10 +88,35 @@ function closeModal() {
     modalWrapper.classList.add('modal__wrapper--hide');
     document.getElementById('privacy-modal').classList.remove('modal__body--show');
     document.getElementById('terms-of-service-modal').classList.remove('modal__body--show');
-    document.querySelector('body').classList.add('disable-scroll');
+    document.querySelector('body').classList.remove('disable-scroll');
 }
 
 function openModal() {
     modalWrapper.classList.remove('modal__wrapper--hide');
     document.querySelector('body').classList.add('disable-scroll');
 }
+
+
+function debounce(func, wait, immediate) {
+    var timeout;
+  
+    return function executedFunction() {
+      var context = this;
+      var args = arguments;
+          
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+  
+      var callNow = immediate && !timeout;
+      
+      clearTimeout(timeout);
+  
+      timeout = setTimeout(later, wait);
+      
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+  
