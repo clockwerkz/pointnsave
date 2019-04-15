@@ -88,6 +88,7 @@ nav .container {
 
 .dark {
   background-color: #062e39;
+  box-shadow: 0px 3px 8px 10px rgba(0, 0, 0, 0.363);
 }
 
 .navbar {
@@ -218,7 +219,7 @@ nav .container {
 
 #customers {
   background-color: #045C59;
-  padding: 2rem 0 0 0;
+  padding: 5rem 0 0 0;
   color: white;
 }
 
@@ -389,7 +390,8 @@ nav .container {
   }
 }
 #how-it-works {
-  padding: 2rem 0 0 0;
+  padding: 5rem 0 0 0;
+  background-color: #f5edde;
 }
 
 .process-card {
@@ -402,7 +404,7 @@ nav .container {
   color: white;
 }
 .process-card__wrapper {
-  margin: 4rem 0;
+  margin: 4rem 0 5rem 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -436,7 +438,8 @@ nav .container {
   }
 }
 #benefits {
-  padding: 4rem 0;
+  padding: 5rem 0;
+  background-color: #f5edde;
 }
 
 .benefits__subtitle {
@@ -462,7 +465,7 @@ nav .container {
 }
 #contact-form {
   background-color: #094050;
-  padding: 0.5rem 0 0;
+  padding: 5rem 0 0;
   color: white;
 }
 
