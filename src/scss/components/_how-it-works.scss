@@ -1,5 +1,6 @@
 #how-it-works {
-    padding: 2rem 0 0 0;
+    padding: 5rem 0 0 0;
+    background-color: $cream;
 }
 
 .process-card {
@@ -11,7 +12,7 @@
     min-height: 550px;
     color: white;
     &__wrapper {
-        margin: 4rem 0;
+        margin: 4rem 0 5rem 0;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
