@@ -338,6 +338,17 @@ var menuIcon = document.querySelector('.navbar__icon');
 var menuIconClose = document.querySelector('.navbar-mobile__close');
 var selectorBtns = document.querySelectorAll('.selector__button');
 var industryInfo = document.querySelectorAll('.industry-info');
+var navBar = document.querySelector('nav');
+var handleScroll = debounce(function (e) {
+  console.log(window.scrollY);
+}, 250);
+window.addEventListener('scroll', function (e) {
+  if (window.scrollY > 200) {
+    navBar.classList.add('dark');
+  } else {
+    navBar.classList.remove('dark');
+  }
+});
 menuIcon.addEventListener('click', function (e) {
   document.querySelector('.navbar-mobile__wrapper').classList.toggle('show');
 });
@@ -359,7 +370,63 @@ selectorBtns.forEach(function (btn) {
     console.log(e.target.dataset.value);
     document.getElementById(e.target.dataset.value).classList.add('industry-info--show');
   });
+}); //Modal 
+
+var modalWrapper = document.querySelector('.modal__wrapper');
+var privacyPolicy = document.getElementById('privacy-policy');
+var termsOfService = document.getElementById('terms-of-service');
+modalWrapper.addEventListener('click', closeModal);
+termsOfService.addEventListener('click', function (e) {
+  e.preventDefault();
+  openModal();
 });
+privacyPolicy.addEventListener('click', function (e) {
+  e.preventDefault();
+  openModal();
+  document.getElementById('privacy-modal').classList.add('modal__body--show');
+});
+termsOfService.addEventListener('click', function (e) {
+  e.preventDefault();
+  openModal();
+  console.log(termsOfService);
+  document.getElementById('terms-of-service-modal').classList.add('modal__body--show');
+});
+var modalCloseBtns = document.querySelectorAll('.btn--modal-close');
+modalCloseBtns.forEach(function (btn) {
+  return btn.addEventListener('click', closeModal);
+});
+
+function closeModal() {
+  modalWrapper.classList.add('modal__wrapper--hide');
+  document.getElementById('privacy-modal').classList.remove('modal__body--show');
+  document.getElementById('terms-of-service-modal').classList.remove('modal__body--show');
+  document.querySelector('body').classList.remove('disable-scroll');
+}
+
+function openModal() {
+  modalWrapper.classList.remove('modal__wrapper--hide');
+  document.querySelector('body').classList.add('disable-scroll');
+}
+
+function debounce(func, wait, immediate) {
+  var timeout;
+  return function executedFunction() {
+    var context = this;
+    var args = arguments;
+
+    var later = function later() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
+;
 },{"../scss/main.scss":"scss/main.scss","vanillajs-scrollspy":"../node_modules/vanillajs-scrollspy/lib/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -388,7 +455,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53218" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50266" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

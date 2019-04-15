@@ -32,7 +32,7 @@
 .hero__wrapper--btn {
   width: 100%;
   display: flex;
-  padding: 5rem 0 4.4rem 52%;
+  padding-left: 63%;
 }
 .hero__title {
   font-size: 3.5rem;
@@ -55,6 +55,7 @@
   }
   .hero__wrapper--btn {
     justify-content: center;
+    padding: 2rem 0 0 0;
   }
 }
 @media screen and (max-width: 525px) {
@@ -74,14 +75,19 @@
   }
 }
 nav {
-  position: absolute;
-  top: 20px;
+  position: fixed;
+  padding: 20px 0;
   z-index: 3;
   width: 100%;
+  transition: all 0.15s ease;
 }
 nav .container {
   display: flex;
   justify-content: space-between;
+}
+
+.dark {
+  background-color: #062e39;
 }
 
 .navbar {
@@ -575,6 +581,43 @@ option {
     margin: 0 1rem;
   }
 }
+.modal__wrapper {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.644);
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  opacity: 100%;
+  transition: all 0.5s linear;
+}
+.modal__wrapper--hide {
+  display: none;
+  opacity: 0%;
+}
+.modal__body {
+  top: -100%;
+  left: 50%;
+  position: absolute;
+  overflow-y: scroll;
+  background-color: #e1b76a;
+  width: 70%;
+  max-height: 80%;
+  padding: 2rem;
+  transform: translateX(-50%);
+  transition: all 0.5s linear;
+}
+.modal__body--show {
+  top: 5%;
+}
+.modal__title {
+  margin-bottom: 1.5rem;
+}
+.modal__copy {
+  margin-bottom: 1.5rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -583,6 +626,10 @@ option {
 
 body {
   font-family: "Open Sans", sans-serif;
+}
+
+body.disable-scroll {
+  overflow-y: hidden;
 }
 
 img {
@@ -634,6 +681,10 @@ img {
 }
 .btn--yellow {
   background-color: #d9a33f;
+  color: white;
+}
+.btn--dark {
+  background-color: #045C59;
   color: white;
 }
 .btn--wide {
