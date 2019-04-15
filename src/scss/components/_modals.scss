@@ -21,6 +21,7 @@
         overflow-y: scroll;
         background-color: $light-yellow;
         width: 70%;
+        max-height: 80%;
         padding: 2rem;
         transform: translateX(-50%);
         transition: all 0.5s linear;

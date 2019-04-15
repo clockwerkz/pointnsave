@@ -74,8 +74,10 @@ function closeModal() {
     modalWrapper.classList.add('modal__wrapper--hide');
     document.getElementById('privacy-modal').classList.remove('modal__body--show');
     document.getElementById('terms-of-service-modal').classList.remove('modal__body--show');
+    document.querySelector('body').classList.add('disable-scroll');
 }
 
 function openModal() {
     modalWrapper.classList.remove('modal__wrapper--hide');
+    document.querySelector('body').classList.add('disable-scroll');
 }

@@ -20,6 +20,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+body.disable-scroll {
+    overflow-y: hidden;
+}
+
 img {
     width: 100%;
 }
