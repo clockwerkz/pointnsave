@@ -302,7 +302,7 @@ nav .container {
 .industry-info {
   display: none;
   justify-content: center;
-  padding: 2rem 0 5rem 0;
+  padding: 2rem 0 8rem 0;
 }
 .industry-info--show {
   display: flex;
@@ -337,6 +337,11 @@ nav .container {
 
 .bullet-point {
   margin: 0.75rem 0;
+}
+.bullet-point__check {
+  color: #e1b76a;
+  display: inline-block;
+  margin: 0 0.35rem;
 }
 
 @media screen and (max-width: 1200px) {
@@ -404,7 +409,7 @@ nav .container {
   color: white;
 }
 .process-card__wrapper {
-  margin: 4rem 0 5rem 0;
+  margin: 4rem 0 8rem 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -438,7 +443,7 @@ nav .container {
   }
 }
 #benefits {
-  padding: 5rem 0;
+  padding: 5rem 0 8rem;
   background-color: #f5edde;
 }
 
@@ -449,10 +454,18 @@ nav .container {
   width: 80%;
   color: #26827f;
 }
+.benefits__floating-quote {
+  padding: 1rem;
+  font-size: 1.25rem;
+  position: relative;
+  background: #045C59;
+  color: white;
+}
 
 @media screen and (max-width: 1200px) {
   .benefits__floating-quote {
     width: 35%;
+    margin-left: 2rem;
   }
 }
 @media screen and (max-width: 575px) {
@@ -465,7 +478,7 @@ nav .container {
 }
 #contact-form {
   background-color: #094050;
-  padding: 5rem 0 0;
+  padding: 5rem 0;
   color: white;
 }
 
@@ -528,15 +541,8 @@ option {
   }
 
   .contact-form__image {
-    width: 100%;
-    height: 400px;
-    margin: 0;
-  }
-}
-@media screen and (max-width: 500px) {
-  .contact-form__image {
-    height: 350px;
-    width: 95%;
+    width: 80%;
+    margin: 0 auto 3rem;
   }
 }
 .page-footer {
@@ -620,7 +626,15 @@ option {
 .modal__copy {
   margin-bottom: 1.5rem;
 }
+.modal__subheading {
+  margin: 1.5rem 0 1rem;
+}
 
+@media screen and (max-width: 700px) {
+  .modal__body {
+    width: 90%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -699,6 +713,9 @@ img {
 }
 .btn--non-rounded {
   border-radius: 0;
+}
+.btn--modal-close {
+  margin: 2rem 0;
 }
 
 @media screen and (min-width: 1405px) {
