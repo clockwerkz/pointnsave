@@ -1,5 +1,5 @@
 #benefits {
-    padding: 5rem 0;
+    padding: 5rem 0 8rem;
     background-color: $cream;
 }
 
@@ -11,12 +11,20 @@
         width: 80%;
         color: $light-green;
     }
+    &__floating-quote {
+        padding: 1rem;
+        font-size: 1.25rem;
+        position: relative;
+        background: $green;
+        color: white;
+    }
 }
 
 @media screen and (max-width: 1200px) {
     .benefits {
         &__floating-quote {
             width: 35%;
+            margin-left: 2rem;
         }
     }
 }

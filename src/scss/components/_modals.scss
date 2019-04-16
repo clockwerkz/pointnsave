@@ -34,5 +34,15 @@
     }
     &__copy {
         margin-bottom: 1.5rem;
+    } &__subheading {
+        margin: 1.5rem 0 1rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .modal {
+        &__body {
+            width: 90%;
+        }
     }
 }

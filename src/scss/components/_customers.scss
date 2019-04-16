@@ -99,7 +99,7 @@
 .industry-info {
     display:none;
     justify-content: center;
-    padding: 2rem 0 5rem 0;
+    padding: 2rem 0 8rem 0;
     &--show {
         display: flex;
     }
@@ -135,6 +135,11 @@
 
 .bullet-point {
     margin: 0.75rem 0;
+    &__check {
+        color: $light-yellow;
+        display: inline-block;
+        margin: 0 .35rem;
+    }
 }
 
 @media screen and (max-width: 1200px) {

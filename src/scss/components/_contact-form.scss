@@ -1,6 +1,6 @@
 #contact-form {
     background-color: $dark-blue;
-    padding: 5rem 0 0;
+    padding: 5rem 0 ;
     color: white;
 }
 
@@ -67,15 +67,8 @@ option {
         }
     }
     .contact-form__image {
-        width: 100%;
-        height: 400px;
-        margin: 0;
+        width: 80%;
+        margin: 0 auto 3rem;
     }
 }
 
-@media screen and (max-width: 500px) {
-    .contact-form__image{
-        height: 350px;
-        width: 95%;
-    }
-}
