@@ -12,7 +12,8 @@
         color: $light-green;
     }
     &__floating-quote {
-        padding: 1rem;
+        border-radius: 20px;
+        padding: 1.5rem;
         font-size: 1.25rem;
         position: relative;
         background: $green;
@@ -25,6 +26,15 @@
         &__floating-quote {
             width: 35%;
             margin-left: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .benefits {
+        &__floating-quote {
+            padding: 1rem;
+            font-size: 1rem; 
         }
     }
 }
