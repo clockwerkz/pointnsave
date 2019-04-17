@@ -5,6 +5,7 @@
   background: url("/casual-cellphone-contemporary-1471752.f197abdc.jpg") no-repeat center;
   background-size: cover;
   padding-bottom: 2.5rem;
+  height: 80vh;
 }
 #hero::before {
   content: "";
@@ -32,7 +33,7 @@
 .hero__wrapper--btn {
   width: 100%;
   display: flex;
-  padding: 5rem 0 4.4rem 63%;
+  padding: 7rem 0 4.4rem 68%;
 }
 .hero__title {
   font-size: 3.5rem;
@@ -45,6 +46,24 @@
   font-weight: 500;
 }
 
+@media screen and (max-width: 1399px) {
+  .hero__wrapper--btn {
+    padding: 7rem 0 4.4rem 64%;
+  }
+}
+@media screen and (max-width: 1278px) {
+  .hero__wrapper--btn {
+    padding: 4rem 0 4.4rem 64%;
+  }
+}
+@media screen and (max-width: 930px) {
+  .hero__title {
+    font-size: 3rem;
+  }
+  .hero__wrapper--btn {
+    padding: 2rem 0 4.4rem 55%;
+  }
+}
 @media screen and (max-width: 768px) {
   .hero__wrapper {
     text-align: center;
