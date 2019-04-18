@@ -32,7 +32,8 @@
     &__wrapper--btn {
         width: 100%;
         display: flex;
-        padding: 7rem 0 4.4rem 68%;
+        padding: 4rem 0 0 68%;
+        margin: 3rem 0 8rem;
     }
     &__title {
         font-size: 3.5rem;
@@ -45,13 +46,7 @@
         font-weight: 500;
     }
 }
-@media screen and (max-width: 1399px) {
-    .hero {
-        &__wrapper--btn {
-            padding: 7rem 0 4.4rem 64%;
-        }
-    }
-}
+
 
 @media screen and (max-width: 1278px) {
     .hero {
@@ -59,7 +54,7 @@
             font-size: 3rem;
         }
         &__wrapper--btn {
-            padding: 4rem 0 4.4rem 64%;
+            padding: 4rem 0 0 64%;
         }
     }
 }
@@ -67,7 +62,7 @@
 @media screen and (max-width: 930px) {
     .hero {
         &__wrapper--btn {
-            padding: 2rem 0 4.4rem 55%;
+            padding: 2rem 0 0 55%;
         }
     }
 }
@@ -84,7 +79,7 @@
         }
         &__wrapper--btn {
             justify-content: center;
-            padding: 8rem 0 4rem 0;
+            padding: 8rem 0 0 0;
         }
     }     
 }
@@ -102,7 +97,7 @@
             font-size: 1.75rem;
         }
         &__wrapper--btn {
-            padding: 3rem 0;
+            padding: 3rem 0 0 0;
             justify-content: center;
         }
     }    
