@@ -359,7 +359,7 @@ nav .container {
 
 .app-store-btns {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1rem 0;
 }
 
@@ -403,6 +403,10 @@ nav .container {
   .industry-selector {
     width: 70%;
   }
+
+  .app-store-btns {
+    justify-content: center;
+  }
 }
 @media screen and (max-width: 400px) {
   .industry-selector {
@@ -411,6 +415,11 @@ nav .container {
 
   .selector__button {
     font-size: 0.65rem;
+  }
+
+  .app-store-btns {
+    justify-content: center;
+    flex-direction: column;
   }
 }
 #how-it-works {
@@ -743,6 +752,11 @@ img {
 .btn--modal-close {
   margin: 2rem 0;
 }
+.btn--store {
+  width: 130px;
+  height: auto;
+  margin-left: 0.25rem;
+}
 
 @media screen and (min-width: 1405px) {
   .container {
@@ -752,6 +766,11 @@ img {
 @media screen and (max-width: 768px) {
   .btn--right {
     margin-top: 30%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .btn--store {
+    margin: 0 1rem;
   }
 }
 @media screen and (max-width: 400px) {
