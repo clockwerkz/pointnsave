@@ -143,7 +143,7 @@
 
 .app-store-btns {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1rem 0;
 }
 
@@ -190,6 +190,9 @@
     .industry-selector {
         width: 70%;
     }
+    .app-store-btns {
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -198,5 +201,9 @@
     }
     .selector__button {
         font-size: 0.65rem;
+    }
+    .app-store-btns {
+        justify-content: center;
+        flex-direction: column;
     }
 }
