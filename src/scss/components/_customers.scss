@@ -104,12 +104,11 @@
         display: flex;
     }
     &__card-wrapper {
-        margin: 1rem 0 0 0;
-        padding: 1rem 1rem 0.5rem 1rem;
+        padding: 0.25rem 1rem 0.5rem 1rem;
         width: 50%;
     }
     &__card {
-        padding: 1.5rem;
+        padding: .75rem 1.5rem;
         width: 60%;
     }
     &__title {
@@ -128,7 +127,7 @@
 
     &__bullet-points {
         list-style: none;
-        margin: 1rem 0 4rem;
+        margin: 1rem 0 .25rem;
         color: $lighter-green;
     }
 }
@@ -140,6 +139,12 @@
         display: inline-block;
         margin: 0 .35rem;
     }
+}
+
+.app-store-btns {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
 }
 
 @media screen and (max-width: 1200px) {
