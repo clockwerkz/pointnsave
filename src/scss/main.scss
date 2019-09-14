@@ -98,6 +98,14 @@ img {
     }
 }
 
+.row {
+    width: 100%;
+    display: flex;
+    &--center {
+        justify-content: center;
+    }
+}
+
 
 @media screen and (min-width: 1405px) {
     .container {

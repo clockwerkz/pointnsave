@@ -97,12 +97,9 @@
     color: white;
 }
 .industry-info {
-    display:none;
+    display:flex;
     justify-content: center;
-    padding: 2rem 0 8rem 0;
-    &--show {
-        display: flex;
-    }
+    padding: 2rem 0 4rem 0;
     &__card-wrapper {
         padding: 0.25rem 1rem 0.5rem 1rem;
         width: 50%;
@@ -128,6 +125,26 @@
     &__bullet-points {
         list-style: none;
         margin: 1rem 0 .25rem;
+        color: $lighter-green;
+    }
+}
+.dashboard {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8rem;
+    &__info {
+        width: 40%;
+    }
+    &__video {
+        width: 40%;
+    }
+    &__title {
+        font-size: 1.6rem;
+        text-align: left;
+        font-weight: bold;
+        margin: 0.5rem 0;
+    }
+    &__description {
         color: $lighter-green;
     }
 }
