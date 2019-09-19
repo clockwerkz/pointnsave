@@ -1,10 +1,19 @@
 * {box-sizing:border-box}
 
+
+.mobile_phone {
+    position: relative;
+    margin:3rem auto;
+    width: 40%;
+}
 /* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+.slideshow-container {  
+    width: 200px;
+    height: auto;
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Hide the images by default */
