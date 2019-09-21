@@ -61,6 +61,17 @@ document.querySelector('.prev').addEventListener('click', function() {
 
 var checkbox = document.querySelector(".toggle-switch");
 
+function toggleSwitchText() {
+  const switchText = document.querySelectorAll('.switch__text');
+  switchText.forEach((txt)=> {
+    if (txt.classList.contains('switch__text--active')) {
+      txt.classList.remove('switch__text--active');
+    } else {
+      txt.classList.add('switch__text--active');
+    }
+  });
+}
+
 checkbox.addEventListener( 'change', function() {
     if(this.checked) {
         mobilePhone.classList.add('mobile-phone--dark');
@@ -85,4 +96,5 @@ checkbox.addEventListener( 'change', function() {
         img.classList.add('hide');
       });
     }
+    toggleSwitchText();
 });

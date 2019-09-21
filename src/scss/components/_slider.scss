@@ -4,6 +4,19 @@
     display: inline-block;
     width: 60px;
     height: 34px;
+    &__toggle{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    &__text {
+      margin: .25rem 1rem;
+      color: $lighter-green;
+      &--active {
+        font-weight: bold;
+        color: white;
+      }
+    } 
   }
   
   /* Hide default HTML checkbox */
@@ -39,7 +52,7 @@
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color:$light-green;
   }
   
   input:focus + .slider {
