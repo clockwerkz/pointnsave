@@ -400,6 +400,9 @@ nav .container {
   }
 }
 @media screen and (max-width: 900px) {
+  .industry-info {
+    padding-bottom: 4rem;
+  }
   .industry-info__card {
     width: 100%;
     padding: 0.25rem;
@@ -908,6 +911,33 @@ input:checked + .slider:before {
     opacity: 1;
   }
 }
+@media screen and (max-width: 700px) {
+  .mobile-phone {
+    margin: 0 auto;
+    width: 200px;
+    height: 327px;
+  }
+
+  .slideshow-container {
+    top: 38px;
+    width: 140px;
+  }
+
+  .industry-info {
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .mobile-phone {
+    width: 100px;
+    height: 227px;
+  }
+
+  .slideshow-container {
+    top: 30px;
+    width: 90px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -939,7 +969,7 @@ iframe {
 
 .section__title {
   font-family: "Ubuntu", sans-serif;
-  margin: 3rem;
+  margin: 1rem;
   font-size: 3rem;
   text-align: center;
   line-height: 4rem;
