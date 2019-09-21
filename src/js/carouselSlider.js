@@ -1,7 +1,10 @@
 import '../scss/main.scss';
 
-var slideIndex = 1;
+let timer = null;
+
+let slideIndex = 1;
 showSlides(slideIndex);
+startTimer();
 
 // Next/previous controls
 function plusSlides(n) {
@@ -14,10 +17,8 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-    debugger;
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {
       slideIndex = 1
     } else if (n < 1) {
@@ -28,16 +29,30 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
 }
 
-const dots = document.querySelectorAll('.dot');
-dots.forEach((dot)=> {
-    dot.addEventListener('click', (e)=> {
-        showSlides(parseInt(dot.dataset.number));
-    });
-})
+function startTimer() {
+  if (timer === null) {
+    timer = setInterval(function() {
+      showSlides(slideIndex+1);
+    }, 4000);
+  }
+}
+
+function stopTimer() {
+  clearInterval(timer);
+  timer = null;
+}
+
+
+document.querySelector('.next').addEventListener('click', function() {
+  stopTimer();
+  plusSlides(1);
+  startTimer();
+});
+document.querySelector('.prev').addEventListener('click', function() {
+  stopTimer();
+  plusSlides(-1);
+  startTimer();
+});
