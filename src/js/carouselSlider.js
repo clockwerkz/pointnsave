@@ -1,6 +1,8 @@
 import '../scss/main.scss';
-
 let timer = null;
+const lightImgs = document.querySelectorAll('.slideshow__img--light');
+const darkImgs = document.querySelectorAll('.slideshow__img--dark');
+const mobilePhone = document.querySelector('.mobile-phone');
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -55,4 +57,32 @@ document.querySelector('.prev').addEventListener('click', function() {
   stopTimer();
   plusSlides(-1);
   startTimer();
+});
+
+var checkbox = document.querySelector(".toggle-switch");
+
+checkbox.addEventListener( 'change', function() {
+    if(this.checked) {
+        mobilePhone.classList.add('mobile-phone--dark');
+        mobilePhone.classList.remove('mobile-phone--light');
+        lightImgs.forEach((img)=> {
+          img.classList.remove('show');
+          img.classList.add('hide');
+        });
+        darkImgs.forEach((img)=> {
+          img.classList.remove('hide');
+          img.classList.add('show');
+        });
+    } else {
+      mobilePhone.classList.add('mobile-phone--light');
+      mobilePhone.classList.remove('mobile-phone--dark');
+      lightImgs.forEach((img)=> {
+        img.classList.remove('hide');
+        img.classList.add('show');
+      });
+      darkImgs.forEach((img)=> {
+        img.classList.remove('show');
+        img.classList.add('hide');
+      });
+    }
 });

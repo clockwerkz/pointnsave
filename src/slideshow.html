@@ -12,9 +12,8 @@
 </head>
 <body>
 
-    <h1>Carousel Slider</h1>
 
-    <div class="mobile_phone">
+    <div class="mobile-phone mobile-phone--light">
   
     <!-- Slideshow container -->
     <div class="slideshow-container">
@@ -22,17 +21,20 @@
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
           <div class="numbertext">1 / 3</div>
-          <img src="../src/images/homescreen_light.png" />
+          <img src="../src/images/homescreen_light.png" class="slideshow__img slideshow__img--light show"/>
+          <img src="../src/images/homescreen_dark.png" class="slideshow__img slideshow__img--dark hide"/>
         </div>
       
         <div class="mySlides fade">
           <div class="numbertext">2 / 3</div>
-          <img src="../src/images/discounts_light.png" />
+          <img src="../src/images/discounts_light.png" class="slideshow__img slideshow__img--light show"/>
+          <img src="../src/images/discounts_dark.png" class="slideshow__img slideshow__img--dark hide"/>
         </div>
       
         <div class="mySlides fade">
           <div class="numbertext">3 / 3</div>
-          <img src="../src/images/events_light.png" />
+          <img src="../src/images/events_light.png" class="slideshow__img slideshow__img--light show"/>
+          <img src="../src/images/events_dark.png" class="slideshow__img slideshow__img--dark hide"/>
         </div>
       
         <!-- Next and previous buttons -->
@@ -41,10 +43,9 @@
       </div>
       <br>
       
-      <!-- The dots/circles -->
-    </div> 
+    </div>  <!-- .mobile-phone -->
     <label class="switch">
-      <input type="checkbox">
+      <input type="checkbox" class="toggle-switch">
       <span class="slider round"></span>
   </label>
       <script src='js/carouselSlider.js'></script>

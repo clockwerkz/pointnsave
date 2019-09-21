@@ -95,42 +95,54 @@
             <h1 class="section__title section__title--min-bot-margin">Custom Made for Your Chamber</h1>
             <div class="industry-info">
                     <div class="industry-info__image-wrapper">
-                        <img class="industry-info__image" src="./images/mobile_phone_chamber_commerce.png" alt="Mobile Phone Displaying Chamber of Commerce Main Screen" />
+                        <div class="mobile-phone mobile-phone--light">
+  
+                            <!-- Slideshow container -->
+                            <div class="slideshow-container">
+                        
+                                <!-- Full-width images with number and caption text -->
+                                <div class="mySlides fade">
+                                  <div class="numbertext">1 / 3</div>
+                                  <img src="../src/images/homescreen_light.png" class="slideshow__img slideshow__img--light show"/>
+                                  <img src="../src/images/homescreen_dark.png" class="slideshow__img slideshow__img--dark hide"/>
+                                </div>
+                              
+                                <div class="mySlides fade">
+                                  <div class="numbertext">2 / 3</div>
+                                  <img src="../src/images/discounts_light.png" class="slideshow__img slideshow__img--light show"/>
+                                  <img src="../src/images/discounts_dark.png" class="slideshow__img slideshow__img--dark hide"/>
+                                </div>
+                              
+                                <div class="mySlides fade">
+                                  <div class="numbertext">3 / 3</div>
+                                  <img src="../src/images/events_light.png" class="slideshow__img slideshow__img--light show"/>
+                                  <img src="../src/images/events_dark.png" class="slideshow__img slideshow__img--dark hide"/>
+                                </div>
+                              
+                                <!-- Next and previous buttons -->
+                                <a class="prev slide-btn">&#10094;</a>
+                                <a class="next slide-btn" >&#10095;</a>
+                              </div>
+                              <br>
+                              
+                            </div>  <!-- .mobile-phone -->
                         <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" class="toggle-switch">
                             <span class="slider round"></span>
                         </label>
                     </div> <!-- .industry-info__image-wrapper -->
-                    <div class="industry-info__card-wrapper">
-                            <div class="industry-info__card">
-                                <h3 class="industry-info__title">
-                                    Chamber of Commerce
-                                </h3>
-                                <ul class="industry-info__bullet-points">
-                                    <li class="bullet-point"><i class="fas fa-check bullet-point__check"></i> Reach members where they are most...their phones</li>
-                                    <li class="bullet-point"><i class="fas fa-check bullet-point__check"></i> Create additional revenue stream by advertising members businesses inside app</li>
-                                    <li class="bullet-point"><i class="fas fa-check bullet-point__check"></i> Allows sponsors to put “ad banner” on home screen for additional fee</li>
-                                    <li class="bullet-point"><i class="fas fa-check bullet-point__check"></i> Attract a next generation of members</li>
-                                </ul>
-                                <div class="app-store-btns">
-                                    <a href="https://itunes.apple.com/us/app/live-work-play-nocc/id1462018988?ls=1&mt=8" target="_blank">
-                                        <img class ="btn--store" src="./images/apple_store.png" />
-                                    </a>
-                                    <a href="https://play.google.com/store/apps/details?id=com.nocc.nocc" target="_blank">
-                                        <img class ="btn--store" src="./images/google_play.png" />
-                                    </a>
-                                </div>
-                                <button class="btn btn--wide btn--yellow" onclick="window.location.href='#contact-form'">Learn More</button>
-                            </div> <!-- .industry-info__card -->
-                        </div> <!-- .industyr-info__card-wrapper -->
                     </div> <!-- .industry-info -->
                     <div class="dashboard">
                         <div class="dashboard__info">
-                            <h3 class="dashboard__title">Easy To Use Dashboard</h3>
-                            <p class="dashboard__description">Our easy to use Dashboard lets you add and edit any advertisements with a breeze. You can also monitor member engagements and usage statistics. Check out this video that shows the dashboard in action.</p>
+                            <ul class="industry-info__bullet-points">
+                                <li class="bullet-point"><i class="fas fa-check bullet-point__check"></i> Reach members where they are most...their phones</li>
+                                <li class="bullet-point"><i class="fas fa-check bullet-point__check"></i> Create additional revenue stream by advertising members businesses inside app</li>
+                                <li class="bullet-point"><i class="fas fa-check bullet-point__check"></i> Allows sponsors to put “ad banner” on home screen for additional fee</li>
+                                <li class="bullet-point"><i class="fas fa-check bullet-point__check"></i> Attract a next generation of members</li>
+                            </ul>
                         </div>
                         <div class="dashboard__video">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/gUCQixtdHTE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/gUCQixtdHTE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
         </div> <!-- .container -->
@@ -339,5 +351,6 @@
     </div> <!-- .modal-wrapper -->
 
   <script src='js/app.js'></script>
+  <script src='js/carouselSlider.js'></script>
 </body>
 </html>

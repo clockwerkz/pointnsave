@@ -136,7 +136,8 @@
         width: 40%;
     }
     &__video {
-        width: 40%;
+        width: 560px;
+        height: 315px;
     }
     &__title {
         font-size: 1.6rem;
@@ -171,6 +172,12 @@
             padding: .25rem;
         }
     }
+    .dashboard {
+        flex-wrap: nowrap;
+        &__info {
+            width: 100%;
+        }
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -185,6 +192,16 @@
     }
     .selector__button {
         font-size: 0.8rem;
+    }
+    .dashboard {
+        &__info {
+            width: 70%;
+        }
+        &__video {
+            width: 80%;
+        }
+        flex-direction: column-reverse;
+        align-items: center;
     }
 }
 
