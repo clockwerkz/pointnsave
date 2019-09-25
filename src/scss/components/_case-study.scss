@@ -1,6 +1,7 @@
 #case-study {
     padding-bottom: 5rem;
     position: relative;
+    
 }
 .hero__screen {
     position: absolute;
@@ -20,19 +21,22 @@
         margin-top: 4rem;
         display: inline-block;
         position: relative;
-        z-index: 3;
+        z-index: 1;
         width: 50%;
     }
 }
 
 .nocc {
+    min-height: 300px;
     display: flex;
-    margin: 4rem 0;
+    margin: 6rem 0 4rem;
     &__video {
         width: 50%;
     }
     &__quote {
+        font-size: 1.25rem;
         width: 50%;
+        padding: 0 2.5rem 0;
     }
 }
 
@@ -41,13 +45,23 @@
         background-color: #3d6755;
     }
     &__title {
-        font-size: 6rem;
+        font-size: 8rem;
         color: #e8ffe1;
     }
+    &__text {
+        padding-left: 1rem;
+        position: relative;
+        top: -30px;
+        font-size: 2rem;
+        color: #f9ea80;
+    }
 }
-
+.quote__ref {
+    padding-top: 1rem;
+    text-align: right;
+}
 .app__links {
-    margin: 8rem 0 0 0;
+    margin: 5rem 0 0 0;
     width: 300px;
 }
 
@@ -70,5 +84,109 @@
 .store {
     &__link {
         width: 45%;
+    }
+}
+
+.brochure {
+    position: absolute;
+    border: 1px solid #ccc;
+    width: 400px;
+    right: 60px;
+    bottom: -50px;
+    transform: rotate(-20deg);
+}
+
+@media screen and (max-width: 1200px) {
+    .brochure {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .nocc {
+        &__video {
+        }
+        &__quote {
+            padding: 0 1rem;
+        }
+    }
+    .brochure {
+
+        width: 275px;
+        right: 50px;
+        bottom: -50px;
+        transform: rotate(-20deg);
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .brochure {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .nocc {
+        flex-direction: column;
+        align-items: center;
+        &__video {
+            width: 60%;
+            height: 300px;
+        }
+        &__quote {
+            width: 60%;
+            padding: 2rem 0;
+        }
+    }
+    .brochure {
+
+        width: 250px;
+        right: 10px;
+        bottom: -50px;
+        transform: rotate(0deg);
+    }
+}
+@media screen and (max-width: 600px) {
+    .nocc {
+        flex-direction: column;
+        align-items: center;
+        &__video {
+            width: 80%;
+            height: 300px;
+        }
+        &__quote {
+            width: 80%;
+            padding: 2rem 0;
+        }
+    }
+    .numbers {
+        &__title {
+            text-align: center;
+        }
+        &__text {
+            text-align: center;
+        }
+    }
+    .app__links {
+        padding-top: 3rem;
+        margin: 0 auto;
+    }
+    .brochure {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .nocc {
+        flex-direction: column;
+        align-items: center;
+        &__video {
+            width: 100%;
+            height: 300px;
+        }
+        &__quote {
+            width: 100%;
+            padding: 2rem 0;
+        }
     }
 }
