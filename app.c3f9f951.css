@@ -152,6 +152,10 @@ nav .container {
   color: white;
 }
 
+.active {
+  color: white;
+}
+
 .navbar-mobile {
   list-style: none;
 }
@@ -644,11 +648,11 @@ nav .container {
 
 .brochure {
   position: absolute;
-  border: 1px solid #ccc;
   width: 400px;
   right: 60px;
   bottom: -50px;
   transform: rotate(-20deg);
+  box-shadow: 5px 15px 20px rgba(56, 56, 56, 0.45);
 }
 
 @media screen and (max-width: 1200px) {
@@ -1064,10 +1068,6 @@ input:checked + .slider:before {
   display: none;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
-
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -1163,7 +1163,7 @@ iframe {
 }
 .section__title--dark {
   margin: 0;
-  padding: 3rem 0 3rem;
+  padding: 6rem 0 3rem;
   color: white;
   background-color: #062e39;
 }
