@@ -1,0 +1,74 @@
+#case-study {
+    padding-bottom: 5rem;
+    position: relative;
+}
+.hero__screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.section {
+    &__hero {
+        position: relative;
+        background: url('../images/thumbnail_IMG_3330.jpg') no-repeat;
+        background-position: right;
+        background-size: cover;
+        text-align: center;
+    }
+    &__image {
+        margin-top: 4rem;
+        display: inline-block;
+        position: relative;
+        z-index: 3;
+        width: 50%;
+    }
+}
+
+.nocc {
+    display: flex;
+    margin: 4rem 0;
+    &__video {
+        width: 50%;
+    }
+    &__quote {
+        width: 50%;
+    }
+}
+
+.numbers {
+    &-highlight {
+        background-color: #3d6755;
+    }
+    &__title {
+        font-size: 6rem;
+        color: #e8ffe1;
+    }
+}
+
+.app__links {
+    margin: 8rem 0 0 0;
+    width: 300px;
+}
+
+.links {
+    &__text {
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.25rem;
+        color: #3d6755;
+        font-weight: bold;
+    }
+}
+
+.app-store {
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.store {
+    &__link {
+        width: 45%;
+    }
+}

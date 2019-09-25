@@ -5,6 +5,7 @@
 @import './components/customers';
 @import './components/how-it-works';
 @import './components/benefits';
+@import './components/case-study';
 @import './components/contact-form';
 @import './components/footer';
 @import './components//modals';
@@ -49,6 +50,12 @@ iframe {
     }
     &--green {
         color: $green;
+    }
+    &--dark {
+        margin: 0;
+        padding: 1rem 0;
+        color: white;
+        background-color: $darker-blue;
     }
 }
 
