@@ -3,6 +3,12 @@
     position: relative;
     
 }
+.case-study__img {
+    position: relative;
+    top: 20px;
+    text-align: center;
+    width: 175px;
+}
 .hero__screen {
     position: absolute;
     width: 100%;
@@ -72,6 +78,9 @@
         font-size: 1.25rem;
         color: #3d6755;
         font-weight: bold;
+        &--orange {
+            color: #EA8034;
+        }
     }
 }
 

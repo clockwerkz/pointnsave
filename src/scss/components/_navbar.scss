@@ -29,10 +29,12 @@ nav {
     &__logo-image {
         width: 175px;
         &__subtitle {
+            font-size: .75rem;
+            width: 250px;
             color: $light-gray;
             position: absolute;
             bottom: -5px;
-            left: 30px;
+            left: 0px;
         }
     }
     &__icon {

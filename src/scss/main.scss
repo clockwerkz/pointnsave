@@ -52,8 +52,9 @@ iframe {
         color: $green;
     }
     &--dark {
+        font-size: 2rem;
         margin: 0;
-        padding: 6rem 0 3rem;
+        padding: 6rem 0 1.75rem;
         color: white;
         background-color: $darker-blue;
     }
