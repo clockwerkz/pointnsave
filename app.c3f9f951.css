@@ -121,10 +121,12 @@ nav .container {
   width: 175px;
 }
 .navbar__logo-image__subtitle {
+  font-size: 0.75rem;
+  width: 250px;
   color: #cccccc;
   position: absolute;
   bottom: -5px;
-  left: 30px;
+  left: 0px;
 }
 .navbar__icon {
   color: white;
@@ -568,6 +570,13 @@ nav .container {
   position: relative;
 }
 
+.case-study__img {
+  position: relative;
+  top: 20px;
+  text-align: center;
+  width: 175px;
+}
+
 .hero__screen {
   position: absolute;
   width: 100%;
@@ -635,6 +644,9 @@ nav .container {
   font-size: 1.25rem;
   color: #3d6755;
   font-weight: bold;
+}
+.links__text--orange {
+  color: #EA8034;
 }
 
 .app-store {
@@ -1162,8 +1174,9 @@ iframe {
   color: #045C59;
 }
 .section__title--dark {
+  font-size: 2rem;
   margin: 0;
-  padding: 6rem 0 3rem;
+  padding: 6rem 0 1.75rem;
   color: white;
   background-color: #062e39;
 }
