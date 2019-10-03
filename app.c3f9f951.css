@@ -612,6 +612,14 @@ nav .container {
   width: 50%;
   padding: 0 2.5rem 0;
 }
+.nocc__extra-video {
+  text-align: center;
+}
+
+.extra-video__link {
+  color: #209965;
+  text-decoration: none;
+}
 
 .numbers-highlight {
   background-color: #3d6755;
@@ -699,6 +707,7 @@ nav .container {
     height: 300px;
   }
   .nocc__quote {
+    margin-top: 2rem;
     width: 60%;
     padding: 2rem 0;
   }
