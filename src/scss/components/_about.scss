@@ -1,7 +1,26 @@
 #about {
     background-color: $orange;
 }
-
+.row {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+.about {
+    &__wrapper {
+        display: flex;
+    }
+    &__info {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__img {
+        height: 200px;
+        width: auto;
+    }
+}
 .clients {
     background-color: white;
     &__logo {
