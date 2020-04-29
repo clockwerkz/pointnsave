@@ -1,0 +1,11 @@
+#about {
+    background-color: $orange;
+}
+
+.clients {
+    background-color: white;
+    &__logo {
+        width: auto;
+        height: 40px;
+    }
+}

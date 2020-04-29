@@ -16,7 +16,6 @@
         position: relative;
         padding-top: 15%;
         text-align: left;
-        width: 50%;
         z-index: 1;
         color: white;
     }
@@ -28,8 +27,8 @@
     }
     &__title {
         font-size: 3.5rem;
+        line-height: 4rem;
         font-family: 'Ubuntu', sans-serif;
-        text-transform: uppercase;
         letter-spacing: 3px;
     }
     &__subtitle {
