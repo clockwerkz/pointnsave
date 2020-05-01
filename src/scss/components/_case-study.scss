@@ -5,13 +5,51 @@
     background-position: right;
     background-size: cover;
     text-align: center;
-    
+    &::before {
+        top: 0;
+        padding: 0;
+        display: block;
+        content: 'NOCC';
+        font-size: 25rem;
+        text-align: center;
+        width: 100%;
+        line-height: 24rem;
+        font-weight: bold;
+        color: #23361c;
+        opacity: 0.4;
+        position: absolute;
+    }
+    &::after {
+        z-index: 2;
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+    }
 }
-.case-study__img {
-    position: relative;
-    top: 20px;
-    text-align: center;
-    width: 175px;
+.case-study {
+    &__title {
+        position: relative;
+        z-index: 1;
+        color: #EA8034;
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+    &__img-wrapper {
+        flex: 1;
+    }
+    &__img {
+        position: relative;
+        width: auto;
+        height: 100%;
+        text-align: center;
+        
+    }
+    &__wrapper {
+        display: flex;
+        width: 100%;
+    }
 }
 .hero__screen {
     position: absolute;
@@ -39,11 +77,15 @@
     margin: 6rem 0 4rem;
     &__video {
         width: 50%;
+        position: relative;
+        z-index: 1;
     }
     &__quote {
         font-size: 1.25rem;
         width: 50%;
         padding: 0 2.5rem 0;
+        position: relative;
+        z-index: 1;
     }
     &__extra-video {
         text-align: center;
@@ -57,6 +99,8 @@
 .numbers {
     &-highlight {
         background-color: #3d6755;
+        position: relative;
+        z-index: 1;
     }
     &__title {
         font-size: 8rem;
@@ -81,6 +125,8 @@
 
 .links {
     &__text {
+        position: relative;
+        z-index: 1;
         text-align: center;
         padding: 1rem;
         font-size: 1.25rem;
@@ -93,7 +139,8 @@
 }
 
 .app-store {
-    
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
 }
