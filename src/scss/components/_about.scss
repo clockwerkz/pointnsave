@@ -2,9 +2,12 @@
     background-color: $orange;
 }
 .row {
-    padding: 1rem 5% 1rem 0;
+    padding: 1rem 5% 1rem 2%;
     display: flex;
     justify-content: space-around;
+}
+#about {
+    padding: 3rem 0 0 0;
 }
 .about {
     &__wrapper {
@@ -17,18 +20,19 @@
         justify-content: space-between;
     }
     &__img {
-        transform:translate(0, 81px);
+        display: block;
         height: 300px;
         width: auto;
     }
     &__title {
+        color: white;
         padding-left: 5%;
-        margin: 2rem 0;
+        margin: 0;
         font-size: 2.5rem;
         font-weight: bold;
     }
     &__description {
-        padding-left: 5%;
+        padding: 0 7.5%;
         margin: 1rem 0;
     }
 }
@@ -36,6 +40,6 @@
     background-color: white;
     &__logo {
         width: auto;
-        height: 40px;
+        height: 50px;
     }
 }

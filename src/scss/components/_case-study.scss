@@ -1,6 +1,10 @@
 #case-study {
     padding-bottom: 5rem;
     position: relative;
+    background: url('../images/thumbnail_IMG_3330.jpg') no-repeat;
+    background-position: right;
+    background-size: cover;
+    text-align: center;
     
 }
 .case-study__img {
@@ -18,10 +22,7 @@
 .section {
     &__hero {
         position: relative;
-        background: url('../images/thumbnail_IMG_3330.jpg') no-repeat;
-        background-position: right;
-        background-size: cover;
-        text-align: center;
+        
     }
     &__image {
         margin-top: 4rem;
