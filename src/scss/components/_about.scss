@@ -1,0 +1,45 @@
+#about {
+    background-color: $orange;
+}
+.row {
+    padding: 1rem 5% 1rem 2%;
+    display: flex;
+    justify-content: space-around;
+}
+#about {
+    padding: 3rem 0 0 0;
+}
+.about {
+    &__wrapper {
+        display: flex;
+    }
+    &__info {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__img {
+        display: block;
+        height: 300px;
+        width: auto;
+    }
+    &__title {
+        color: white;
+        padding-left: 5%;
+        margin: 0;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    &__description {
+        padding: 0 7.5%;
+        margin: 1rem 0;
+    }
+}
+.clients {
+    background-color: white;
+    &__logo {
+        width: auto;
+        height: 50px;
+    }
+}

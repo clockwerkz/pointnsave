@@ -19,14 +19,6 @@ const handleScroll = debounce((e)=> {
     console.log(window.scrollY);
 }, 250)
 
-window.addEventListener('scroll', function(e){
-    if (window.scrollY > 200) {
-        navBar.classList.add('dark');
-    } else {
-        navBar.classList.remove('dark');
-    }
-});
-
 menuIcon.addEventListener('click', (e)=> {
     document.querySelector('.navbar-mobile__wrapper').classList.toggle('show');
 });
