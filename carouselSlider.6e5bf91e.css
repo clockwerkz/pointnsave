@@ -605,7 +605,7 @@ nav .container {
   }
 }
 #case-study {
-  padding-bottom: 5rem;
+  padding: 6rem 0 5rem;
   position: relative;
   background: url("/thumbnail_IMG_3330.a9adb0ae.jpg") no-repeat;
   background-blend-mode: screen;
@@ -624,7 +624,7 @@ nav .container {
   letter-spacing: 2.8rem;
   font-weight: bold;
   color: #23361c;
-  opacity: 0.2;
+  opacity: 0.15;
   position: absolute;
   z-index: 3;
 }
@@ -632,7 +632,6 @@ nav .container {
 .case-study__title {
   position: relative;
   z-index: 3;
-  padding: 6rem 0 2rem;
   color: #ff9100;
   font-weight: bold;
   text-align: center;
@@ -658,7 +657,8 @@ nav .container {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(215, 228, 210, 0.822);
+  top: 0;
+  background-color: rgba(215, 228, 210, 0.849);
 }
 
 .section__hero {
@@ -749,15 +749,6 @@ nav .container {
 
 .store__link {
   width: 45%;
-}
-
-.brochure {
-  position: absolute;
-  width: 400px;
-  right: 60px;
-  bottom: -50px;
-  transform: rotate(-20deg);
-  box-shadow: 5px 15px 20px rgba(56, 56, 56, 0.45);
 }
 
 @media screen and (max-width: 1200px) {
