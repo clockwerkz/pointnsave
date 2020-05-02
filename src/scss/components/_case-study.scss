@@ -150,15 +150,6 @@
     }
 }
 
-.brochure {
-    position: absolute;
-    width: 400px;
-    right: 60px;
-    bottom: -50px;
-    transform: rotate(-20deg);
-    box-shadow: 5px 15px 20px rgba(56, 56, 56, 0.45);
-}
-
 @media screen and (max-width: 1200px) {
     .brochure {
         width: 350px;
