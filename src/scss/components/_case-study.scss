@@ -4,7 +4,6 @@
     background: url('../images/thumbnail_IMG_3330.jpg') no-repeat;
     background-position: right;
     background-size: cover;
-    text-align: center;
     &::before {
         top: 0;
         padding: 0;
@@ -34,10 +33,12 @@
         z-index: 1;
         color: #EA8034;
         font-weight: bold;
+        text-align: center;
         font-size: 2.5rem;
     }
     &__img-wrapper {
         flex: 1;
+        width: 45%;
     }
     &__img {
         position: relative;
