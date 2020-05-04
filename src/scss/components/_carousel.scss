@@ -25,9 +25,6 @@
     height: auto;
     position: absolute;
     margin: auto;
-    top: 61px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 /* Hide the images by default */
@@ -35,6 +32,10 @@
   display: none;
 }
 
+.slideshow__img {
+  width: auto;
+  height: 100%;
+}
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;

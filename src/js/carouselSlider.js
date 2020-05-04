@@ -1,12 +1,13 @@
 import '../scss/main.scss';
 let timer = null;
 const lightImgs = document.querySelectorAll('.slideshow__img--light');
-const darkImgs = document.querySelectorAll('.slideshow__img--dark');
 const mobilePhone = document.querySelector('.mobile-phone');
 
 let slideIndex = 1;
-showSlides(slideIndex);
-startTimer();
+document.addEventListener("DOMContentLoaded", ()=> {
+  showSlides(slideIndex);
+  //startTimer();
+})
 
 // Next/previous controls
 function plusSlides(n) {
@@ -59,42 +60,4 @@ document.querySelector('.prev').addEventListener('click', function() {
   startTimer();
 });
 
-var checkbox = document.querySelector(".toggle-switch");
 
-function toggleSwitchText() {
-  const switchText = document.querySelectorAll('.switch__text');
-  switchText.forEach((txt)=> {
-    if (txt.classList.contains('switch__text--active')) {
-      txt.classList.remove('switch__text--active');
-    } else {
-      txt.classList.add('switch__text--active');
-    }
-  });
-}
-
-checkbox.addEventListener( 'change', function() {
-    if(this.checked) {
-        mobilePhone.classList.add('mobile-phone--dark');
-        mobilePhone.classList.remove('mobile-phone--light');
-        lightImgs.forEach((img)=> {
-          img.classList.remove('show');
-          img.classList.add('hide');
-        });
-        darkImgs.forEach((img)=> {
-          img.classList.remove('hide');
-          img.classList.add('show');
-        });
-    } else {
-      mobilePhone.classList.add('mobile-phone--light');
-      mobilePhone.classList.remove('mobile-phone--dark');
-      lightImgs.forEach((img)=> {
-        img.classList.remove('hide');
-        img.classList.add('show');
-      });
-      darkImgs.forEach((img)=> {
-        img.classList.remove('show');
-        img.classList.add('hide');
-      });
-    }
-    toggleSwitchText();
-});

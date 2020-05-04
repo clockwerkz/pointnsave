@@ -21,8 +21,11 @@
     }
     &__img {
         display: block;
-        height: 300px;
+        height: 350px;
         width: auto;
+    }
+    &__image-container {
+        margin-top: auto;
     }
     &__title {
         color: white;

@@ -16,11 +16,16 @@
 }
 
 #customers {
-    background-color: $green;
+    background-color: $dark-orange;
     padding: 5rem 0 0 0;
     color: white;
 }
 
+.customers {
+    &__wrapper {
+        display: flex;
+    }
+}
 .quote-section {
     background-color: $darker-blue;
     color: white;
@@ -99,9 +104,9 @@
 .industry-info {
     display:flex;
     justify-content: center;
-    padding: 4rem 0 7rem 0;
+    min-height: 600px;
+    flex: 1;
     &__card-wrapper {
-        padding: 0.25rem 1rem 0.5rem 1rem;
         width: 50%;
     }
     &__card {
@@ -118,8 +123,6 @@
     }
     &__image-wrapper {
         text-align:right;
-        margin-left: 0.4rem;
-        width: 50%
     }
 
     &__bullet-points {
@@ -130,34 +133,29 @@
 }
 .dashboard {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding-bottom: 12rem;
-    &__info {
-        width: 40%;
-    }
-    &__video {
-        width: 560px;
-        height: 315px;
-    }
+    color: $cream;
+    flex: 1;
     &__title {
         font-size: 1.6rem;
         text-align: left;
         font-weight: bold;
         margin: 0.5rem 0;
     }
-    &__description {
-        color: $lighter-green;
-    }
     &__text {
         text-align: center;
-        color: $lighter-green;
+    }
+    &__img {
+        margin-top: 1.2rem;
     }
 }
 
 .bullet-point {
     margin: 0.75rem 0;
+    color: $cream;
     &__check {
-        color: $light-yellow;
         display: inline-block;
         margin: 0 .35rem;
     }

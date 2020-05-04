@@ -47,7 +47,7 @@ iframe {
     text-align: center;
     line-height: 4rem;
     &--min-bot-margin {
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
     }
     &--green {
         color: $green;
@@ -61,10 +61,15 @@ iframe {
     }
 }
 
+
 .section__subtitle {
     font-size: 1.5rem;
     text-align: center;
     line-height: 2rem;
+    margin-bottom: 2rem;
+    &--cream {
+        color: $cream;
+    }
 }
 
 .btn {
