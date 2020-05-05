@@ -170,7 +170,7 @@ nav .container {
 .navbar-mobile__item {
   margin: 0;
   font-size: 1rem;
-  border-bottom: 1px solid #94e0dd;
+  border-bottom: 1px solid white;
 }
 .navbar-mobile__item:last-child {
   border-bottom: none;
@@ -179,13 +179,13 @@ nav .container {
   display: block;
   padding-left: 1rem;
   text-decoration: none;
-  color: #94e0dd;
+  color: white;
   font-size: 2rem;
   width: 100%;
   padding: 1.5rem;
 }
 .navbar-mobile__link:hover {
-  background-color: #94e0dd;
+  background-color: white;
   color: inherit;
 }
 .navbar-mobile__link--active {
@@ -195,7 +195,7 @@ nav .container {
 .navbar-mobile__close {
   font-size: 3rem;
   position: absolute;
-  color: #94e0dd;
+  color: white;
   top: 30px;
   right: 30px;
 }
@@ -242,8 +242,11 @@ nav .container {
 }
 .about__img {
   display: block;
-  height: 300px;
+  height: 350px;
   width: auto;
+}
+.about__image-container {
+  margin-top: auto;
 }
 .about__title {
   color: white;
@@ -255,6 +258,7 @@ nav .container {
 .about__description {
   color: #c7e4bc;
   padding: 0 7.5%;
+  font-size: 1.2rem;
   margin-bottom: 3rem;
 }
 
@@ -282,16 +286,20 @@ nav .container {
 }
 
 #customers {
-  background-color: #045C59;
-  padding: 5rem 0 0 0;
+  background-color: #742018;
+  padding: 6rem 0 0 0;
   color: white;
 }
 
+.customers__wrapper {
+  display: flex;
+}
+
 .quote-section {
-  background-color: #062e39;
-  color: white;
+  background-color: #BCDD97;
+  color: #142D29;
   text-align: center;
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
 
 .quote__title {
@@ -305,7 +313,7 @@ nav .container {
   text-align: right;
 }
 .quote__info {
-  color: #94e0dd;
+  color: white;
 }
 
 .benefits__quote {
@@ -343,20 +351,20 @@ nav .container {
   margin: 2rem auto;
   border-width: 1px 0 1px 0;
   border-style: solid;
-  border-color: #022b2a;
+  border-color: #142D29;
   cursor: pointer;
 }
 
 .selector__button {
   font-weight: bold;
-  color: #94e0dd;
+  color: white;
   font-size: 1rem;
   padding: 0.7rem 0;
   width: 100%;
   text-align: center;
 }
 .selector__button:hover {
-  background-color: #26827f;
+  background-color: #BCDD97;
 }
 
 .selected {
@@ -366,10 +374,10 @@ nav .container {
 .industry-info {
   display: flex;
   justify-content: center;
-  padding: 4rem 0 7rem 0;
+  min-height: 600px;
+  flex: 1;
 }
 .industry-info__card-wrapper {
-  padding: 0.25rem 1rem 0.5rem 1rem;
   width: 50%;
 }
 .industry-info__card {
@@ -385,47 +393,40 @@ nav .container {
   max-width: 300px;
 }
 .industry-info__image-wrapper {
-  text-align: right;
-  margin-left: 0.4rem;
-  width: 50%;
+  margin-top: 3rem;
 }
 .industry-info__bullet-points {
   list-style: none;
   margin: 1rem 0 0.25rem;
-  color: #94e0dd;
+  color: white;
 }
 
-.dashboard {
+.how-it-works {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding-bottom: 12rem;
+  color: #FFF4C5;
+  flex: 1;
 }
-.dashboard__info {
-  width: 40%;
-}
-.dashboard__video {
-  width: 560px;
-  height: 315px;
-}
-.dashboard__title {
+.how-it-works__title {
   font-size: 1.6rem;
   text-align: left;
   font-weight: bold;
   margin: 0.5rem 0;
 }
-.dashboard__description {
-  color: #94e0dd;
-}
-.dashboard__text {
+.how-it-works__text {
   text-align: center;
-  color: #94e0dd;
+}
+.how-it-works__img {
+  margin-top: 1.2rem;
 }
 
 .bullet-point {
   margin: 0.75rem 0;
+  color: #FFF4C5;
 }
 .bullet-point__check {
-  color: #e1b76a;
   display: inline-block;
   margin: 0 0.35rem;
 }
@@ -522,7 +523,7 @@ nav .container {
 }
 #how-it-works {
   padding: 5rem 0 6rem 0;
-  background-color: #f5edde;
+  background-color: #FFF4C5;
 }
 
 .process-card {
@@ -570,7 +571,7 @@ nav .container {
 }
 #benefits {
   padding: 5rem 0 8rem;
-  background-color: #f5edde;
+  background-color: #FFF4C5;
 }
 
 .benefits__subtitle {
@@ -578,7 +579,7 @@ nav .container {
 }
 .benefits__description {
   width: 80%;
-  color: #26827f;
+  color: #BCDD97;
 }
 .benefits__floating-quote {
   border-radius: 20px;
@@ -694,7 +695,7 @@ nav .container {
   padding: 0 2.5rem 0;
   position: relative;
   z-index: 1;
-  color: #022b2a;
+  color: #142D29;
 }
 .nocc__extra-video {
   text-align: center;
@@ -845,10 +846,33 @@ nav .container {
     padding: 2rem 0;
   }
 }
+#dashboard {
+  position: relative;
+  padding: 5rem 0;
+  background: url("/casual-cellphone-contemporary-1471752.f197abdc.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.dashboard__multiply-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.dashboard__video {
+  width: 50%;
+  height: 500px;
+  margin: 5rem auto;
+}
+.dashboard > iframe {
+  min-height: 500px;
+}
+
 #contact-form {
   position: relative;
   z-index: 1;
-  background-color: #094050;
+  background-color: #C35146;
   padding: 5rem 0;
   color: white;
 }
@@ -930,10 +954,10 @@ option {
 }
 .social-media__link {
   text-decoration: none;
-  color: #022b2a;
+  color: #142D29;
 }
 .social-media__link:hover {
-  color: #94e0dd;
+  color: white;
 }
 .social-media__icon {
   margin: 0 1rem;
@@ -952,7 +976,7 @@ option {
   color: #045C59;
 }
 .footer__link:hover {
-  color: #94e0dd;
+  color: white;
 }
 
 @media screen and (max-width: 575px) {
@@ -1020,7 +1044,7 @@ option {
 }
 .switch__text {
   margin: 0.25rem 1rem;
-  color: #94e0dd;
+  color: white;
 }
 .switch__text--active {
   font-weight: bold;
@@ -1060,7 +1084,7 @@ option {
 }
 
 input:checked + .slider {
-  background-color: #26827f;
+  background-color: #BCDD97;
 }
 
 input:focus + .slider {
@@ -1111,14 +1135,16 @@ input:checked + .slider:before {
   height: auto;
   position: absolute;
   margin: auto;
-  top: 61px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 /* Hide the images by default */
 .mySlides {
   display: none;
+}
+
+.slideshow__img {
+  width: auto;
+  height: 100%;
 }
 
 /* Next & previous buttons */
@@ -1241,9 +1267,11 @@ img {
 }
 
 .container {
+  position: relative;
   width: 85%;
   margin: 0 auto;
   clear: both;
+  z-index: 2;
 }
 
 iframe {
@@ -1259,10 +1287,13 @@ iframe {
   line-height: 4rem;
 }
 .section__title--min-bot-margin {
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 .section__title--green {
   color: #045C59;
+}
+.section__title--cream {
+  color: #FFF4C5;
 }
 .section__title--dark {
   font-size: 2rem;
@@ -1276,6 +1307,10 @@ iframe {
   font-size: 1.5rem;
   text-align: center;
   line-height: 2rem;
+  margin-bottom: 2rem;
+}
+.section__subtitle--cream {
+  color: #FFF4C5;
 }
 
 .btn {

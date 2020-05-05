@@ -189,18 +189,18 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\slide-1.jpg":[["slide-1.76083b87.jpg","images/slide-1.jpg"],"images/slide-1.jpg"],"./..\\images\\thumbnail_IMG_3330.jpg":[["thumbnail_IMG_3330.a9adb0ae.jpg","images/thumbnail_IMG_3330.jpg"],"images/thumbnail_IMG_3330.jpg"],"./..\\images\\mobile_phone_light.png":[["mobile_phone_light.5f040e61.png","images/mobile_phone_light.png"],"images/mobile_phone_light.png"],"./..\\images\\mobile_phone_dark.png":[["mobile_phone_dark.a98e61d4.png","images/mobile_phone_dark.png"],"images/mobile_phone_dark.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/carouselSlider.js":[function(require,module,exports) {
+},{"./..\\images\\slide-1.jpg":[["slide-1.76083b87.jpg","images/slide-1.jpg"],"images/slide-1.jpg"],"./..\\images\\thumbnail_IMG_3330.jpg":[["thumbnail_IMG_3330.a9adb0ae.jpg","images/thumbnail_IMG_3330.jpg"],"images/thumbnail_IMG_3330.jpg"],"./..\\images\\casual-cellphone-contemporary-1471752.jpg":[["casual-cellphone-contemporary-1471752.f197abdc.jpg","images/casual-cellphone-contemporary-1471752.jpg"],"images/casual-cellphone-contemporary-1471752.jpg"],"./..\\images\\mobile_phone_light.png":[["mobile_phone_light.5f040e61.png","images/mobile_phone_light.png"],"images/mobile_phone_light.png"],"./..\\images\\mobile_phone_dark.png":[["mobile_phone_dark.a98e61d4.png","images/mobile_phone_dark.png"],"images/mobile_phone_dark.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/carouselSlider.js":[function(require,module,exports) {
 "use strict";
 
 require("../scss/main.scss");
 
 var timer = null;
 var lightImgs = document.querySelectorAll('.slideshow__img--light');
-var darkImgs = document.querySelectorAll('.slideshow__img--dark');
 var mobilePhone = document.querySelector('.mobile-phone');
 var slideIndex = 1;
-showSlides(slideIndex);
-startTimer(); // Next/previous controls
+document.addEventListener("DOMContentLoaded", function () {
+  showSlides(slideIndex); //startTimer();
+}); // Next/previous controls
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -253,46 +253,6 @@ document.querySelector('.prev').addEventListener('click', function () {
   plusSlides(-1);
   startTimer();
 });
-var checkbox = document.querySelector(".toggle-switch");
-
-function toggleSwitchText() {
-  var switchText = document.querySelectorAll('.switch__text');
-  switchText.forEach(function (txt) {
-    if (txt.classList.contains('switch__text--active')) {
-      txt.classList.remove('switch__text--active');
-    } else {
-      txt.classList.add('switch__text--active');
-    }
-  });
-}
-
-checkbox.addEventListener('change', function () {
-  if (this.checked) {
-    mobilePhone.classList.add('mobile-phone--dark');
-    mobilePhone.classList.remove('mobile-phone--light');
-    lightImgs.forEach(function (img) {
-      img.classList.remove('show');
-      img.classList.add('hide');
-    });
-    darkImgs.forEach(function (img) {
-      img.classList.remove('hide');
-      img.classList.add('show');
-    });
-  } else {
-    mobilePhone.classList.add('mobile-phone--light');
-    mobilePhone.classList.remove('mobile-phone--dark');
-    lightImgs.forEach(function (img) {
-      img.classList.remove('hide');
-      img.classList.add('show');
-    });
-    darkImgs.forEach(function (img) {
-      img.classList.remove('show');
-      img.classList.add('hide');
-    });
-  }
-
-  toggleSwitchText();
-});
 },{"../scss/main.scss":"scss/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -321,7 +281,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50195" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58671" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
