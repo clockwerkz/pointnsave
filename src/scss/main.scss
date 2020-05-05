@@ -7,6 +7,7 @@
 @import './components/how-it-works';
 @import './components/benefits';
 @import './components/case-study';
+@import './components/dashboard';
 @import './components/contact-form';
 @import './components/footer';
 @import './components//modals';
@@ -32,9 +33,11 @@ img {
 }
 
 .container {
+    position: relative;
     width: 85%;
     margin: 0 auto;
     clear: both;
+    z-index: 2;
 }
 iframe {
     width: 100%;
@@ -51,6 +54,9 @@ iframe {
     }
     &--green {
         color: $green;
+    }
+    &--cream {
+        color: $cream;
     }
     &--dark {
         font-size: 2rem;
