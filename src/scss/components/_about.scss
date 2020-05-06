@@ -38,13 +38,22 @@
         color: #c7e4bc;
         padding: 0 7.5%;
         font-size: 1.2rem;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
     }
 }
 .clients {
     background-color: white;
     &__logo {
         width: auto;
-        height: 50px;
+        height: 65px;
+        &--adj {
+            height: 80px;
+        }
+    }
+    &__description {
+        color: #c7e4bc;
+        padding-left: 7.5%;
+        margin-bottom: 1.4rem;
+        font-weight: bold;
     }
 }

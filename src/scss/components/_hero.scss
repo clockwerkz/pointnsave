@@ -1,10 +1,24 @@
 #hero {
     position: relative;
-    background: url('../images/slide-1.jpg') no-repeat center;
-    background-size: cover;
+    
     padding-bottom: 2.5rem;
 }
 
+.carousel__panel 
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    &--1 {
+        background: url('../images/slide-1.jpg') no-repeat center;
+        background-size: cover;
+    }
+    &--2 {
+        background: url('../images/chino_valley_2.jpg') no-repeat center;
+        background-size: cover;
+    }
+}
 .container--hero {
     display: flex;
     flex-direction: column;
