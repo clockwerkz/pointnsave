@@ -2,9 +2,84 @@
 /*  COLOR CHOICES */
 #hero {
   position: relative;
+  padding-bottom: 2.5rem;
+}
+
+.carousel__images {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transform: translateX(0%);
+  overflow: hidden;
+}
+
+.carousel__controls {
+  position: relative;
+}
+
+.carousel__control {
+  position: absolute;
+  top: 250px;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 50;
+  color: #e0e0e0;
+  transition: all 0.5s;
+}
+
+.carousel__control:hover {
+  color: #fff;
+}
+
+.carousel__control--left-control {
+  left: 40px;
+}
+
+.carousel__control--right-control {
+  right: 40px;
+}
+
+.carousel__slider {
+  position: absolute;
+  top: 500px;
+  left: 50%;
+}
+
+.carousel__slide {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 3px solid #fff;
+}
+
+.carousel__panels {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transform: translateX(-100%);
+}
+
+.carousel__panel {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+.carousel__panel--1 {
   background: url("/slide-1.76083b87.jpg") no-repeat center;
   background-size: cover;
-  padding-bottom: 2.5rem;
+}
+.carousel__panel--2 {
+  background: url("/chino_valley_2.f1ce23ba.jpg") no-repeat center;
+  background-size: cover;
+}
+.carousel__panel--3 {
+  background: url("/city_of_Pico_Rivera.c376718f.jpg") no-repeat center;
+  background-size: cover;
+}
+.carousel__panel--4 {
+  background: url("/city_of_Covina.350225d0.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .container--hero {
@@ -259,7 +334,7 @@ nav .container {
   color: #c7e4bc;
   padding: 0 7.5%;
   font-size: 1.2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .clients {
@@ -267,7 +342,16 @@ nav .container {
 }
 .clients__logo {
   width: auto;
-  height: 50px;
+  height: 65px;
+}
+.clients__logo--adj {
+  height: 80px;
+}
+.clients__description {
+  color: #c7e4bc;
+  padding-left: 7.5%;
+  margin-bottom: 1.4rem;
+  font-weight: bold;
 }
 
 #current-customers {
@@ -849,7 +933,7 @@ nav .container {
 #dashboard {
   position: relative;
   padding: 5rem 0;
-  background: url("/casual-cellphone-contemporary-1471752.f197abdc.jpg") no-repeat center;
+  background: url("/dashboard.a7e0750f.PNG") no-repeat center;
   background-size: cover;
 }
 

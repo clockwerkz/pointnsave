@@ -189,18 +189,74 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\slide-1.jpg":[["slide-1.76083b87.jpg","images/slide-1.jpg"],"images/slide-1.jpg"],"./..\\images\\thumbnail_IMG_3330.jpg":[["thumbnail_IMG_3330.a9adb0ae.jpg","images/thumbnail_IMG_3330.jpg"],"images/thumbnail_IMG_3330.jpg"],"./..\\images\\casual-cellphone-contemporary-1471752.jpg":[["casual-cellphone-contemporary-1471752.f197abdc.jpg","images/casual-cellphone-contemporary-1471752.jpg"],"images/casual-cellphone-contemporary-1471752.jpg"],"./..\\images\\mobile_phone_light.png":[["mobile_phone_light.5f040e61.png","images/mobile_phone_light.png"],"images/mobile_phone_light.png"],"./..\\images\\mobile_phone_dark.png":[["mobile_phone_dark.a98e61d4.png","images/mobile_phone_dark.png"],"images/mobile_phone_dark.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/carouselSlider.js":[function(require,module,exports) {
+},{"./..\\images\\slide-1.jpg":[["slide-1.76083b87.jpg","images/slide-1.jpg"],"images/slide-1.jpg"],"./..\\images\\chino_valley_2.jpg":[["chino_valley_2.f1ce23ba.jpg","images/chino_valley_2.jpg"],"images/chino_valley_2.jpg"],"./..\\images\\city_of_Pico_Rivera.jpg":[["city_of_Pico_Rivera.c376718f.jpg","images/city_of_Pico_Rivera.jpg"],"images/city_of_Pico_Rivera.jpg"],"./..\\images\\city_of_Covina.jpg":[["city_of_Covina.350225d0.jpg","images/city_of_Covina.jpg"],"images/city_of_Covina.jpg"],"./..\\images\\thumbnail_IMG_3330.jpg":[["thumbnail_IMG_3330.a9adb0ae.jpg","images/thumbnail_IMG_3330.jpg"],"images/thumbnail_IMG_3330.jpg"],"./..\\images\\dashboard.PNG":[["dashboard.a7e0750f.PNG","images/dashboard.PNG"],"images/dashboard.PNG"],"./..\\images\\mobile_phone_light.png":[["mobile_phone_light.5f040e61.png","images/mobile_phone_light.png"],"images/mobile_phone_light.png"],"./..\\images\\mobile_phone_dark.png":[["mobile_phone_dark.a98e61d4.png","images/mobile_phone_dark.png"],"images/mobile_phone_dark.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/carouselSlider.js":[function(require,module,exports) {
 "use strict";
 
 require("../scss/main.scss");
 
 var timer = null;
-var lightImgs = document.querySelectorAll('.slideshow__img--light');
-var mobilePhone = document.querySelector('.mobile-phone');
 var slideIndex = 1;
 document.addEventListener("DOMContentLoaded", function () {
-  showSlides(slideIndex); //startTimer();
-}); // Next/previous controls
+  showSlides(slideIndex);
+  startTimer();
+});
+
+function createSlideshow(el) {
+  var slideIndex = 1;
+  var timer = null;
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  } // Thumbnail image controls
+
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  } // Next/previous controls
+
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  } // Thumbnail image controls
+
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.querySelectorAll(".mobile-phone .mySlides");
+
+    if (n > slides.length) {
+      slideIndex = 1;
+    } else if (n < 1) {
+      slideIndex = slides.length;
+    } else {
+      slideIndex = n;
+    }
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+  }
+
+  function startTimer() {
+    if (timer === null) {
+      timer = setInterval(function () {
+        showSlides(slideIndex + 1);
+      }, 4000);
+    }
+  }
+
+  function stopTimer() {
+    clearInterval(timer);
+    timer = null;
+  }
+} // Next/previous controls
+
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -213,7 +269,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
+  var slides = document.querySelectorAll(".mobile-phone .mySlides");
 
   if (n > slides.length) {
     slideIndex = 1;
@@ -243,16 +299,93 @@ function stopTimer() {
   timer = null;
 }
 
-document.querySelector('.next').addEventListener('click', function () {
+document.querySelector('.mobile-phone .next').addEventListener('click', function () {
   stopTimer();
   plusSlides(1);
   startTimer();
 });
-document.querySelector('.prev').addEventListener('click', function () {
+document.querySelector('.mobile-phone .prev').addEventListener('click', function () {
   stopTimer();
   plusSlides(-1);
   startTimer();
 });
+var heroSliderSetup = {
+  dimension: 100,
+  carouselObj: document.querySelector("#hero")
+};
+
+function createSlider(_ref) {
+  var dimension = _ref.dimension,
+      carouselObj = _ref.carouselObj;
+  var slider = carouselObj.querySelector('.carousel__panels');
+  var transX = -dimension;
+  var objWidth = dimension;
+  var upperLimit = -(dimension * 4);
+  var lowerLimit = 0;
+  var reset = false;
+  var setTransition = false;
+  var timerObj = null;
+  var leftControl = carouselObj.querySelector('.carousel__control--left-control');
+  var rightControl = carouselObj.querySelector('.carousel__control--right-control');
+  leftControl.addEventListener('click', function () {
+    if (timerObj) {
+      clearInterval(timerObj);
+      timerObj = null;
+    }
+
+    if (transX >= lowerLimit) return;
+    setAnimationTransition();
+    transX += objWidth;
+    setTranslate(transX);
+    setSlideTimer();
+  });
+  rightControl.addEventListener('click', function () {
+    if (timerObj) {
+      clearInterval(timerObj);
+      timerObj = null;
+    }
+
+    if (transX <= upperLimit) return;
+    setAnimationTransition();
+    transX -= objWidth;
+    setTranslate(transX);
+    setSlideTimer();
+  });
+  slider.addEventListener('transitionend', function () {
+    if (transX <= upperLimit) {
+      setAnimationTransition(false);
+      transX = lowerLimit - objWidth;
+      setTranslate(transX);
+    } else if (transX >= lowerLimit) {
+      setAnimationTransition(false);
+      transX = upperLimit + 100;
+      setTranslate(transX);
+    }
+  });
+
+  var setSlideTimer = function setSlideTimer() {
+    if (!timerObj) {
+      timerObj = setInterval(function () {
+        setAnimationTransition();
+        transX -= objWidth;
+        setTranslate(transX);
+      }, 6000);
+    }
+  };
+
+  var setTranslate = function setTranslate(value) {
+    slider.style.transform = "translateX(".concat(value, "%)");
+  };
+
+  var setAnimationTransition = function setAnimationTransition() {
+    var animated = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+    return slider.style.transition = animated ? 'transform 0.75s ease-in-out' : 'none';
+  };
+
+  setSlideTimer();
+}
+
+createSlider(heroSliderSetup);
 },{"../scss/main.scss":"scss/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -281,7 +414,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59952" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62762" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
