@@ -112,7 +112,7 @@ document.querySelector('.mobile-phone .prev').addEventListener('click', function
 
 
 const heroSliderSetup = {
-  dimension : 100,
+  dimension : 50,
   carouselObj : document.querySelector("#hero")
 }
 
@@ -126,32 +126,32 @@ function createSlider ( { dimension, carouselObj } )  {
   let setTransition = false;
   let timerObj=null;
 
-  // let leftControl = carouselObj.querySelector('.carousel__control--left-control');
-  // let rightControl = carouselObj.querySelector('.carousel__control--right-control');
+  let leftControl = carouselObj.querySelector('.carousel__control--left-control');
+  let rightControl = carouselObj.querySelector('.carousel__control--right-control');
 
-  // leftControl.addEventListener('click', ()=>{
-  //   if (timerObj) {
-  //     clearInterval(timerObj);
-  //     timerObj=null;
-  //   }
-  //   if (transX>= lowerLimit) return;
-  //   setAnimationTransition();
-  //   transX+=objWidth;
-  //   setTranslate(transX);
-  //   setSlideTimer();
-  // });
+  leftControl.addEventListener('click', ()=>{
+    if (timerObj) {
+      clearInterval(timerObj);
+      timerObj=null;
+    }
+    if (transX>= lowerLimit) return;
+    setAnimationTransition();
+    transX+=objWidth;
+    setTranslate(transX);
+    setSlideTimer();
+  });
   
-  // rightControl.addEventListener('click', ()=>{
-  //   if (timerObj) {
-  //     clearInterval(timerObj);
-  //     timerObj=null;
-  //   }
-  //   if (transX<=upperLimit) return;
-  //   setAnimationTransition();
-  //   transX-=objWidth;
-  //   setTranslate(transX);
-  //   setSlideTimer();
-  // });
+  rightControl.addEventListener('click', ()=>{
+    if (timerObj) {
+      clearInterval(timerObj);
+      timerObj=null;
+    }
+    if (transX<=upperLimit) return;
+    setAnimationTransition();
+    transX-=objWidth;
+    setTranslate(transX);
+    setSlideTimer();
+  });
   
   
   slider.addEventListener('transitionend', ()=> {
