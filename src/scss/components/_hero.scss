@@ -4,6 +4,15 @@
     padding-bottom: 2.5rem;
 }
 
+.carousel__images {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(0%);
+    overflow: hidden;
+}
+
 .carousel__controls {
     position: relative;
 }
@@ -57,6 +66,14 @@
     }
     &--2 {
         background: url('../images/chino_valley_2.jpg') no-repeat center;
+        background-size: cover;
+    }
+    &--3 {
+        background: url('../images/city_of_Pico_Rivera.jpg') no-repeat center;
+        background-size: cover;
+    }
+    &--4 {
+        background: url('../images/city_of_Covina.jpg') no-repeat center;
         background-size: cover;
     }
 }

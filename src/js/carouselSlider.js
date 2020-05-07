@@ -112,7 +112,7 @@ document.querySelector('.mobile-phone .prev').addEventListener('click', function
 
 
 const heroSliderSetup = {
-  dimension : 50,
+  dimension : 100,
   carouselObj : document.querySelector("#hero")
 }
 
@@ -120,7 +120,7 @@ function createSlider ( { dimension, carouselObj } )  {
   const slider = carouselObj.querySelector('.carousel__panels');
   let transX = -(dimension);
   let objWidth = dimension;
-  let upperLimit = -(dimension*2);
+  let upperLimit = -(dimension*4);
   let lowerLimit = 0;
   let reset=false;
   let setTransition = false;
