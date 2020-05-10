@@ -1,117 +1,14 @@
 import '../scss/main.scss';
+import { fadeSlider } from './fadeSlider';
 const delay = 8000;
 
-let timer = null;
-
-let slideIndex = 1;
+let quoteIndex = 1;
 document.addEventListener("DOMContentLoaded", ()=> {
-  showSlides(slideIndex);
+  //showSlides(slideIndex);
+  const mobilePhoneSlides = fadeSlider(".mobile-phone", 4000, 1);
+  mobilePhoneSlides.init(1);
   createSlider(heroSliderSetup);
-  startTimer();
-})
-
-function createSlideshow(el) {
-  let slideIndex = 1;
-  let timer = null;
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-  
-  // Thumbnail image controls
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  // Next/previous controls
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  // Thumbnail image controls
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-  function showSlides(n) {
-    var i;
-    var slides = document.querySelectorAll(".mobile-phone .mySlides");
-    if (n > slides.length) {
-        slideIndex = 1
-      } else if (n < 1) {
-          slideIndex = slides.length
-      } else {
-          slideIndex = n;
-      }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex-1].style.display = "block";
-  }
-  
-  function startTimer() {
-    if (timer === null) {
-      timer = setInterval(function() {
-        showSlides(slideIndex+1);
-      }, 4000);
-    }
-  }
-  
-  function stopTimer() {
-    clearInterval(timer);
-    timer = null;
-  }
-}
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.querySelectorAll(".mobile-phone .mySlides");
-  if (n > slides.length) {
-      slideIndex = 1
-    } else if (n < 1) {
-        slideIndex = slides.length
-    } else {
-        slideIndex = n;
-    }
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  slides[slideIndex-1].style.display = "block";
-}
-
-function startTimer() {
-  if (timer === null) {
-    timer = setInterval(function() {
-      showSlides(slideIndex+1);
-    }, 4000);
-  }
-}
-
-function stopTimer() {
-  clearInterval(timer);
-  timer = null;
-}
-
-
-document.querySelector('.mobile-phone .next').addEventListener('click', function() {
-  stopTimer();
-  plusSlides(1);
-  startTimer();
 });
-document.querySelector('.mobile-phone .prev').addEventListener('click', function() {
-  stopTimer();
-  plusSlides(-1);
-  startTimer();
-});
-
 
 
 const heroSliderSetup = {
@@ -121,8 +18,11 @@ const heroSliderSetup = {
 
 function createSlider ( { dimension, carouselObj } )  {
   const slider = carouselObj.querySelector('.carousel__panels');
-  const quotes = ["asdda qqwe da eqw asdqwqd d sadad asdqwe qqwdcbh ger", "vjrt sasd adwq cfsfasd cdgdgf csdd qwdq fwegs zaasd", "sdhmgfd jyjer fasfs ff g xdv ser gwef rhd gs rsgd dsfdd", "efsa gsdv dsdsafwe fsa fwegas segesg"]
-  const authors = ["Arcadia Chamber of Commerce","Chino Valley Chamber", "NOCC", "Sweet Shade"];
+  const quotesText = ["asdda qqwe da eqw asdqwqd d sadad asdqwe qqwdcbh ger", "vjrt sasd adwq cfsfasd cdgdgf csdd qwdq fwegs zaasd", "sdhmgfd jyjer fasfs ff g xdv ser gwef rhd gs rsgd dsfdd", "efsa gsdv dsdsafwe fsa fwegas segesg"]
+  const authorsText = ["Arcadia Chamber of Commerce","Chino Valley Chamber", "NOCC", "Sweet Shade"];
+  const quote = document.getElementById("quote");
+  const author = document.getElementById("quote-author");
+  let quoteIdx = 1;
   let transX = -(dimension);
   let objWidth = dimension;
   let upperLimit = -(dimension*4);
@@ -146,6 +46,12 @@ function createSlider ( { dimension, carouselObj } )  {
     setTranslate(transX);
     setSlideTimer();
   });
+
+  const changeQuote = () => {
+    let i = quoteIdx++ % quotesText.length;
+    quote.textContent = quotesText[i];
+    author.textContent = authorsText[i];
+  }
   
   rightControl.addEventListener('click', ()=>{
     if (timerObj) {
@@ -175,6 +81,7 @@ function createSlider ( { dimension, carouselObj } )  {
   const setSlideTimer = () => {
     if (!timerObj) {
       timerObj = setInterval(()=> {
+        changeQuote();
         setAnimationTransition();
         transX-=objWidth;
         setTranslate(transX);
@@ -192,8 +99,3 @@ function createSlider ( { dimension, carouselObj } )  {
   
   setSlideTimer();
 }
-
-
-
-
-
