@@ -60,6 +60,11 @@ export function createSlider ( { dimension, carouselObj, delay } )  {
         }, delay);
       }
     }
+
+    const stopTimer = () => {
+        clearInterval(timerObj);
+        timerObj = null;
+    }
     
     const setTranslate = (value) => {
         slider.style.transform = `translateX(${value}%)`;
@@ -67,7 +72,14 @@ export function createSlider ( { dimension, carouselObj, delay } )  {
     
     const setAnimationTransition = (animated=true) => 
       slider.style.transition = (animated ? 'transform 0.75s ease-in-out' : 'none');
-    
-    
+     
+    // window.addEventListener('focus', function() {
+    //     setSlideTimer();
+    // });
+    // window.addEventListener('blur', function() {
+    //     stopTimer();
+    // });
+
     setSlideTimer();
+    
   }
