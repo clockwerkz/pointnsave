@@ -82,7 +82,9 @@
     flex-direction: column;
     
 }
-
+#quote-author {
+    text-align: right;
+}
 .hero {
     &__wrapper {
         position: relative;

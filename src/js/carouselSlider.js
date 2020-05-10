@@ -1,9 +1,12 @@
 import '../scss/main.scss';
+const delay = 8000;
+
 let timer = null;
 
 let slideIndex = 1;
 document.addEventListener("DOMContentLoaded", ()=> {
   showSlides(slideIndex);
+  createSlider(heroSliderSetup);
   startTimer();
 })
 
@@ -118,6 +121,8 @@ const heroSliderSetup = {
 
 function createSlider ( { dimension, carouselObj } )  {
   const slider = carouselObj.querySelector('.carousel__panels');
+  const quotes = ["asdda qqwe da eqw asdqwqd d sadad asdqwe qqwdcbh ger", "vjrt sasd adwq cfsfasd cdgdgf csdd qwdq fwegs zaasd", "sdhmgfd jyjer fasfs ff g xdv ser gwef rhd gs rsgd dsfdd", "efsa gsdv dsdsafwe fsa fwegas segesg"]
+  const authors = ["Arcadia Chamber of Commerce","Chino Valley Chamber", "NOCC", "Sweet Shade"];
   let transX = -(dimension);
   let objWidth = dimension;
   let upperLimit = -(dimension*4);
@@ -125,6 +130,7 @@ function createSlider ( { dimension, carouselObj } )  {
   let reset=false;
   let setTransition = false;
   let timerObj=null;
+
 
   let leftControl = carouselObj.querySelector('.carousel__control--left-control');
   let rightControl = carouselObj.querySelector('.carousel__control--right-control');
@@ -172,7 +178,7 @@ function createSlider ( { dimension, carouselObj } )  {
         setAnimationTransition();
         transX-=objWidth;
         setTranslate(transX);
-      }, 6000);
+      }, delay);
     }
   }
   
@@ -187,5 +193,7 @@ function createSlider ( { dimension, carouselObj } )  {
   setSlideTimer();
 }
 
-createSlider(heroSliderSetup);
+
+
+
 
