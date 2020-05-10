@@ -189,20 +189,17 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\slide-1.jpg":[["slide-1.76083b87.jpg","images/slide-1.jpg"],"images/slide-1.jpg"],"./..\\images\\chino_valley_2.jpg":[["chino_valley_2.f1ce23ba.jpg","images/chino_valley_2.jpg"],"images/chino_valley_2.jpg"],"./..\\images\\city_of_Pico_Rivera.jpg":[["city_of_Pico_Rivera.c376718f.jpg","images/city_of_Pico_Rivera.jpg"],"images/city_of_Pico_Rivera.jpg"],"./..\\images\\city_of_Covina.jpg":[["city_of_Covina.350225d0.jpg","images/city_of_Covina.jpg"],"images/city_of_Covina.jpg"],"./..\\images\\thumbnail_IMG_3330.jpg":[["thumbnail_IMG_3330.a9adb0ae.jpg","images/thumbnail_IMG_3330.jpg"],"images/thumbnail_IMG_3330.jpg"],"./..\\images\\dashboard.PNG":[["dashboard.a7e0750f.PNG","images/dashboard.PNG"],"images/dashboard.PNG"],"./..\\images\\mobile_phone_light.png":[["mobile_phone_light.5f040e61.png","images/mobile_phone_light.png"],"images/mobile_phone_light.png"],"./..\\images\\mobile_phone_dark.png":[["mobile_phone_dark.a98e61d4.png","images/mobile_phone_dark.png"],"images/mobile_phone_dark.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/carouselSlider.js":[function(require,module,exports) {
+},{"./..\\images\\slide-1.jpg":[["slide-1.76083b87.jpg","images/slide-1.jpg"],"images/slide-1.jpg"],"./..\\images\\chino_valley_2.jpg":[["chino_valley_2.f1ce23ba.jpg","images/chino_valley_2.jpg"],"images/chino_valley_2.jpg"],"./..\\images\\city_of_Pico_Rivera.jpg":[["city_of_Pico_Rivera.c376718f.jpg","images/city_of_Pico_Rivera.jpg"],"images/city_of_Pico_Rivera.jpg"],"./..\\images\\city_of_Covina.jpg":[["city_of_Covina.350225d0.jpg","images/city_of_Covina.jpg"],"images/city_of_Covina.jpg"],"./..\\images\\thumbnail_IMG_3330.jpg":[["thumbnail_IMG_3330.a9adb0ae.jpg","images/thumbnail_IMG_3330.jpg"],"images/thumbnail_IMG_3330.jpg"],"./..\\images\\laptop-screen.jpg":[["laptop-screen.fa7d06ed.jpg","images/laptop-screen.jpg"],"images/laptop-screen.jpg"],"./..\\images\\mobile_phone_light.png":[["mobile_phone_light.5f040e61.png","images/mobile_phone_light.png"],"images/mobile_phone_light.png"],"./..\\images\\mobile_phone_dark.png":[["mobile_phone_dark.a98e61d4.png","images/mobile_phone_dark.png"],"images/mobile_phone_dark.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/fadeSlider.js":[function(require,module,exports) {
 "use strict";
 
-require("../scss/main.scss");
-
-var timer = null;
-var slideIndex = 1;
-document.addEventListener("DOMContentLoaded", function () {
-  showSlides(slideIndex);
-  startTimer();
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
+exports.fadeSlider = void 0;
 
-function createSlideshow(el) {
-  var slideIndex = 1;
+var fadeSlider = function fadeSlider(target, delay, slideIndex) {
+  var el = target + "  .mySlides";
+  console.log(el);
   var timer = null;
 
   function plusSlides(n) {
@@ -226,7 +223,7 @@ function createSlideshow(el) {
 
   function showSlides(n) {
     var i;
-    var slides = document.querySelectorAll(".mobile-phone .mySlides");
+    var slides = document.querySelectorAll(el);
 
     if (n > slides.length) {
       slideIndex = 1;
@@ -241,13 +238,23 @@ function createSlideshow(el) {
     }
 
     slides[slideIndex - 1].style.display = "block";
+  } // Next/previous controls
+
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  } // Thumbnail image controls
+
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
   }
 
   function startTimer() {
     if (timer === null) {
       timer = setInterval(function () {
         showSlides(slideIndex + 1);
-      }, 4000);
+      }, delay);
     }
   }
 
@@ -255,69 +262,45 @@ function createSlideshow(el) {
     clearInterval(timer);
     timer = null;
   }
-} // Next/previous controls
 
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-} // Thumbnail image controls
-
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.querySelectorAll(".mobile-phone .mySlides");
-
-  if (n > slides.length) {
-    slideIndex = 1;
-  } else if (n < 1) {
-    slideIndex = slides.length;
-  } else {
-    slideIndex = n;
+  function init(n) {
+    showSlides(1);
+    startTimer();
+    document.querySelector(target + ' .next').addEventListener('click', function () {
+      stopTimer();
+      plusSlides(1);
+      startTimer();
+    });
+    document.querySelector(target + ' .prev').addEventListener('click', function () {
+      stopTimer();
+      plusSlides(-1);
+      startTimer();
+    });
   }
 
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-}
-
-function startTimer() {
-  if (timer === null) {
-    timer = setInterval(function () {
-      showSlides(slideIndex + 1);
-    }, 4000);
-  }
-}
-
-function stopTimer() {
-  clearInterval(timer);
-  timer = null;
-}
-
-document.querySelector('.mobile-phone .next').addEventListener('click', function () {
-  stopTimer();
-  plusSlides(1);
-  startTimer();
-});
-document.querySelector('.mobile-phone .prev').addEventListener('click', function () {
-  stopTimer();
-  plusSlides(-1);
-  startTimer();
-});
-var heroSliderSetup = {
-  dimension: 100,
-  carouselObj: document.querySelector("#hero")
+  return {
+    init: init,
+    plusSlides: plusSlides,
+    startTimer: startTimer,
+    stopTimer: stopTimer
+  };
 };
+
+exports.fadeSlider = fadeSlider;
+},{}],"js/createSlider.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.createSlider = createSlider;
 
 function createSlider(_ref) {
   var dimension = _ref.dimension,
-      carouselObj = _ref.carouselObj;
+      carouselObj = _ref.carouselObj,
+      delay = _ref.delay;
   var slider = carouselObj.querySelector('.carousel__panels');
+  var quoteIdx = 1;
   var transX = -dimension;
   var objWidth = dimension;
   var upperLimit = -(dimension * 4);
@@ -369,7 +352,7 @@ function createSlider(_ref) {
         setAnimationTransition();
         transX -= objWidth;
         setTranslate(transX);
-      }, 6000);
+      }, delay);
     }
   };
 
@@ -384,9 +367,31 @@ function createSlider(_ref) {
 
   setSlideTimer();
 }
+},{}],"js/carouselSlider.js":[function(require,module,exports) {
+"use strict";
 
-createSlider(heroSliderSetup);
-},{"../scss/main.scss":"scss/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+require("../scss/main.scss");
+
+var _fadeSlider = require("./fadeSlider");
+
+var _createSlider = require("./createSlider");
+
+var delay = 8000;
+var quoteIndex = 1;
+document.addEventListener("DOMContentLoaded", function () {
+  //showSlides(slideIndex);
+  (0, _createSlider.createSlider)(heroSliderSetup);
+  var mobilePhoneSlides = (0, _fadeSlider.fadeSlider)(".mobile-phone", 4000, 1);
+  var quotesSlides = (0, _fadeSlider.fadeSlider)("#hero", delay, 1);
+  mobilePhoneSlides.init(1);
+  quotesSlides.init(1);
+});
+var heroSliderSetup = {
+  dimension: 100,
+  carouselObj: document.querySelector("#hero"),
+  delay: delay
+};
+},{"../scss/main.scss":"scss/main.scss","./fadeSlider":"js/fadeSlider.js","./createSlider":"js/createSlider.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -414,7 +419,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62762" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51628" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

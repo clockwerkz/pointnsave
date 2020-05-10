@@ -87,6 +87,10 @@
   flex-direction: column;
 }
 
+#quote-author {
+  text-align: right;
+}
+
 .hero__wrapper {
   position: relative;
   padding-top: 15%;
@@ -104,6 +108,8 @@
 .hero__quote {
   color: white;
   width: 50%;
+  transition: opacity 2s;
+  min-height: 150px;
 }
 .hero__wrapper--btn {
   width: 100%;
@@ -933,7 +939,7 @@ nav .container {
 #dashboard {
   position: relative;
   padding: 5rem 0;
-  background: url("/dashboard.a7e0750f.PNG") no-repeat center;
+  background: url("/laptop-screen.fa7d06ed.jpg") no-repeat center;
   background-size: cover;
 }
 
@@ -1232,7 +1238,7 @@ input:checked + .slider:before {
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.slide-btn.prev, .slide-btn.next {
   cursor: pointer;
   position: absolute;
   top: 35%;
@@ -1246,12 +1252,12 @@ input:checked + .slider:before {
   user-select: none;
 }
 
-.prev {
+.slide-btn.prev {
   left: -60px;
 }
 
 /* Position the "next button" to the right */
-.next {
+.slide-btn.next {
   right: -60px;
   border-radius: 3px 0 0 3px;
 }
