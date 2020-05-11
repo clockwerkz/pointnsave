@@ -199,7 +199,6 @@ exports.fadeSlider = void 0;
 
 var fadeSlider = function fadeSlider(target, delay, slideIndex) {
   var el = target + "  .mySlides";
-  console.log(el);
   var timer = null;
 
   function plusSlides(n) {
@@ -356,6 +355,11 @@ function createSlider(_ref) {
     }
   };
 
+  var stopTimer = function stopTimer() {
+    clearInterval(timerObj);
+    timerObj = null;
+  };
+
   var setTranslate = function setTranslate(value) {
     slider.style.transform = "translateX(".concat(value, "%)");
   };
@@ -366,6 +370,10 @@ function createSlider(_ref) {
   };
 
   setSlideTimer();
+  return {
+    setSlideTimer: setSlideTimer,
+    stopTimer: stopTimer
+  };
 }
 },{}],"js/carouselSlider.js":[function(require,module,exports) {
 "use strict";
@@ -380,11 +388,21 @@ var delay = 8000;
 var quoteIndex = 1;
 document.addEventListener("DOMContentLoaded", function () {
   //showSlides(slideIndex);
-  (0, _createSlider.createSlider)(heroSliderSetup);
+  var heroSlider = (0, _createSlider.createSlider)(heroSliderSetup);
   var mobilePhoneSlides = (0, _fadeSlider.fadeSlider)(".mobile-phone", 4000, 1);
   var quotesSlides = (0, _fadeSlider.fadeSlider)("#hero", delay, 1);
   mobilePhoneSlides.init(1);
   quotesSlides.init(1);
+  window.addEventListener('focus', function () {
+    heroSlider.setSlideTimer();
+    mobilePhoneSlides.startTimer();
+    quotesSlides.startTimer();
+  });
+  window.addEventListener('blur', function () {
+    heroSlider.stopTimer();
+    mobilePhoneSlides.stopTimer();
+    quotesSlides.stopTimer();
+  });
 });
 var heroSliderSetup = {
   dimension: 100,
@@ -419,7 +437,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51628" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55917" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

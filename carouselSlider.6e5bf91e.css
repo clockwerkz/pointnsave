@@ -5,6 +5,15 @@
   padding-bottom: 2.5rem;
 }
 
+.hero-quote {
+  line-height: 1.6rem;
+}
+
+.quote-author {
+  margin-top: 1rem;
+  text-align: right;
+}
+
 .carousel__images {
   position: absolute;
   top: 0;
@@ -23,7 +32,7 @@
   top: 250px;
   font-size: 3rem;
   cursor: pointer;
-  z-index: 50;
+  z-index: 5;
   color: #e0e0e0;
   transition: all 0.5s;
 }
@@ -108,8 +117,7 @@
 .hero__quote {
   color: white;
   width: 50%;
-  transition: opacity 2s;
-  min-height: 150px;
+  min-height: 200px;
 }
 .hero__wrapper--btn {
   width: 100%;
@@ -135,6 +143,17 @@
     font-size: 3rem;
   }
 }
+@media screen and (max-width: 930px) {
+  .hero__wrapper--btn {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+  .hero__quote {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .hero__wrapper {
     text-align: center;
@@ -143,9 +162,8 @@
   .hero__title {
     margin-top: 4rem;
   }
-  .hero__wrapper--btn {
-    justify-content: center;
-    padding: 8rem 0 0 0;
+  .hero__quote {
+    width: 90%;
   }
 }
 @media screen and (max-width: 525px) {
@@ -154,13 +172,12 @@
     width: 100%;
   }
   .hero__title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .hero__subtitle {
     font-size: 1.75rem;
   }
   .hero__wrapper--btn {
-    padding: 3rem 0 0 0;
     justify-content: center;
   }
 }
@@ -206,7 +223,7 @@ nav .container {
   left: 0px;
 }
 .navbar__icon {
-  color: white;
+  color: #C35146;
   display: none;
   font-size: 3rem;
   margin-top: 0.5rem;
@@ -245,7 +262,7 @@ nav .container {
   right: -60%;
   top: 0;
   width: 60%;
-  z-index: 3;
+  z-index: 10;
   transition: all 0.25s;
 }
 .navbar-mobile__item {
@@ -358,8 +375,25 @@ nav .container {
   padding-left: 7.5%;
   margin-bottom: 1.4rem;
   font-weight: bold;
+  text-align: center;
 }
 
+@media screen and (max-width: 1190px) {
+  .clients__logo {
+    height: 50px;
+  }
+}
+@media screen and (max-width: 930px) {
+  .about__wrapper {
+    flex-direction: column;
+  }
+  .about__img {
+    display: block;
+    height: auto;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
 #current-customers {
   padding: 3rem 0 0 0;
 }
@@ -857,17 +891,31 @@ nav .container {
   .nocc__quote {
     padding: 0 1rem;
   }
-
-  .brochure {
-    width: 275px;
-    right: 50px;
-    bottom: -50px;
-    transform: rotate(-20deg);
-  }
 }
 @media screen and (max-width: 760px) {
   .brochure {
     width: 250px;
+  }
+
+  .case-study__wrapper {
+    flex-direction: column;
+  }
+  .case-study__img-wrapper {
+    width: 70%;
+  }
+
+  .nocc {
+    flex-direction: column;
+  }
+  .nocc__video {
+    width: 65%;
+    height: 300px;
+    margin: 0 auto;
+  }
+  .nocc__quote {
+    margin-top: 2.5rem;
+    width: 75%;
+    text-align: center;
   }
 }
 @media screen and (max-width: 700px) {
