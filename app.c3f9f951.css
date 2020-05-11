@@ -172,7 +172,8 @@
     width: 100%;
   }
   .hero__title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
   .hero__subtitle {
     font-size: 1.75rem;
@@ -375,7 +376,7 @@ nav .container {
   padding-left: 7.5%;
   margin-bottom: 1.4rem;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
 }
 
 @media screen and (max-width: 1190px) {
@@ -392,6 +393,15 @@ nav .container {
     height: auto;
     width: 60%;
     margin: 0 auto;
+  }
+
+  .clients__description {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  .clients__logo {
+    height: 40px;
   }
 }
 #current-customers {
@@ -606,6 +616,15 @@ nav .container {
     width: 80%;
   }
 }
+@media screen and (max-width: 700px) {
+  .customers__wrapper {
+    flex-direction: column;
+  }
+
+  .slide-btn.next {
+    right: -140px;
+  }
+}
 @media screen and (max-width: 600px) {
   .industry-info {
     flex-wrap: wrap;
@@ -643,54 +662,6 @@ nav .container {
   .app-store-btns {
     justify-content: center;
     flex-direction: column;
-  }
-}
-#how-it-works {
-  padding: 5rem 0 6rem 0;
-  background-color: #FFF4C5;
-}
-
-.process-card {
-  width: 28%;
-  background-color: #b17300;
-  border-radius: 25px;
-  margin: 0 1rem;
-  padding: 2rem 1rem 4rem 1rem;
-  min-height: 550px;
-  color: white;
-}
-.process-card__wrapper {
-  margin: 4rem 0 8rem 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.process-card__title {
-  font-size: 2rem;
-  text-align: center;
-  margin: 1rem 0;
-}
-.process-card__description {
-  margin-top: 1.75rem;
-  line-height: 1.75rem;
-}
-.process-card__icon {
-  text-align: center;
-  display: block;
-  margin: 1rem auto;
-  width: 25%;
-}
-
-@media screen and (min-width: 1100px) {
-  .process-card {
-    width: 22%;
-  }
-}
-@media screen and (max-width: 810px) {
-  .process-card {
-    width: 90%;
-    margin: 1rem auto;
-    min-height: 0;
   }
 }
 #benefits {
@@ -893,6 +864,10 @@ nav .container {
   }
 }
 @media screen and (max-width: 760px) {
+  #case-study::before {
+    font-size: 15rem;
+  }
+
   .brochure {
     width: 250px;
   }
@@ -902,6 +877,8 @@ nav .container {
   }
   .case-study__img-wrapper {
     width: 70%;
+    text-align: center;
+    padding: 2rem 0;
   }
 
   .nocc {
@@ -913,7 +890,7 @@ nav .container {
     margin: 0 auto;
   }
   .nocc__quote {
-    margin-top: 2.5rem;
+    margin: 2.5rem auto 0;
     width: 75%;
     text-align: center;
   }
@@ -941,6 +918,10 @@ nav .container {
   }
 }
 @media screen and (max-width: 600px) {
+  #case-study::before {
+    font-size: 10rem;
+  }
+
   .nocc {
     flex-direction: column;
     align-items: center;
@@ -971,6 +952,14 @@ nav .container {
   }
 }
 @media screen and (max-width: 400px) {
+  #case-study::before {
+    font-size: 8rem;
+  }
+
+  .case-study__img-wrapper {
+    width: 100%;
+  }
+
   .nocc {
     flex-direction: column;
     align-items: center;
@@ -1007,6 +996,23 @@ nav .container {
   min-height: 500px;
 }
 
+@media screen and (max-width: 900px) {
+  .dashboard__video {
+    width: 70%;
+    min-height: 400px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .dashboard__video {
+    width: 80%;
+    max-height: 300px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .dashboard__video {
+    width: 95%;
+  }
+}
 #contact-form {
   position: relative;
   z-index: 1;
@@ -1374,16 +1380,9 @@ input:checked + .slider:before {
   .industry-info {
     padding-bottom: 2rem;
   }
-}
-@media screen and (max-width: 400px) {
-  .mobile-phone {
-    width: 100px;
-    height: 227px;
-  }
 
-  .slideshow-container {
-    top: 30px;
-    width: 90px;
+  .slide-btn.next {
+    right: -140px;
   }
 }
 * {
