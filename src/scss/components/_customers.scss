@@ -226,6 +226,7 @@
 
 @media screen and (max-width: 600px) {
     .industry-info {
+        padding: 0;
         flex-wrap: wrap;
         &__card-wrapper {
             text-align: center;
@@ -246,6 +247,16 @@
     .app-store-btns {
         justify-content: center;
     }
+
+    .how-it-works{
+        &__title {
+            text-align: center;
+        }
+        &__img {
+            display: none;
+        }
+    }
+   
 }
 
 @media screen and (max-width: 400px) {
@@ -260,3 +271,4 @@
         flex-direction: column;
     }
 }
+
