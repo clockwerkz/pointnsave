@@ -181,6 +181,9 @@
   .hero__wrapper--btn {
     justify-content: center;
   }
+  .hero__multiply-layer {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 15%, black 80%);
+  }
 }
 nav {
   position: fixed;
@@ -627,6 +630,7 @@ nav .container {
 }
 @media screen and (max-width: 600px) {
   .industry-info {
+    padding: 0;
     flex-wrap: wrap;
   }
   .industry-info__card-wrapper {
@@ -648,6 +652,13 @@ nav .container {
 
   .app-store-btns {
     justify-content: center;
+  }
+
+  .how-it-works__title {
+    text-align: center;
+  }
+  .how-it-works__img {
+    display: none;
   }
 }
 @media screen and (max-width: 400px) {
@@ -920,6 +931,7 @@ nav .container {
 @media screen and (max-width: 600px) {
   #case-study::before {
     font-size: 10rem;
+    line-height: 15rem;
   }
 
   .nocc {
@@ -954,6 +966,7 @@ nav .container {
 @media screen and (max-width: 400px) {
   #case-study::before {
     font-size: 8rem;
+    line-height: 10rem;
   }
 
   .case-study__img-wrapper {
