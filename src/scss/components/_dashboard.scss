@@ -24,3 +24,29 @@
     }
 }
 
+@media screen and (max-width: 900px) {
+    .dashboard {
+        &__video {
+            width: 70%;
+            min-height: 400px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .dashboard {
+        &__video {
+            width: 80%;
+            max-height: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .dashboard {
+        &__video {
+            width: 95%;
+            
+        }
+    }
+}

@@ -114,17 +114,8 @@
   .industry-info {
     padding-bottom: 2rem;
   }
+  .slide-btn.next {
+    right: -140px;
+  }
 }
 
-@media screen and (max-width: 400px) {
-
-  .mobile-phone {
-    width: 100px;
-    height: 227px;
-  }
-  .slideshow-container {
-    top: 30px;
-    width: 90px;
-  }
-
-}

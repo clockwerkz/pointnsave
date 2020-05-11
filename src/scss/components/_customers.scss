@@ -215,6 +215,15 @@
     }
 }
 
+@media screen and (max-width: 700px) {
+    .customers__wrapper {
+        flex-direction: column;
+    }
+    .slide-btn.next {
+        right: -140px;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .industry-info {
         flex-wrap: wrap;

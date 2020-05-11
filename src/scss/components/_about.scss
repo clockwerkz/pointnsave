@@ -55,7 +55,7 @@
         padding-left: 7.5%;
         margin-bottom: 1.4rem;
         font-weight: bold;
-        text-align: center;
+        text-align: left;
     }
 }
 
@@ -79,5 +79,16 @@
             margin: 0 auto;
         }
     }
+    .clients__description {
+        text-align: center;
+    }
 
+}
+
+@media screen and (max-width: 400px) {
+    .clients {
+        &__logo {
+            height: 40px;
+        }
+    }
 }
