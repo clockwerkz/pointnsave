@@ -73,13 +73,11 @@ export function createSlider ( { dimension, carouselObj, delay } )  {
     const setAnimationTransition = (animated=true) => 
       slider.style.transition = (animated ? 'transform 0.75s ease-in-out' : 'none');
      
-    // window.addEventListener('focus', function() {
-    //     setSlideTimer();
-    // });
-    // window.addEventListener('blur', function() {
-    //     stopTimer();
-    // });
 
     setSlideTimer();
     
+    return {
+      setSlideTimer,
+      stopTimer
+    }
   }

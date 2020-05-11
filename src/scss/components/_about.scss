@@ -55,5 +55,29 @@
         padding-left: 7.5%;
         margin-bottom: 1.4rem;
         font-weight: bold;
+        text-align: center;
     }
+}
+
+@media screen and (max-width: 1190px) {
+    .clients {
+        &__logo {
+            height: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .about{
+        &__wrapper {
+        flex-direction: column;
+        }
+        &__img {
+            display: block;
+            height: auto;
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
+
 }

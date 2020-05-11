@@ -1,6 +1,5 @@
 export const fadeSlider = (target, delay, slideIndex) => {
     const el = target +"  .mySlides";
-    console.log(el);
     let timer = null;
     function plusSlides(n) {
       showSlides(slideIndex += n);

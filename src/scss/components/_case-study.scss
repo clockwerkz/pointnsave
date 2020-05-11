@@ -165,18 +165,32 @@
             padding: 0 1rem;
         }
     }
-    .brochure {
-
-        width: 275px;
-        right: 50px;
-        bottom: -50px;
-        transform: rotate(-20deg);
-    }
 }
 
 @media screen and (max-width: 760px) {
     .brochure {
         width: 250px;
+    }
+    .case-study {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__img-wrapper {
+            width: 70%;
+        }
+    }
+    .nocc {
+        flex-direction: column;
+        &__video {
+            width: 65%;
+            height: 300px;
+            margin: 0 auto;
+        }
+        &__quote {
+            margin-top: 2.5rem;
+            width: 75%;
+            text-align: center;
+        }
     }
 }
 
