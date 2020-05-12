@@ -67,7 +67,7 @@
     height: 100%;
     flex-shrink: 0;
     &--1 {
-        background: url('../images/slide-1.jpg') no-repeat center;
+        background: url('../images/city_of_Pico_Rivera.jpg') no-repeat center;
         background-size: cover;
     }
     &--2 {
@@ -75,7 +75,7 @@
         background-size: cover;
     }
     &--3 {
-        background: url('../images/city_of_Pico_Rivera.jpg') no-repeat center;
+        background: url('../images/slide-1.jpg') no-repeat center;
         background-size: cover;
     }
     &--4 {
@@ -194,5 +194,20 @@
         &__multiply-layer {
             background: linear-gradient(180deg, rgba(255,255,255,0) 15%, rgba(0,0,0,1) 80%);
         }
-    }    
+    } 
+    .carousel__panel {
+ 
+        &--1 {
+            background: url('../images/city_of_Pico_Rivera_mobile.jpg') no-repeat center;
+            background-size: cover;
+        }
+        &--2 {
+            background: url('../images/chino_valley_2_mobile.jpg') no-repeat center;
+            background-size: cover;
+        }
+        &--3 {
+            background: url('../images/slide-1_mobile.jpg') no-repeat center;
+            background-size: cover;
+        }   
+    }
 }
