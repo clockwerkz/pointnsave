@@ -67,7 +67,6 @@ privacyPolicy.addEventListener('click', (e)=>{
 termsOfService.addEventListener('click', (e)=>{
     e.preventDefault();
     openModal();
-    console.log(termsOfService);
     document.getElementById('terms-of-service-modal').classList.add('modal__body--show');
 });
 
