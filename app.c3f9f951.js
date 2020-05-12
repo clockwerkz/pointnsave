@@ -381,7 +381,6 @@ privacyPolicy.addEventListener('click', function (e) {
 termsOfService.addEventListener('click', function (e) {
   e.preventDefault();
   openModal();
-  console.log(termsOfService);
   document.getElementById('terms-of-service-modal').classList.add('modal__body--show');
 });
 var modalCloseBtns = document.querySelectorAll('.btn--modal-close');
@@ -448,7 +447,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64413" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64708" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
