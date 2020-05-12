@@ -718,6 +718,7 @@ nav .container {
 }
 #case-study {
   padding: 6rem 0 5rem;
+  overflow-x: hidden;
   position: relative;
   background: url("/thumbnail_IMG_3330.a9adb0ae.jpg") no-repeat;
   background-blend-mode: screen;
@@ -1111,10 +1112,10 @@ option {
 }
 .social-media__link {
   text-decoration: none;
-  color: #142D29;
+  color: #C35146;
 }
 .social-media__link:hover {
-  color: white;
+  color: #FF973E;
 }
 .social-media__icon {
   margin: 0 1rem;
@@ -1130,10 +1131,10 @@ option {
 }
 .footer__link {
   text-decoration: none;
-  color: #045C59;
+  color: #C35146;
 }
 .footer__link:hover {
-  color: white;
+  color: #FF973E;
 }
 
 @media screen and (max-width: 575px) {
