@@ -1164,12 +1164,12 @@ option {
   z-index: 100;
   height: 100%;
   width: 100%;
-  opacity: 100%;
+  opacity: 1;
   transition: all 0.5s linear;
 }
 .modal__wrapper--hide {
   display: none;
-  opacity: 0%;
+  opacity: 0;
 }
 .modal__body {
   top: -100%;
