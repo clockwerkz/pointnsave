@@ -189,237 +189,19 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\city_of_Pico_Rivera.jpg":[["city_of_Pico_Rivera.c376718f.jpg","images/city_of_Pico_Rivera.jpg"],"images/city_of_Pico_Rivera.jpg"],"./..\\images\\chino_valley_2.jpg":[["chino_valley_2.f1ce23ba.jpg","images/chino_valley_2.jpg"],"images/chino_valley_2.jpg"],"./..\\images\\slide-1.jpg":[["slide-1.76083b87.jpg","images/slide-1.jpg"],"images/slide-1.jpg"],"./..\\images\\city_of_Covina.jpg":[["city_of_Covina.350225d0.jpg","images/city_of_Covina.jpg"],"images/city_of_Covina.jpg"],"./..\\images\\city_of_Pico_Rivera_mobile.jpg":[["city_of_Pico_Rivera_mobile.ef7b7f24.jpg","images/city_of_Pico_Rivera_mobile.jpg"],"images/city_of_Pico_Rivera_mobile.jpg"],"./..\\images\\chino_valley_2_mobile.jpg":[["chino_valley_2_mobile.d1ca22f8.jpg","images/chino_valley_2_mobile.jpg"],"images/chino_valley_2_mobile.jpg"],"./..\\images\\slide-1_mobile.jpg":[["slide-1_mobile.46a62600.jpg","images/slide-1_mobile.jpg"],"images/slide-1_mobile.jpg"],"./..\\images\\thumbnail_IMG_3330.jpg":[["thumbnail_IMG_3330.a9adb0ae.jpg","images/thumbnail_IMG_3330.jpg"],"images/thumbnail_IMG_3330.jpg"],"./..\\images\\laptop-screen.jpg":[["laptop-screen.fa7d06ed.jpg","images/laptop-screen.jpg"],"images/laptop-screen.jpg"],"./..\\images\\mobile_phone_light.png":[["mobile_phone_light.5f040e61.png","images/mobile_phone_light.png"],"images/mobile_phone_light.png"],"./..\\images\\mobile_phone_dark.png":[["mobile_phone_dark.a98e61d4.png","images/mobile_phone_dark.png"],"images/mobile_phone_dark.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/vanillajs-scrollspy/lib/index.js":[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var fncAnimation = function fncAnimation(callback) {
-  window.setTimeout(callback, 1000 / 60);
-  return callback;
-};
-
-window.requestAnimFrame = function () {
-  return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || fncAnimation;
-}();
-
-var VanillaScrollspy = function () {
-  function VanillaScrollspy(menu) {
-    var speed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2000;
-    var easing = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'easeOutSine';
-
-    _classCallCheck(this, VanillaScrollspy);
-
-    this.menu = menu;
-    this.speed = speed;
-    this.easing = easing;
-  }
-
-  _createClass(VanillaScrollspy, [{
-    key: 'scrollToY',
-    value: function scrollToY() {
-      var _this = this;
-
-      var targetY = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-
-      var scrollTargetY = targetY;
-      var scrollY = window.scrollY || document.documentElement.scrollTop;
-      var currentTime = 0;
-      var time = Math.max(0.1, Math.min(Math.abs(scrollY - scrollTargetY) / this.speed, 0.8));
-
-      var easingEquations = {
-        easeOutSine: function easeOutSine(pos) {
-          return Math.sin(pos * (Math.PI / 2));
-        },
-        easeInOutSine: function easeInOutSine(pos) {
-          return -0.5 * (Math.cos(Math.PI * pos) - 1);
-        },
-        easeInOutQuint: function easeInOutQuint(pos) {
-          /* eslint-disable-next-line */
-          if ((pos /= 0.5) < 1) {
-            return 0.5 * Math.pow(pos, 5);
-          }
-          return 0.5 * (Math.pow(pos - 2, 5) + 2);
-        }
-      };
-
-      var tick = function tick() {
-        currentTime += 1 / 60;
-        var p = currentTime / time;
-        var t = easingEquations[_this.easing](p);
-
-        if (p < 1) {
-          window.requestAnimFrame(tick);
-          window.scrollTo(0, scrollY + (scrollTargetY - scrollY) * t);
-        } else {
-          window.scrollTo(0, scrollTargetY);
-        }
-      };
-
-      tick();
-    }
-  }, {
-    key: 'menuControl',
-    value: function menuControl() {
-      var i = void 0;
-      var currLink = void 0;
-      var refElement = void 0;
-      var links = this.menu.querySelectorAll('a[href^="#"]');
-      var scrollPos = window.scrollY || document.documentElement.scrollTop;
-
-      for (i = 0; i < links.length; i += 1) {
-        currLink = links[i];
-        refElement = document.querySelector(currLink.getAttribute('href'));
-
-        if (refElement.offsetTop <= scrollPos && refElement.offsetTop + refElement.clientHeight > scrollPos) {
-          currLink.classList.add('active');
-        } else {
-          currLink.classList.remove('active');
-        }
-      }
-    }
-  }, {
-    key: 'animated',
-    value: function animated() {
-      var self = this;
-      function control(e) {
-        e.preventDefault();
-        var target = document.querySelector(this.hash);
-        self.scrollToY(target.offsetTop);
-      }
-
-      var i = void 0;
-      var link = void 0;
-      var links = this.menu.querySelectorAll('a[href^="#"]');
-
-      for (i = 0; i < links.length; i += 1) {
-        link = links[i];
-        link.addEventListener('click', control);
-      }
-    }
-  }, {
-    key: 'init',
-    value: function init() {
-      var _this2 = this;
-
-      this.animated();
-      document.addEventListener('scroll', function () {
-        _this2.menuControl();
-      });
-    }
-  }]);
-
-  return VanillaScrollspy;
-}();
-
-exports.default = VanillaScrollspy;
-},{}],"js/app.js":[function(require,module,exports) {
+},{"./..\\images\\city_of_Pico_Rivera.jpg":[["city_of_Pico_Rivera.c376718f.jpg","images/city_of_Pico_Rivera.jpg"],"images/city_of_Pico_Rivera.jpg"],"./..\\images\\chino_valley_2.jpg":[["chino_valley_2.f1ce23ba.jpg","images/chino_valley_2.jpg"],"images/chino_valley_2.jpg"],"./..\\images\\slide-1.jpg":[["slide-1.76083b87.jpg","images/slide-1.jpg"],"images/slide-1.jpg"],"./..\\images\\city_of_Covina.jpg":[["city_of_Covina.350225d0.jpg","images/city_of_Covina.jpg"],"images/city_of_Covina.jpg"],"./..\\images\\city_of_Pico_Rivera_mobile.jpg":[["city_of_Pico_Rivera_mobile.ef7b7f24.jpg","images/city_of_Pico_Rivera_mobile.jpg"],"images/city_of_Pico_Rivera_mobile.jpg"],"./..\\images\\chino_valley_2_mobile.jpg":[["chino_valley_2_mobile.d1ca22f8.jpg","images/chino_valley_2_mobile.jpg"],"images/chino_valley_2_mobile.jpg"],"./..\\images\\slide-1_mobile.jpg":[["slide-1_mobile.46a62600.jpg","images/slide-1_mobile.jpg"],"images/slide-1_mobile.jpg"],"./..\\images\\thumbnail_IMG_3330.jpg":[["thumbnail_IMG_3330.a9adb0ae.jpg","images/thumbnail_IMG_3330.jpg"],"images/thumbnail_IMG_3330.jpg"],"./..\\images\\laptop-screen.jpg":[["laptop-screen.fa7d06ed.jpg","images/laptop-screen.jpg"],"images/laptop-screen.jpg"],"./..\\images\\mobile_phone_light.png":[["mobile_phone_light.5f040e61.png","images/mobile_phone_light.png"],"images/mobile_phone_light.png"],"./..\\images\\mobile_phone_dark.png":[["mobile_phone_dark.a98e61d4.png","images/mobile_phone_dark.png"],"images/mobile_phone_dark.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/admin.js":[function(require,module,exports) {
 "use strict";
 
 require("../scss/main.scss");
 
-var _vanillajsScrollspy = _interopRequireDefault(require("vanillajs-scrollspy"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var menu = document.getElementById('navbar');
-var menuMobile = document.getElementById('navbar__mobile');
-var scrollspy = new _vanillajsScrollspy.default(menu, 3000);
-scrollspy.init();
-var scrollspyMobile = new _vanillajsScrollspy.default(menuMobile, 3000);
-scrollspyMobile.init();
-var menuIcon = document.querySelector('.navbar__icon');
-var menuIconClose = document.querySelector('.navbar-mobile__close');
-var selectorBtns = document.querySelectorAll('.selector__button');
-var industryInfo = document.querySelectorAll('.industry-info');
-var navBar = document.querySelector('nav');
-var handleScroll = debounce(function (e) {
-  console.log(window.scrollY);
-}, 250);
-menuIcon.addEventListener('click', function (e) {
-  document.querySelector('.navbar-mobile__wrapper').classList.toggle('show');
-});
-menuIconClose.addEventListener('click', function (e) {
-  document.querySelector('.navbar-mobile__wrapper').classList.toggle('show');
-});
-selectorBtns.forEach(function (btn) {
-  return btn.addEventListener('click', function (e) {
-    selectorBtns.forEach(function (selector) {
-      return selector.classList.remove('selected');
-    });
-    e.target.classList.add('selected');
-    var itemShown = document.querySelector('.industry-info--show');
-
-    if (itemShown) {
-      itemShown.classList.remove('industry-info--show');
-    }
-
-    console.log(e.target.dataset.value);
-    document.getElementById(e.target.dataset.value).classList.add('industry-info--show');
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById('portal-btn').addEventListener("click", function (e) {
+    var selection = document.getElementById("portal-select").value;
+    console.log(selection);
+    if (selection) window.open(selection, '_blank');
   });
-}); //Modal 
-
-var modalWrapper = document.querySelector('.modal__wrapper');
-var privacyPolicy = document.getElementById('privacy-policy');
-var termsOfService = document.getElementById('terms-of-service');
-modalWrapper.addEventListener('click', closeModal);
-termsOfService.addEventListener('click', function (e) {
-  e.preventDefault();
-  openModal();
 });
-privacyPolicy.addEventListener('click', function (e) {
-  e.preventDefault();
-  openModal();
-  document.getElementById('privacy-modal').classList.add('modal__body--show');
-});
-termsOfService.addEventListener('click', function (e) {
-  e.preventDefault();
-  openModal();
-  document.getElementById('terms-of-service-modal').classList.add('modal__body--show');
-});
-var modalCloseBtns = document.querySelectorAll('.btn--modal-close');
-modalCloseBtns.forEach(function (btn) {
-  return btn.addEventListener('click', closeModal);
-});
-
-function closeModal() {
-  modalWrapper.classList.add('modal__wrapper--hide');
-  document.getElementById('privacy-modal').classList.remove('modal__body--show');
-  document.getElementById('terms-of-service-modal').classList.remove('modal__body--show');
-  document.querySelector('body').classList.remove('disable-scroll');
-}
-
-function openModal() {
-  modalWrapper.classList.remove('modal__wrapper--hide');
-  document.querySelector('body').classList.add('disable-scroll');
-}
-
-function debounce(func, wait, immediate) {
-  var timeout;
-  return function executedFunction() {
-    var context = this;
-    var args = arguments;
-
-    var later = function later() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-}
-
-;
-},{"../scss/main.scss":"scss/main.scss","vanillajs-scrollspy":"../node_modules/vanillajs-scrollspy/lib/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../scss/main.scss":"scss/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -623,5 +405,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/app.js"], null)
-//# sourceMappingURL=/app.c3f9f951.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/admin.js"], null)
+//# sourceMappingURL=/admin.522ed690.js.map
