@@ -1,1 +1,1 @@
-console.log("Loaded");
+import '../scss/main.scss';
