@@ -1,0 +1,15 @@
+#login-portal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.portal {
+    display: flex;
+    flex-direction: column;
+}
+
+.portal select, .portal .btn {
+    margin: 0.5rem 0;
+}
