@@ -16,7 +16,7 @@ nav {
     box-shadow: 0px 3px 8px 10px rgba(0, 0, 0, 0.363);
 }
 
-.navbar {
+.navbar, .navbar--admin {
     position: relative;
     list-style: none;
     display: flex;
@@ -55,6 +55,9 @@ nav {
     &__link {
         text-decoration: none;
         color: $orange;
+        &--highlight {
+            font-weight: bold;
+        }
         &:hover {
             color: $light-orange;
         }
@@ -118,7 +121,7 @@ nav {
     right: 0%;
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 800px) {
     .navbar {
         display: none;
 
@@ -128,7 +131,7 @@ nav {
     }
 }
 
-@media screen and (min-width: 671px) {
+@media screen and (min-width: 801px) {
     .navbar-mobile__wrapper.show {
         display: none;
     }

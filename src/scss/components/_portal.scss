@@ -5,11 +5,55 @@
     height: 100vh;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 .portal {
     display: flex;
     flex-direction: column;
+    width: 60%;
+    &__form {
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    &__text {
+        text-align: center;
+    }
+    &__link {
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: bold;
+        color: $orange;
+    }
+}
+
+.portal select {
+    padding: 5px;
+    border-radius: 2px;
 }
 
 .portal select, .portal .btn {
     margin: 0.5rem 0;
+}
+
+@media screen and (max-width: 800px) {
+    .portal {
+        width : 80%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .portal {
+        width : 100%;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .portal__form {
+        width : 80%;
+    }
 }
