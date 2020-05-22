@@ -82,6 +82,7 @@ nav {
         width: 60%;  
         z-index: 10;
         transition: all 0.25s;
+        overflow: scroll;
     }
     &__item {
         margin: 0;
@@ -96,9 +97,9 @@ nav {
         padding-left: 1rem;
         text-decoration: none;
         color: $lighter-green;
-        font-size: 2rem;
+        font-size: 1.5rem;
         width: 100%;
-        padding: 1.5rem;
+        padding: 1rem;
         &:hover {
             background-color: $lighter-green;
             color: inherit;
