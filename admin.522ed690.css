@@ -284,6 +284,7 @@ nav .container {
   width: 60%;
   z-index: 10;
   transition: all 0.25s;
+  overflow: scroll;
 }
 .navbar-mobile__item {
   margin: 0;
@@ -298,9 +299,9 @@ nav .container {
   padding-left: 1rem;
   text-decoration: none;
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   width: 100%;
-  padding: 1.5rem;
+  padding: 1rem;
 }
 .navbar-mobile__link:hover {
   background-color: white;
