@@ -216,7 +216,7 @@ nav .container {
   box-shadow: 0px 3px 8px 10px rgba(0, 0, 0, 0.363);
 }
 
-.navbar {
+.navbar, .navbar--admin {
   position: relative;
   list-style: none;
   display: flex;
@@ -224,14 +224,14 @@ nav .container {
   width: 100%;
   transition: all 0.75s ease-in;
 }
-.navbar__logo {
+.navbar__logo, .navbar--admin__logo {
   position: relative;
   width: 130px;
 }
-.navbar__logo-image {
+.navbar__logo-image, .navbar--admin__logo-image {
   width: 175px;
 }
-.navbar__logo-image__subtitle {
+.navbar__logo-image__subtitle, .navbar--admin__logo-image__subtitle {
   font-size: 0.75rem;
   width: 250px;
   color: #cccccc;
@@ -239,28 +239,31 @@ nav .container {
   bottom: -5px;
   left: 0px;
 }
-.navbar__icon {
+.navbar__icon, .navbar--admin__icon {
   color: #C35146;
   display: none;
   font-size: 3rem;
   margin-top: 0.5rem;
 }
-.navbar__item {
+.navbar__item, .navbar--admin__item {
   font-size: 0.9rem;
   line-height: 3rem;
   margin: 0 0.5rem;
 }
-.navbar__item:last-child {
+.navbar__item:last-child, .navbar--admin__item:last-child {
   margin-right: 0;
 }
-.navbar__link {
+.navbar__link, .navbar--admin__link {
   text-decoration: none;
   color: #C35146;
 }
-.navbar__link:hover {
+.navbar__link--highlight, .navbar--admin__link--highlight {
+  font-weight: bold;
+}
+.navbar__link:hover, .navbar--admin__link:hover {
   color: #FF973E;
 }
-.navbar__link--active {
+.navbar__link--active, .navbar--admin__link--active {
   font-weight: bold;
 }
 
@@ -319,7 +322,7 @@ nav .container {
   right: 0%;
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 800px) {
   .navbar {
     display: none;
   }
@@ -327,7 +330,7 @@ nav .container {
     display: inherit;
   }
 }
-@media screen and (min-width: 671px) {
+@media screen and (min-width: 801px) {
   .navbar-mobile__wrapper.show {
     display: none;
   }
@@ -1419,15 +1422,55 @@ input:checked + .slider:before {
   height: 100vh;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .portal {
   display: flex;
   flex-direction: column;
+  width: 60%;
+}
+.portal__form {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+.portal__text {
+  text-align: center;
+}
+.portal__link {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #C35146;
+}
+
+.portal select {
+  padding: 5px;
+  border-radius: 2px;
 }
 
 .portal select, .portal .btn {
   margin: 0.5rem 0;
 }
 
+@media screen and (max-width: 800px) {
+  .portal {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .portal {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 515px) {
+  .portal__form {
+    width: 80%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
