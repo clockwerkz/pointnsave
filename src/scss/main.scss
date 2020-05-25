@@ -110,6 +110,9 @@ iframe {
     &--wide {
         width: 100%;
     }
+    &--portal {
+        width: 60%;
+    }
     &--red {
         background-color: $red;
         color: white;
