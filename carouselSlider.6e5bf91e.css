@@ -1422,7 +1422,7 @@ input:checked + .slider:before {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("/Point N Save LOGO.76f47546.png");
+  background-image: url("/Point N Save LOGO.76f47546.png");
   background-position: 50% -10%;
   background-size: contain;
   background-repeat: no-repeat;
