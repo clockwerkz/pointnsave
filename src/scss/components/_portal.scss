@@ -1,8 +1,20 @@
 #login-portal {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: url('../../src/images/Point\ N\ Save\ LOGO.png');
+    background-position: 50% -10%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    &:after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(255,255,255, 0.5);
+    }
 }
 
 img {
@@ -11,11 +23,18 @@ img {
 }
 
 .portal {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 40%;
+    background-color:$orange;
+    color: white;
+    min-height: 200px;
+    padding: 3rem 1rem;
+    border-radius: 10px;
     &__form {
-        width: 50%;
+        width: 90%;
         text-align: center;
         margin: 0 auto;
     }
@@ -26,7 +45,7 @@ img {
         text-decoration: none;
         cursor: pointer;
         font-weight: bold;
-        color: $orange;
+        color: black;
     }
 }
 
@@ -39,16 +58,19 @@ img {
     margin: 0.5rem 0;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .portal {
         width : 80%;
+    }
+    #login-portal {
+        background-position: 50% 10%;
     }
 }
 
 
 @media screen and (max-width: 600px) {
     .portal {
-        width : 100%;
+        width : 90%;
     }
 }
 
