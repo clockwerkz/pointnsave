@@ -1422,7 +1422,7 @@ input:checked + .slider:before {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url("/Point N Save LOGO.76f47546.png");
+  background: url("/Point N Save LOGO.76f47546.png");
   background-position: 50% -10%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1593,6 +1593,9 @@ iframe {
 }
 .btn--wide {
   width: 100%;
+}
+.btn--portal {
+  width: 60%;
 }
 .btn--red {
   background-color: #b71f2a;
