@@ -116,6 +116,10 @@ iframe {
     &--red {
         background-color: $red;
         color: white;
+    }
+    &--green {
+        background-color: $nocc-green;
+        color: white;
     } 
     &--non-rounded {
         border-radius: 0;

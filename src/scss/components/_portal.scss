@@ -4,17 +4,18 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('../../src/images/PointNSaveLOGO.png');
-    background-position: 50% -10%;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-color: #222;
     &:after {
         content: '';
         position: absolute;
         height: 100%;
         width: 100%;
-        background-color: rgba(255,255,255, 0.5);
-    }
+        background: url('../../src/images/PointNSaveLOGO.png');
+        background-position: 50% 95%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.1;
+     }
 }
 
 img {
@@ -28,30 +29,39 @@ img {
     display: flex;
     flex-direction: column;
     width: 40%;
-    background-color:$orange;
-    color: white;
+    background-color:white;
     min-height: 200px;
     padding: 3rem 1rem;
     border-radius: 10px;
+    margin-top: -10rem;
     &__form {
         width: 90%;
         text-align: center;
         margin: 0 auto;
     }
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 1.25rem;
+    }
     &__text {
+        margin-top: 1rem;
         text-align: center;
+        font-size: 1.25rem;
+        color: #777;
     }
     &__link {
         text-decoration: none;
         cursor: pointer;
         font-weight: bold;
-        color: black;
+        color: $orange;
     }
 }
 
 .portal select {
-    padding: 5px;
+    padding: 10px;
     border-radius: 2px;
+    width: 80%;
+    font-size: 1.25rem;
 }
 
 .portal select, .portal .btn {
