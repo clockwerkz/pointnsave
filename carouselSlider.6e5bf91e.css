@@ -1422,17 +1422,18 @@ input:checked + .slider:before {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("/Point N Save LOGO.76f47546.png");
-  background-position: 50% -10%;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-color: #222;
 }
 #login-portal:after {
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background: url("/PointNSaveLOGO.4bbc82aa.png");
+  background-position: 50% 95%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
 }
 
 img {
@@ -1446,30 +1447,39 @@ img {
   display: flex;
   flex-direction: column;
   width: 40%;
-  background-color: #C35146;
-  color: white;
+  background-color: white;
   min-height: 200px;
   padding: 3rem 1rem;
   border-radius: 10px;
+  margin-top: -10rem;
 }
 .portal__form {
   width: 90%;
   text-align: center;
   margin: 0 auto;
 }
+.portal__title {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
 .portal__text {
+  margin-top: 1rem;
   text-align: center;
+  font-size: 1.25rem;
+  color: #777;
 }
 .portal__link {
   text-decoration: none;
   cursor: pointer;
   font-weight: bold;
-  color: black;
+  color: #C35146;
 }
 
 .portal select {
-  padding: 5px;
+  padding: 10px;
   border-radius: 2px;
+  width: 80%;
+  font-size: 1.25rem;
 }
 
 .portal select, .portal .btn {
@@ -1599,6 +1609,10 @@ iframe {
 }
 .btn--red {
   background-color: #b71f2a;
+  color: white;
+}
+.btn--green {
+  background-color: #63B54E;
   color: white;
 }
 .btn--non-rounded {
