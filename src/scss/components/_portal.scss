@@ -33,7 +33,6 @@ img {
     min-height: 200px;
     padding: 3rem 1rem;
     border-radius: 10px;
-    margin-top: -10rem;
     &__form {
         width: 90%;
         text-align: center;
@@ -68,6 +67,12 @@ img {
     margin: 0.5rem 0;
 }
 
+@media screen and (max-width: 1000px) {
+    .portal {
+        width: 70%;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .portal {
         width : 80%;
@@ -82,10 +87,17 @@ img {
     .portal {
         width : 90%;
     }
+    .portal select {
+        width: 95%;
+    }
+    .portal select option {
+        font-size: 1rem;
+        width: 60%;
+    }
 }
 
 @media screen and (max-width: 515px) {
-    .portal__form {
-        width : 80%;
+    .portal__form option{
+        width : 100px;
     }
 }
