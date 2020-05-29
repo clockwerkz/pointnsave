@@ -9,6 +9,9 @@ nav {
         display: flex;
         justify-content: space-between;
     }
+    &.inverse {
+        background: none;
+    }
 }
 
 .dark {
@@ -56,6 +59,10 @@ nav {
         text-decoration: none;
         color: $orange;
         &--highlight {
+            font-weight: bold;
+        }
+        &--inverse {
+            color: white;
             font-weight: bold;
         }
         &:hover {

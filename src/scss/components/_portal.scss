@@ -29,6 +29,7 @@ img {
     display: flex;
     flex-direction: column;
     width: 40%;
+    margin-top: -12rem;
     background-color:white;
     min-height: 200px;
     padding: 3rem 1rem;
@@ -70,6 +71,7 @@ img {
 @media screen and (max-width: 1000px) {
     .portal {
         width: 70%;
+        margin-top: -8rem;
     }
 }
 
