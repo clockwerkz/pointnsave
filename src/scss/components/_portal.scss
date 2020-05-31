@@ -29,7 +29,7 @@ img {
     display: flex;
     flex-direction: column;
     width: 40%;
-    margin-top: -14rem;
+    margin-top: -12rem;
     background-color:white;
     min-height: 200px;
     padding: 2rem 1rem;
@@ -71,7 +71,7 @@ img {
 @media screen and (max-width: 1000px) {
     .portal {
         width: 70%;
-        margin-top: -8rem;
+        margin-top: -4rem;
     }
     #login-portal {
         &:after {
@@ -106,5 +106,19 @@ img {
 @media screen and (max-width: 515px) {
     .portal__form option{
         width : 100px;
+    }
+    .portal {
+        &__title {
+            font-size: 1.5rem;
+        }
+        &__text {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .portal {
+        margin-top: 0rem;
     }
 }
