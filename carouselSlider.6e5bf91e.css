@@ -1435,7 +1435,7 @@ input:checked + .slider:before {
   content: "";
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: 80%;
   background: url("/PointNSaveLOGO.4bbc82aa.png");
   background-position: 50% 95%;
   background-size: contain;
@@ -1457,7 +1457,7 @@ img {
   margin-top: -14rem;
   background-color: white;
   min-height: 200px;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   border-radius: 10px;
 }
 .portal__form {
@@ -1497,6 +1497,10 @@ img {
   .portal {
     width: 70%;
     margin-top: -8rem;
+  }
+
+  #login-portal:after {
+    width: 100%;
   }
 }
 @media screen and (max-width: 900px) {
