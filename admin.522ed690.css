@@ -1454,10 +1454,10 @@ img {
   display: flex;
   flex-direction: column;
   width: 40%;
-  margin-top: -12rem;
+  margin-top: -14rem;
   background-color: white;
   min-height: 200px;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
   border-radius: 10px;
 }
 .portal__form {
