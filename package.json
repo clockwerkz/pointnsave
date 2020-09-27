@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "kind-of": "^6.0.3",
+    "node-forge": "^0.10.0",
     "save": "^2.3.3",
     "set-value": "^3.0.2",
     "vanillajs-scrollspy": "^2.0.3"
