@@ -7,7 +7,7 @@
     justify-content: space-around;
 }
 #about {
-    padding: 3rem 0 0 0;
+    padding: 0 0 0 0;
 }
 .about {
     &__wrapper {
@@ -16,32 +16,33 @@
     &__info {
         color: white;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
     &__img {
         display: block;
-        height: 350px;
-        width: auto;
+        height: auto;
+        width: 100%;
     }
     &__image-container {
-        margin-top: auto;
+        width: 50%;
     }
     &__title {
         color: white;
         padding-left: 5%;
-        margin-bottom: 2rem;
+        margin: 3rem 0 2rem;
         font-size: 2.5rem;
         font-weight: bold;
     }
     &__description {
         color: #c7e4bc;
-        padding: 0 7.5%;
         font-size: 1.2rem;
-        margin-bottom: 1rem;
+        width: 50%;
+        padding: 0 1.5rem;
     }
 }
 .clients {
+    width: 100%;
     background-color: white;
     &__logo {
         width: auto;
@@ -71,12 +72,6 @@
     .about{
         &__wrapper {
         flex-direction: column;
-        }
-        &__img {
-            display: block;
-            height: auto;
-            width: 60%;
-            margin: 0 auto;
         }
     }
     .clients__description {
