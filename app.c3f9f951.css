@@ -354,7 +354,7 @@ nav.inverse {
 }
 
 #about {
-  padding: 3rem 0 0 0;
+  padding: 0 0 0 0;
 }
 
 .about__wrapper {
@@ -363,32 +363,35 @@ nav.inverse {
 .about__info {
   color: white;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .about__img {
   display: block;
-  height: 350px;
-  width: auto;
+  height: auto;
+  width: 100%;
 }
 .about__image-container {
-  margin-top: auto;
+  align-self: center;
+  width: 50%;
 }
 .about__title {
   color: white;
   padding-left: 5%;
-  margin-bottom: 2rem;
+  margin: 3rem 0 2rem;
   font-size: 2.5rem;
   font-weight: bold;
 }
 .about__description {
   color: #c7e4bc;
-  padding: 0 7.5%;
   font-size: 1.2rem;
-  margin-bottom: 1rem;
+  width: 50%;
+  padding: 0 1.5rem;
 }
 
 .clients {
+  width: 100%;
+  position: relative;
   background-color: white;
 }
 .clients__logo {
@@ -415,15 +418,18 @@ nav.inverse {
   .about__wrapper {
     flex-direction: column;
   }
-  .about__img {
-    display: block;
-    height: auto;
-    width: 60%;
-    margin: 0 auto;
-  }
 
   .clients__description {
     text-align: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  .about__image-container {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .about__description {
+    width: 100%;
   }
 }
 @media screen and (max-width: 400px) {
