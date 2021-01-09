@@ -401,6 +401,11 @@ nav.inverse {
 .clients__logo--adj {
   height: 80px;
 }
+.clients__title {
+  background-color: #094050;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+}
 .clients__description {
   color: #c7e4bc;
   padding-left: 7.5%;
