@@ -198,16 +198,12 @@
     .carousel__panel {
  
         &--1 {
-            background: url('../images/city_of_Pico_Rivera_mobile.jpg') no-repeat center;
+            background: url('../images/Gladwin_County_mobile.jpg') no-repeat center;
             background-size: cover;
         }
         &--2 {
             background: url('../images/chino_valley_2_mobile.jpg') no-repeat center;
             background-size: cover;
-        }
-        &--3 {
-            background: url('../images/slide-1_mobile.jpg') no-repeat center;
-            background-size: cover;
-        }   
+        } 
     }
 }
