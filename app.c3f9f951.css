@@ -75,7 +75,7 @@
   flex-shrink: 0;
 }
 .carousel__panel--1 {
-  background: url("/city_of_Pico_Rivera.c376718f.jpg") no-repeat center;
+  background: url("/Gladwin County.775ad302.jpg") no-repeat center;
   background-size: cover;
 }
 .carousel__panel--2 {
@@ -83,7 +83,7 @@
   background-size: cover;
 }
 .carousel__panel--3 {
-  background: url("/slide-1.76083b87.jpg") no-repeat center;
+  background: url("/Silsbee.4ba167db.jpg") no-repeat center;
   background-size: cover;
 }
 .carousel__panel--4 {
@@ -400,11 +400,6 @@ nav.inverse {
 }
 .clients__logo--adj {
   height: 80px;
-}
-.clients__title {
-  background-color: #094050;
-  padding: 1rem 1.5rem;
-  font-size: 1rem;
 }
 .clients__description {
   color: #c7e4bc;
