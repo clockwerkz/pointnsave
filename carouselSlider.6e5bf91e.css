@@ -75,7 +75,7 @@
   flex-shrink: 0;
 }
 .carousel__panel--1 {
-  background: url("/city_of_Pico_Rivera.c376718f.jpg") no-repeat center;
+  background: url("/Gladwin_County.23c6bb30.jpg") no-repeat center;
   background-size: cover;
 }
 .carousel__panel--2 {
@@ -83,7 +83,7 @@
   background-size: cover;
 }
 .carousel__panel--3 {
-  background: url("/slide-1.76083b87.jpg") no-repeat center;
+  background: url("/Silsbee.4ba167db.jpg") no-repeat center;
   background-size: cover;
 }
 .carousel__panel--4 {
@@ -186,15 +186,11 @@
   }
 
   .carousel__panel--1 {
-    background: url("/city_of_Pico_Rivera_mobile.ef7b7f24.jpg") no-repeat center;
+    background: url("/Gladwin_County_mobile.9e1680f7.jpg") no-repeat center;
     background-size: cover;
   }
   .carousel__panel--2 {
     background: url("/chino_valley_2_mobile.d1ca22f8.jpg") no-repeat center;
-    background-size: cover;
-  }
-  .carousel__panel--3 {
-    background: url("/slide-1_mobile.46a62600.jpg") no-repeat center;
     background-size: cover;
   }
 }
