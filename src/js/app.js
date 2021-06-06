@@ -27,7 +27,12 @@ menuIconClose.addEventListener('click', (e)=> {
     document.querySelector('.navbar-mobile__wrapper').classList.toggle('show');
 });
 
-
+document.getElementById("dashboard-selection").addEventListener("change", (e)=>{
+    const linkRedirect = `https://www.youtube.com/embed/${e.target.value}`;
+    const dashboardEmbeddedVideo = document.getElementById("dashboard-video");
+    console.log(linkRedirect);
+    dashboardEmbeddedVideo.src = linkRedirect;
+});
 
 
 selectorBtns.forEach(btn => btn.addEventListener('click', (e)=> {

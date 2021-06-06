@@ -16,12 +16,17 @@
     }
     &__video {
         width: 50%;
-        height: 500px;
+        height: 400px;
         margin: 5rem auto;
     }
     &>iframe {
         min-height: 500px;
     }
+}
+
+#dashboard-selection {
+    padding: 5px;
+    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 900px) {
@@ -48,5 +53,8 @@
             width: 95%;
             
         }
+    }
+    #dashboard-selection {
+        font-size: 1.25rem;
     }
 }
