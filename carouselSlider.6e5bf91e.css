@@ -75,7 +75,7 @@
   flex-shrink: 0;
 }
 .carousel__panel--1 {
-  background: url("/Gladwin_County.23c6bb30.jpg") no-repeat center;
+  background: url("/city_of_Pico_Rivera.c376718f.jpg") no-repeat center;
   background-size: cover;
 }
 .carousel__panel--2 {
@@ -83,7 +83,7 @@
   background-size: cover;
 }
 .carousel__panel--3 {
-  background: url("/Silsbee.4ba167db.jpg") no-repeat center;
+  background: url("/slide-1.76083b87.jpg") no-repeat center;
   background-size: cover;
 }
 .carousel__panel--4 {
@@ -186,11 +186,15 @@
   }
 
   .carousel__panel--1 {
-    background: url("/Gladwin_County_mobile.9e1680f7.jpg") no-repeat center;
+    background: url("/city_of_Pico_Rivera_mobile.ef7b7f24.jpg") no-repeat center;
     background-size: cover;
   }
   .carousel__panel--2 {
     background: url("/chino_valley_2_mobile.d1ca22f8.jpg") no-repeat center;
+    background-size: cover;
+  }
+  .carousel__panel--3 {
+    background: url("/slide-1_mobile.46a62600.jpg") no-repeat center;
     background-size: cover;
   }
 }
@@ -581,8 +585,8 @@ nav.inverse {
 .how-it-works__text {
   text-align: center;
 }
-.how-it-works__img {
-  margin-top: 1.2rem;
+.how-it-works__img-wrapper {
+  min-height: 400px;
 }
 
 .bullet-point {
@@ -1029,11 +1033,16 @@ nav.inverse {
 }
 .dashboard__video {
   width: 50%;
-  height: 500px;
+  height: 400px;
   margin: 5rem auto;
 }
 .dashboard > iframe {
   min-height: 500px;
+}
+
+#dashboard-selection {
+  padding: 5px;
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 900px) {
@@ -1051,6 +1060,10 @@ nav.inverse {
 @media screen and (max-width: 600px) {
   .dashboard__video {
     width: 95%;
+  }
+
+  #dashboard-selection {
+    font-size: 1.25rem;
   }
 }
 #contact-form {
@@ -1569,6 +1582,12 @@ img {
   margin: 0 auto;
   clear: both;
   z-index: 2;
+}
+
+#dashboard .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 iframe {

@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\Gladwin_County.jpg":[["Gladwin_County.23c6bb30.jpg","images/Gladwin_County.jpg"],"images/Gladwin_County.jpg"],"./..\\images\\chino_valley_2.jpg":[["chino_valley_2.f1ce23ba.jpg","images/chino_valley_2.jpg"],"images/chino_valley_2.jpg"],"./..\\images\\Silsbee.jpg":[["Silsbee.4ba167db.jpg","images/Silsbee.jpg"],"images/Silsbee.jpg"],"./..\\images\\city_of_Covina.jpg":[["city_of_Covina.350225d0.jpg","images/city_of_Covina.jpg"],"images/city_of_Covina.jpg"],"./..\\images\\Gladwin_County_mobile.jpg":[["Gladwin_County_mobile.9e1680f7.jpg","images/Gladwin_County_mobile.jpg"],"images/Gladwin_County_mobile.jpg"],"./..\\images\\chino_valley_2_mobile.jpg":[["chino_valley_2_mobile.d1ca22f8.jpg","images/chino_valley_2_mobile.jpg"],"images/chino_valley_2_mobile.jpg"],"./..\\images\\thumbnail_IMG_3330.jpg":[["thumbnail_IMG_3330.a9adb0ae.jpg","images/thumbnail_IMG_3330.jpg"],"images/thumbnail_IMG_3330.jpg"],"./..\\images\\laptop-screen.jpg":[["laptop-screen.fa7d06ed.jpg","images/laptop-screen.jpg"],"images/laptop-screen.jpg"],"./..\\images\\mobile_phone_light.png":[["mobile_phone_light.5f040e61.png","images/mobile_phone_light.png"],"images/mobile_phone_light.png"],"./..\\images\\mobile_phone_dark.png":[["mobile_phone_dark.a98e61d4.png","images/mobile_phone_dark.png"],"images/mobile_phone_dark.png"],"./..\\images\\PointNSaveLOGO.png":[["PointNSaveLOGO.4bbc82aa.png","images/PointNSaveLOGO.png"],"images/PointNSaveLOGO.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/vanillajs-scrollspy/lib/index.js":[function(require,module,exports) {
+},{"./..\\images\\city_of_Pico_Rivera.jpg":[["city_of_Pico_Rivera.c376718f.jpg","images/city_of_Pico_Rivera.jpg"],"images/city_of_Pico_Rivera.jpg"],"./..\\images\\chino_valley_2.jpg":[["chino_valley_2.f1ce23ba.jpg","images/chino_valley_2.jpg"],"images/chino_valley_2.jpg"],"./..\\images\\slide-1.jpg":[["slide-1.76083b87.jpg","images/slide-1.jpg"],"images/slide-1.jpg"],"./..\\images\\city_of_Covina.jpg":[["city_of_Covina.350225d0.jpg","images/city_of_Covina.jpg"],"images/city_of_Covina.jpg"],"./..\\images\\city_of_Pico_Rivera_mobile.jpg":[["city_of_Pico_Rivera_mobile.ef7b7f24.jpg","images/city_of_Pico_Rivera_mobile.jpg"],"images/city_of_Pico_Rivera_mobile.jpg"],"./..\\images\\chino_valley_2_mobile.jpg":[["chino_valley_2_mobile.d1ca22f8.jpg","images/chino_valley_2_mobile.jpg"],"images/chino_valley_2_mobile.jpg"],"./..\\images\\slide-1_mobile.jpg":[["slide-1_mobile.46a62600.jpg","images/slide-1_mobile.jpg"],"images/slide-1_mobile.jpg"],"./..\\images\\thumbnail_IMG_3330.jpg":[["thumbnail_IMG_3330.a9adb0ae.jpg","images/thumbnail_IMG_3330.jpg"],"images/thumbnail_IMG_3330.jpg"],"./..\\images\\laptop-screen.jpg":[["laptop-screen.fa7d06ed.jpg","images/laptop-screen.jpg"],"images/laptop-screen.jpg"],"./..\\images\\mobile_phone_light.png":[["mobile_phone_light.5f040e61.png","images/mobile_phone_light.png"],"images/mobile_phone_light.png"],"./..\\images\\mobile_phone_dark.png":[["mobile_phone_dark.a98e61d4.png","images/mobile_phone_dark.png"],"images/mobile_phone_dark.png"],"./..\\images\\PointNSaveLOGO.png":[["PointNSaveLOGO.4bbc82aa.png","images/PointNSaveLOGO.png"],"images/PointNSaveLOGO.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/vanillajs-scrollspy/lib/index.js":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -348,6 +348,12 @@ menuIcon.addEventListener('click', function (e) {
 menuIconClose.addEventListener('click', function (e) {
   document.querySelector('.navbar-mobile__wrapper').classList.toggle('show');
 });
+document.getElementById("dashboard-selection").addEventListener("change", function (e) {
+  var linkRedirect = "https://www.youtube.com/embed/".concat(e.target.value);
+  var dashboardEmbeddedVideo = document.getElementById("dashboard-video");
+  console.log(linkRedirect);
+  dashboardEmbeddedVideo.src = linkRedirect;
+});
 selectorBtns.forEach(function (btn) {
   return btn.addEventListener('click', function (e) {
     selectorBtns.forEach(function (selector) {
@@ -447,7 +453,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56380" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63391" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
