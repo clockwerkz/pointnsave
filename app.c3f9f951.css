@@ -367,9 +367,12 @@ nav.inverse {
   height: auto;
   width: 100%;
 }
-.about__image-container {
-  align-self: center;
+.about__video-container {
   width: 50%;
+}
+.about__video-container > iframe {
+  min-height: 320px;
+  border: none;
 }
 .about__title {
   color: white;
@@ -420,7 +423,7 @@ nav.inverse {
   }
 }
 @media screen and (max-width: 700px) {
-  .about__image-container {
+  .about__video-container {
     width: 100%;
     margin-top: 3rem;
   }
