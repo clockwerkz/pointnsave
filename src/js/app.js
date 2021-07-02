@@ -46,7 +46,6 @@ document
   .addEventListener("change", (e) => {
     const linkRedirect = `https://www.youtube.com/embed/${e.target.value}`;
     const dashboardEmbeddedVideo = document.getElementById("dashboard-video");
-    console.log(linkRedirect);
     dashboardEmbeddedVideo.src = linkRedirect;
   });
 
@@ -58,7 +57,6 @@ selectorBtns.forEach((btn) =>
     if (itemShown) {
       itemShown.classList.remove("industry-info--show");
     }
-    console.log(e.target.dataset.value);
     document
       .getElementById(e.target.dataset.value)
       .classList.add("industry-info--show");
