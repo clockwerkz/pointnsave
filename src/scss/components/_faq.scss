@@ -1,0 +1,33 @@
+.faq {
+  position: relative;
+  z-index: 2;
+  width: 95%;
+  margin: 0 auto 6rem;
+  &__heading {
+    margin: 1rem 0;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+  }
+  &__accordion {
+    background-color: transparent;
+    color: $cream;
+    cursor: pointer;
+    padding: 18px 0;
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: left;
+    border: none;
+    outline: none;
+  }
+  &__panel {
+    padding: 0px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  &__text-link {
+    color: $cream;
+    text-decoration: none;
+  }
+}

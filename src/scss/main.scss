@@ -1,180 +1,178 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300:400:500|Ubuntu:500');
-@import './components/variables';
-@import './components/hero';
-@import './components/navbar';
-@import './components/about';
-@import './components/customers';
-@import './components/benefits';
-@import './components/case-study';
-@import './components/dashboard';
-@import './components/contact-form';
-@import './components/footer';
-@import './components//modals';
-@import './components/slider';
-@import './components/carousel';
-@import './components/portal';
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300:400:500|Ubuntu:500");
+@import "./components/variables";
+@import "./components/hero";
+@import "./components/navbar";
+@import "./components/about";
+@import "./components/customers";
+@import "./components/benefits";
+@import "./components/case-study";
+@import "./components/dashboard";
+@import "./components/contact-form";
+@import "./components/footer";
+@import "./components//modals";
+@import "./components/slider";
+@import "./components/carousel";
+@import "./components/portal";
+@import "./components/faq";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 body.disable-scroll {
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 .container {
-    position: relative;
-    width: 85%;
-    margin: 0 auto;
-    clear: both;
-    z-index: 2;
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+  clear: both;
+  z-index: 2;
 }
 
 #dashboard .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 iframe {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .section__title {
-    font-family: 'Ubuntu', sans-serif;
-    margin: 1rem;
-    font-size: 3rem;
-    text-align: center;
-    line-height: 4rem;
-    &--min-bot-margin {
-        margin-bottom: 0rem;
-    }
-    &--green {
-        color: $green;
-    }
-    &--cream {
-        color: $cream;
-    }
-    &--dark {
-        font-size: 2rem;
-        margin: 0;
-        padding: 6rem 0 1.75rem;
-        color: white;
-        background-color: $darker-blue;
-    }
+  font-family: "Ubuntu", sans-serif;
+  margin: 1rem;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 4rem;
+  &--min-bot-margin {
+    margin-bottom: 0rem;
+  }
+  &--green {
+    color: $green;
+  }
+  &--cream {
+    color: $cream;
+  }
+  &--dark {
+    font-size: 2rem;
+    margin: 0;
+    padding: 6rem 0 1.75rem;
+    color: white;
+    background-color: $darker-blue;
+  }
 }
 
-
 .section__subtitle {
-    font-size: 1.5rem;
-    text-align: center;
-    line-height: 2rem;
-    margin-bottom: 2rem;
-    &--cream {
-        color: $cream;
-    }
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+  &--cream {
+    color: $cream;
+  }
 }
 
 .highlight {
-    color: #eaf3e7;
-    font-weight: bold;
+  color: #eaf3e7;
+  font-weight: bold;
 }
 .btn {
-    position: relative;
-    cursor: pointer;
-    z-index: 1;
-    font-weight: bold;
-    border: none;
-    border-radius: 15px;
-    font-size: 1.25rem;
-    padding: 10px;
-    &--lg {
-        font-size: 1.75rem;
-        padding: 1rem 1.75rem;
-    }
-    &--right {
-        margin-top: 10%;
-        margin-left: 65%;
-    }
-    &--yellow {
-        background-color: $yellow;
-        color: white;
-    }
-    &--dark {
-        background-color: $green;
-        color: white;
-    }
-    &--wide {
-        width: 100%;
-    }
-    &--portal {
-        width: 60%;
-    }
-    &--red {
-        background-color: $red;
-        color: white;
-    }
-    &--green {
-        background-color: $nocc-green;
-        color: white;
-    } 
-    &--non-rounded {
-        border-radius: 0;
-    }
-    &--modal-close {
-        margin: 2rem 0;
-    }
-    &--store {
-        width: 130px;
-        height: auto;
-        margin-left: .25rem;
-    }
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.25rem;
+  padding: 10px;
+  &--lg {
+    font-size: 1.75rem;
+    padding: 1rem 1.75rem;
+  }
+  &--right {
+    margin-top: 10%;
+    margin-left: 65%;
+  }
+  &--yellow {
+    background-color: $yellow;
+    color: white;
+  }
+  &--dark {
+    background-color: $green;
+    color: white;
+  }
+  &--wide {
+    width: 100%;
+  }
+  &--portal {
+    width: 60%;
+  }
+  &--red {
+    background-color: $red;
+    color: white;
+  }
+  &--green {
+    background-color: $nocc-green;
+    color: white;
+  }
+  &--non-rounded {
+    border-radius: 0;
+  }
+  &--modal-close {
+    margin: 2rem 0;
+  }
+  &--store {
+    width: 130px;
+    height: auto;
+    margin-left: 0.25rem;
+  }
 }
 
 .row {
-    width: 100%;
-    display: flex;
-    &--center {
-        justify-content: center;
-    }
+  width: 100%;
+  display: flex;
+  &--center {
+    justify-content: center;
+  }
 }
-
 
 @media screen and (min-width: 1405px) {
-    .container {
-        width: 1200px;
-    }
+  .container {
+    width: 1200px;
+  }
 }
 
-
 @media screen and (max-width: 768px) {
-    .btn {
-        &--right {
-            margin-top: 30%;
-        }
+  .btn {
+    &--right {
+      margin-top: 30%;
     }
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .btn {
-        &--store {
-            margin: 0 1rem;
-        }
+  .btn {
+    &--store {
+      margin: 0 1rem;
     }
+  }
 }
 
 @media screen and (max-width: 400px) {
-    .section__title {
-        font-size: 2.5rem;
-    }
+  .section__title {
+    font-size: 2.5rem;
+  }
 }
