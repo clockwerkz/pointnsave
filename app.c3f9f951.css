@@ -1579,6 +1579,10 @@ img {
   text-align: left;
   border: none;
   outline: none;
+  cursor: pointer;
+}
+.faq__accordion:hover {
+  font-weight: bold;
 }
 .faq__panel {
   padding: 0px;
