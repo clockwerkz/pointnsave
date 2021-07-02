@@ -1557,6 +1557,40 @@ img {
     margin-top: 0rem;
   }
 }
+.faq {
+  position: relative;
+  z-index: 2;
+  width: 95%;
+  margin: 0 auto 6rem;
+}
+.faq__heading {
+  margin: 1rem 0;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+}
+.faq__accordion {
+  background-color: transparent;
+  color: #FFF4C5;
+  cursor: pointer;
+  padding: 18px 0;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: left;
+  border: none;
+  outline: none;
+}
+.faq__panel {
+  padding: 0px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.faq__text-link {
+  color: #FFF4C5;
+  text-decoration: none;
+}
+
 * {
   margin: 0;
   padding: 0;
