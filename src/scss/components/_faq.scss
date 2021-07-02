@@ -19,6 +19,10 @@
     text-align: left;
     border: none;
     outline: none;
+    cursor: pointer;
+    &:hover {
+      font-weight: bold;
+    }
   }
   &__panel {
     padding: 0px;
