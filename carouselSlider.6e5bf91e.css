@@ -1592,7 +1592,7 @@ img {
 }
 .faq__text-link {
   color: #FFF4C5;
-  text-decoration: none;
+  font-weight: bold;
 }
 
 * {
