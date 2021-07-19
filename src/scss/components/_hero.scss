@@ -130,6 +130,13 @@
         font-size: 2rem;
         font-weight: 500;
     }
+    &-cta {
+        text-align: center;
+        &__link {
+            color: $cream;
+            text-decoration: none;
+        }
+    }
 }
 
 
