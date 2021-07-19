@@ -137,13 +137,6 @@
   font-size: 2rem;
   font-weight: 500;
 }
-.hero-cta {
-  text-align: center;
-}
-.hero-cta__link {
-  color: #FFF4C5;
-  text-decoration: none;
-}
 
 @media screen and (max-width: 1278px) {
   .hero__title {
@@ -1699,15 +1692,6 @@ iframe {
 .btn--yellow {
   background-color: #d9a33f;
   color: white;
-}
-.btn--cta {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.btn--cta__text {
-  font-size: 1rem;
-  font-weight: normal;
 }
 .btn--dark {
   background-color: #045C59;
